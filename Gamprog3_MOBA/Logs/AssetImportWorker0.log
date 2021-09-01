@@ -426,3 +426,10 @@ Received Import Request.
   path: Assets/Assets/Darth_Artisan/Free_Trees/Prefabs/Palm_Tree.prefab
   artifactKey: Guid(c6b7fb383a3534b039692b5485b6e739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Assets/Darth_Artisan/Free_Trees/Prefabs/Palm_Tree.prefab using Guid(c6b7fb383a3534b039692b5485b6e739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '589cd9f164eeec0b211d2b45c028739b') in 0.007306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 276.638244 seconds.
+  path: Assets/Sci-Fi Building_5
+  artifactKey: Guid(88567b5d7670f284bb272cec3aad4b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Building_5 using Guid(88567b5d7670f284bb272cec3aad4b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9b90da23c9b661b13699e6e0849e3ac') in 0.001611 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
