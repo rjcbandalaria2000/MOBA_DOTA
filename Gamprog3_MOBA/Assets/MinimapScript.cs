@@ -36,7 +36,8 @@ public class MinimapScript : MonoBehaviour
 
             Vector3 cameraPosition = minimapCamera.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log("Where I clicked " + cameraPosition);
-            mainCamera.transform.position = cameraPosition;
+            mainCamera.transform.position = new Vector3(cameraPosition.x, mainCamera.transform.position.y, cameraPosition.z);
+                //cameraPosition;//new Vector3(cameraPosition.x, cameraPosition.y, mainCamera.transform.position.z);
 
         }
 
