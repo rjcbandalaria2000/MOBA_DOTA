@@ -13,7 +13,7 @@ public class MinimapScript : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-        minimapCamera = this.GetComponent<Camera>();
+        //minimapCamera = this.GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -34,10 +34,15 @@ public class MinimapScript : MonoBehaviour
             //    }
             //}
 
-            Vector3 cameraPosition = minimapCamera.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log("Where I clicked " + cameraPosition);
-            mainCamera.transform.position = new Vector3(cameraPosition.x, mainCamera.transform.position.y, cameraPosition.z);
+            //MoveCamera();
         }
 
+    }
+
+    public void MoveCamera()
+    {
+        Vector3 cameraPosition = minimapCamera.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log("Main Camera Position " + cameraPosition);
+        mainCamera.transform.position = new Vector3(cameraPosition.x, mainCamera.transform.position.y, cameraPosition.z);
     }
 }
