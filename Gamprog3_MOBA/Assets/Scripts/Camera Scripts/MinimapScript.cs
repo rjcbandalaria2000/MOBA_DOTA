@@ -8,6 +8,8 @@ public class MinimapScript : MonoBehaviour
     Camera      mainCamera;
     [SerializeField]
     Camera      minimapCamera;
+    [SerializeField]
+    Vector3     cameraOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +44,8 @@ public class MinimapScript : MonoBehaviour
     public void MoveCamera()
     {
         Vector3 cameraPosition = minimapCamera.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log("Main Camera Position " + cameraPosition);
-        mainCamera.transform.position = new Vector3(cameraPosition.x, mainCamera.transform.position.y, cameraPosition.z);
+        Debug.Log("Clicked Position " + cameraPosition);
+        mainCamera.transform.position = new Vector3(cameraPosition.x - cameraOffset.x, mainCamera.transform.position.y, cameraPosition.z - cameraOffset.z);
+        Debug.Log("Main Camera Position " + mainCamera.transform.position);
     }
 }
