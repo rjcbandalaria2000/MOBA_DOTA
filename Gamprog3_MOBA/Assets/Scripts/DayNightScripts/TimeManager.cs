@@ -11,10 +11,12 @@ public class TimeManager : MonoBehaviour
     Light directionalLight;
     [SerializeField]
     LightingPreset lightPreset;
+
     [SerializeField, Range(0,600)]
     public float dayTimer; // LIGHTING -> DAY/NIGHT CYCLE
     public float gameTime = 0;
     public float timeMultiplier = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,9 @@ public class TimeManager : MonoBehaviour
 
         if (Application.isPlaying)
         {
+//<<<<<<< HEAD
+
+//=======
             Time.timeScale = timeMultiplier;
             dayTimer += Time.deltaTime; //* timeMultiplier;
 
@@ -38,6 +43,7 @@ public class TimeManager : MonoBehaviour
             ChangeLighting(dayTimer/ 600);
 
             gameTime += Time.deltaTime;
+//>>>>>>> main
         }
     }
 
@@ -48,6 +54,8 @@ public class TimeManager : MonoBehaviour
         directionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timeOfDay * 360f) - 90f, 170, 0));
 
     }
+//<<<<<<< HEAD
+//=======
 
     public void increaseTimeSpeed()
     {
@@ -58,4 +66,5 @@ public class TimeManager : MonoBehaviour
     {
         timeMultiplier /= 2;
     }
+//>>>>>>> main
 }
