@@ -8,12 +8,14 @@ public class MinimapScript : MonoBehaviour
     Camera      mainCamera;
     [SerializeField]
     Camera      minimapCamera;
+    [SerializeField]
+    Vector3     cameraOffset;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        minimapCamera = this.GetComponent<Camera>();
+        //minimapCamera = this.GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -34,10 +36,16 @@ public class MinimapScript : MonoBehaviour
             //    }
             //}
 
-            Vector3 cameraPosition = minimapCamera.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log("Where I clicked " + cameraPosition);
-            mainCamera.transform.position = new Vector3(cameraPosition.x, mainCamera.transform.position.y, cameraPosition.z);
+            //MoveCamera();
         }
 
+    }
+
+    public void MoveCamera()
+    {
+        Vector3 cameraPosition = minimapCamera.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log("Clicked Position " + cameraPosition);
+        mainCamera.transform.position = new Vector3(cameraPosition.x - cameraOffset.x, mainCamera.transform.position.y, cameraPosition.z - cameraOffset.z);
+        Debug.Log("Main Camera Position " + mainCamera.transform.position);
     }
 }
