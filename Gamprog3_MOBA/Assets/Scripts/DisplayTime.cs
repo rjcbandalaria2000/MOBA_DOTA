@@ -6,8 +6,10 @@ using TMPro;
 
 public class DisplayTime : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
-    public TimeManager timeManager; 
+    [SerializeField]
+    TextMeshProUGUI timerText;
+    [SerializeField]
+    GameManager gameManager; 
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +20,8 @@ public class DisplayTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float minutes = timeManager.gameTime / 60f;
-        float seconds = timeManager.gameTime % 60f;
+        float minutes = gameManager.GetGameTime() / 60f;
+        float seconds = gameManager.GetGameTime() % 60f;
 
         timerText.text = minutes.ToString("00") + " : " + seconds.ToString("00");
     }
