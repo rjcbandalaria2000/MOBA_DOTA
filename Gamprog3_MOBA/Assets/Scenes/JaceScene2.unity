@@ -7490,7 +7490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 957020320}
-  timeManager: {fileID: 2091315191}
+  gameManager: {fileID: 0}
 --- !u!114 &957020320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10165,6 +10165,8 @@ GameObject:
   - component: {fileID: 1479603004}
   - component: {fileID: 1479603005}
   - component: {fileID: 1479603006}
+  - component: {fileID: 1479603008}
+  - component: {fileID: 1479603007}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -10301,6 +10303,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1479603007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479602999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4132140fac36f494dba33b40c11d1eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitFaction: 0
+--- !u!114 &1479603008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479602999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6797081b7d374478e1e15a2e1bab7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  maxHP: 0
 --- !u!1 &1480184260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14398,8 +14427,6 @@ MonoBehaviour:
   directionalLight: {fileID: 705507994}
   lightPreset: {fileID: 11400000, guid: 7328d41e2ee34984ba9ca1dc4aff63ad, type: 2}
   dayTimer: 0
-  gameTime: 0
-  timeMultiplier: 1
 --- !u!4 &2091315192
 Transform:
   m_ObjectHideFlags: 0

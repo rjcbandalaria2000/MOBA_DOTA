@@ -6602,7 +6602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 957020320}
-  timeManager: {fileID: 2091315191}
+  gameManager: {fileID: 0}
 --- !u!114 &957020320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6879,6 +6879,9 @@ MonoBehaviour:
   scrollSpeed: 20
   minY: 25
   maxY: 90
+  player: {fileID: 0}
+  cameraOffsetX: 0
+  cameraOffsetZ: 0
 --- !u!1 &982978262
 GameObject:
   m_ObjectHideFlags: 0
@@ -12784,8 +12787,6 @@ MonoBehaviour:
   directionalLight: {fileID: 705507994}
   lightPreset: {fileID: 11400000, guid: 7328d41e2ee34984ba9ca1dc4aff63ad, type: 2}
   dayTimer: 0
-  gameTime: 0
-  timeMultiplier: 1
 --- !u!4 &2091315192
 Transform:
   m_ObjectHideFlags: 0
