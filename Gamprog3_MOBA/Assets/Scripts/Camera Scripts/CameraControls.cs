@@ -13,6 +13,10 @@ public class CameraControls : MonoBehaviour
     [SerializeField] private float minY = 25f; 
     [SerializeField] private float maxY = 90f;
 
+    public GameObject player;
+
+    public int cameraOffsetX;
+    public int cameraOffsetZ;
 
     // Start is called before the first frame update
     void Start()
@@ -51,5 +55,17 @@ public class CameraControls : MonoBehaviour
         pos.z = Mathf.Clamp(pos.z, -panLimit_Vertical.x, panLimit_Vertical.y);
 
         transform.position = pos;
+
+        if(Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            focusPlayer();
+        }
+
     }
+
+    public void focusPlayer()
+    {
+        this.transform.position = new Vector3(player.transform.position.x , this.transform.position.y, player.transform.position.z - cameraOffsetZ);
+    }
+
 }
