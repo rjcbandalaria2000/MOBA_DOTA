@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    [SerializeField]
+    HealthComponent unitHealth;
+    [SerializeField]
+    Skill[] unitSkills;
     // Start is called before the first frame update
     void Start()
     {
