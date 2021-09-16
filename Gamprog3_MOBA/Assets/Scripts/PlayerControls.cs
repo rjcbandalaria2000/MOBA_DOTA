@@ -34,14 +34,25 @@ public class PlayerControls : MonoBehaviour
     {
        if (Input.GetMouseButtonDown(1))
        {
-            //RaycastHit hit;
-            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //if (Physics.Raycast(ray.origin, ray.direction, out hit))
-            //{
-            //    player.SetDestination(hit.point);
-            //}
-
-            unitStates = States.Moving;
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray.origin, ray.direction, out hit))
+            {
+                FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
+                if (targetFaction)
+                {
+                    if(targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
+                    {
+                        Debug.Log("Attack Unit");
+                    }
+                }
+                else
+                {
+                    unitStates = States.Moving;
+                }
+            }
+           
+            
        }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -59,12 +70,5 @@ public class PlayerControls : MonoBehaviour
            playerAnimator.SetBool("isMoving", false);
            unitStates = States.Idle;
        }
-
-
-       /* if(Input.GetKeyDown(KeyCode.S))
-        {
-            player.SetDestination(this.transform.position);
-        }
-        */
     }
 }
