@@ -8,6 +8,8 @@ public class Unit : MonoBehaviour
     HealthComponent unitHealth;
     [SerializeField]
     Skill[] unitSkills;
+ 
+
     // Start is called before the first frame update
     void Start()
     {

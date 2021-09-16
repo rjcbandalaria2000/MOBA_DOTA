@@ -43,7 +43,12 @@ public class PlayerControls : MonoBehaviour
                 {
                     if(targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
                     {
+                        
                         Debug.Log("Attack Unit");
+                    }
+                    else
+                    {
+                        Debug.Log("Friendly");
                     }
                 }
                 else
