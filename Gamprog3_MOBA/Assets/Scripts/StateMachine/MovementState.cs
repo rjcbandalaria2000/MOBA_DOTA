@@ -27,18 +27,19 @@ public class MovementState : UnitStateMachine
        
 
         if (Physics.Raycast(ray.origin, ray.direction, out hit) && unit.GetComponent<PlayerControls>().unitStates != States.Idle)
-        {
-           
+        { 
+            
+            //var direction = hit.transform.position - unit.transform.position;
+            //unit.transform.rotation = Quaternion.Slerp(unit.transform.rotation,
+            //    Quaternion.LookRotation(direction),
+            //    rotationSpeed * Time.deltaTime);
+            //Debug.Log("Rotation Speed: " + rotationSpeed);
             unitNavMesh.SetDestination(hit.point);
-
         }
         Debug.Log(Vector3.Distance(unit.transform.position, hit.point));
         if (Vector3.Distance(unit.transform.position, hit.point) <= 2)
         {
             unit.GetComponent<PlayerControls>().unitStates = States.Idle;
-
-          
-            
             // unitNavMesh.SetDestination(hit.point);
         }
 

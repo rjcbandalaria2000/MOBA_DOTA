@@ -8,12 +8,12 @@ public class Unit : MonoBehaviour
     HealthComponent unitHealth;
     [SerializeField]
     Skill[] unitSkills;
- 
+    public float turnRate = 1.0f; 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        unitHealth = this.GetComponent<HealthComponent>();
     }
 
     // Update is called once per frame
