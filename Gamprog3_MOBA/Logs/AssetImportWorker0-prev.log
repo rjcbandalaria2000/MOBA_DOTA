@@ -1,99 +1,304 @@
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.6f1 (c0fade0cc7e9) revision 12647134'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 16229 MB
+OS: 'Windows 10 Home Single Language; OS build 19042.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 32686 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Editor\2021.1.6f1\Editor\Unity.exe
+E:\Program Files\Unity\Hub\Editor\2021.1.6f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Gamprog3_Repo/Gamprog3_MOBA
+E:/Chris Bandalaria/Documents/DLS-CSB/4th Year/1ST TERM/GAMPROG3/MOBA REPOSITORY/Gamprog3_MOBA
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56845
-Successfully changed project path to: D:/Gamprog3_Repo/Gamprog3_MOBA
-D:/Gamprog3_Repo/Gamprog3_MOBA
+63880
+Successfully changed project path to: E:/Chris Bandalaria/Documents/DLS-CSB/4th Year/1ST TERM/GAMPROG3/MOBA REPOSITORY/Gamprog3_MOBA
+E:/Chris Bandalaria/Documents/DLS-CSB/4th Year/1ST TERM/GAMPROG3/MOBA REPOSITORY/Gamprog3_MOBA
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 77.40 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 78.22 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.6f1 (c0fade0cc7e9)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Gamprog3_Repo/Gamprog3_MOBA/Assets
+[Subsystems] Discovering subsystems at path E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Chris Bandalaria/Documents/DLS-CSB/4th Year/1ST TERM/GAMPROG3/MOBA REPOSITORY/Gamprog3_MOBA/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1ba1)
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
     Vendor:   NVIDIA
-    VRAM:     8081 MB
-    Driver:   30.0.14.7141
+    VRAM:     5980 MB
+    Driver:   30.0.14.7196
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56860
+Mono path[0] = 'E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56164
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002079 seconds.
+Register platform support module: E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001043 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 75.58 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 82.26 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.488 seconds
+- Completed reload, in  2.160 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002095 seconds.
+Registered in 0.003124 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.653 seconds
+- Completed reload, in  1.135 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2691 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.3 MB.
-System memory in use after: 101.5 MB.
+Unloading 2702 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.6 MB.
+System memory in use after: 102.8 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3147.
-Total: 2.158900 ms (FindLiveObjects: 0.228500 ms CreateObjectMapping: 0.155000 ms MarkObjects: 1.680600 ms  DeleteObjects: 0.093700 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3160.
+Total: 2.541900 ms (FindLiveObjects: 0.284900 ms CreateObjectMapping: 0.308100 ms MarkObjects: 1.862400 ms  DeleteObjects: 0.085300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Materials/DarkBlue.mat
-  artifactKey: Guid(1ca054b4cf8d6ac4aada83f34f5f021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/DarkBlue.mat using Guid(1ca054b4cf8d6ac4aada83f34f5f021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c00efa1d53ff16272519dbb64bd3f7a') in 0.172724 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000358 seconds.
-  path: Assets/Materials/Red.mat
-  artifactKey: Guid(b48f03e22409b2d41bb98ada7ca7bfa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Red.mat using Guid(b48f03e22409b2d41bb98ada7ca7bfa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe0e68e8e3ee3364b4957966d4df9cc') in 0.006899 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000283 seconds.
-  path: Assets/Materials/Green.mat
-  artifactKey: Guid(497837d2c4f40474e8c3bbe2a7dc2e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Green.mat using Guid(497837d2c4f40474e8c3bbe2a7dc2e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf789bc6d75216b669c15af4bcbb7ad') in 0.006271 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.454753 seconds.
   path: Assets/Materials/WhitePixel.png
   artifactKey: Guid(cd3ef732fbc7f5a47adc525e7fce497d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/WhitePixel.png using Guid(cd3ef732fbc7f5a47adc525e7fce497d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '274a997ff82c3f8a0f6090668bc430f7') in 0.034941 seconds 
+Start importing Assets/Materials/WhitePixel.png using Guid(cd3ef732fbc7f5a47adc525e7fce497d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5267065ce68471c6552a02a9030794f0') in 0.221145 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.676448 seconds.
-  path: Assets/Materials/WhitePixel.png
-  artifactKey: Guid(cd3ef732fbc7f5a47adc525e7fce497d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/WhitePixel.png using Guid(cd3ef732fbc7f5a47adc525e7fce497d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977c769cbe6e4bc44efde12331afa5f6') in 0.030966 seconds 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+  Time since last request: 2688.115727 seconds.
+  path: Assets/Scenes/CHRIS TEST SCENE/CHRIS-SEPARATE MANAGERS.unity
+  artifactKey: Guid(e3f076c15b0535b4793978559953a347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/CHRIS TEST SCENE/CHRIS-SEPARATE MANAGERS.unity using Guid(e3f076c15b0535b4793978559953a347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '345f5e16afd5460521cc787276b41dd8') in 0.014947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.153291 seconds.
+  path: Assets/Scenes/CHRIS TEST SCENE/CHRIS- SELECT TEST.unity
+  artifactKey: Guid(a7ff289bae6bed2488e20ed1be6dcaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/CHRIS TEST SCENE/CHRIS- SELECT TEST.unity using Guid(a7ff289bae6bed2488e20ed1be6dcaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a99a902c93bf2bc14b2498c449d95e9') in 0.017690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.707977 seconds.
+  path: Assets/Scenes/CHRIS TEST SCENE/CHRIS - TEST FACTIONS STATS.unity
+  artifactKey: Guid(a6e4550b7e05f1c4c94b530d5168af45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/CHRIS TEST SCENE/CHRIS - TEST FACTIONS STATS.unity using Guid(a6e4550b7e05f1c4c94b530d5168af45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63d8335fda2b4d1524d522698dee5fc') in 0.018110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.803173 seconds.
+  path: Assets/Scenes/CHRIS TEST SCENE/CHRIS - TEST ATTACK.unity
+  artifactKey: Guid(c45ff5415acc37247aaf324dcf35c2f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/CHRIS TEST SCENE/CHRIS - TEST ATTACK.unity using Guid(c45ff5415acc37247aaf324dcf35c2f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ea6583e97ae3e591b3b398a14e21069') in 0.017685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.378702 seconds.
+  path: Assets/Scenes/CHRIS TEST SCENE/CHRIS - HEALTH UI.unity
+  artifactKey: Guid(2d59909dcd5b58b469df19ac889e6912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/CHRIS TEST SCENE/CHRIS - HEALTH UI.unity using Guid(2d59909dcd5b58b469df19ac889e6912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6343ac30d6d664bfa54125cec63fef0d') in 0.016811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.153195 seconds.
+  path: Assets/Scenes/JaceScene2
+  artifactKey: Guid(522dfc801274fbe4d81e909a862e40db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JaceScene2 using Guid(522dfc801274fbe4d81e909a862e40db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3657a9a0f968388bcc4104ee565d31d') in 0.001534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.028408 seconds.
+  path: Assets/Scenes/JaceScene2/NavMesh.asset
+  artifactKey: Guid(6b1deb45e53dc6045b1c24416e6b8c99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JaceScene2/NavMesh.asset using Guid(6b1deb45e53dc6045b1c24416e6b8c99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba34c3f56cdcb67a7565e8e748c4b87') in 0.004947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.443920 seconds.
+  path: Assets/Scenes/MainScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61fa815459912b615d1302770ad46fef') in 0.019287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.296356 seconds.
+  path: Assets/Scenes/JaceScene2 1.unity
+  artifactKey: Guid(333dd1f142bf129438fb674d2aaad579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JaceScene2 1.unity using Guid(333dd1f142bf129438fb674d2aaad579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b9929832d36f3a2016a07fae7e63500') in 0.002256 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002189 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.827 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2684 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.4 MB.
+System memory in use after: 105.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3184.
+Total: 1.942100 ms (FindLiveObjects: 0.238400 ms CreateObjectMapping: 0.124600 ms MarkObjects: 1.563000 ms  DeleteObjects: 0.015200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 333.122746 seconds.
+  path: Assets/JJ_Casual RPG Character - 8Ekard v1.1
+  artifactKey: Guid(b14cc6c23228b6046a372f14f0e6910d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JJ_Casual RPG Character - 8Ekard v1.1 using Guid(b14cc6c23228b6046a372f14f0e6910d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2056fafcd5889aa3b050fb13376a4ede') in 0.006784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.404333 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Character_icon
+  artifactKey: Guid(e9d8442391c3e2140b4dcdedafa49ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Character_icon using Guid(e9d8442391c3e2140b4dcdedafa49ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59071ba01481bd7fb58c541fd240921b') in 0.001935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.439675 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models
+  artifactKey: Guid(9bb7c97c8979e9345b57e07f62319a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models using Guid(9bb7c97c8979e9345b57e07f62319a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c124388c3f24941d1dca5e8836dad5fc') in 0.001669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.687636 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Animator
+  artifactKey: Guid(b0f7b585e12b5c84aaa71d07dbb632e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Animator using Guid(b0f7b585e12b5c84aaa71d07dbb632e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db510b3f26b20cada23ac4549f622bb') in 0.001681 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.546681 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic
+  artifactKey: Guid(b3c139949f5bafb4a836c438404b860d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic using Guid(b3c139949f5bafb4a836c438404b860d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21489fe53efd9ceef75d9f8334219563') in 0.002102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.092404 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Character_icon/Ekard.png
+  artifactKey: Guid(4622ae0f8369c7c4ca9025114aa3baed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Character_icon/Ekard.png using Guid(4622ae0f8369c7c4ca9025114aa3baed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6090a0c1cbf4757034391695d26740fc') in 0.049491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Character_icon/Ekard_Skill_01.png
+  artifactKey: Guid(5f256795dc4da154d820c9a9262e8048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Character_icon/Ekard_Skill_01.png using Guid(5f256795dc4da154d820c9a9262e8048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35ed8bdac2572acf1ebe604a2ce39be5') in 0.008648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.555059 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps
+  artifactKey: Guid(bf0addfbb85294349bb094c036acc4be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps using Guid(bf0addfbb85294349bb094c036acc4be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a78600466be4f96b09d95e5e08f55c62') in 0.001881 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.042267 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps/Directional light.prefab
+  artifactKey: Guid(5bee18225c6b8614b90b59586bc7a4e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps/Directional light.prefab using Guid(5bee18225c6b8614b90b59586bc7a4e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0ac5ad6fcf518ae1679d19142360cad') in 0.008430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps/Ekard_Generic.prefab
+  artifactKey: Guid(b02dae70454e88b4dabff60c98182c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps/Ekard_Generic.prefab using Guid(b02dae70454e88b4dabff60c98182c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caf87cb99cdba63a8526fd63871ccda6') in 0.254117 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps/Main Camera.prefab
+  artifactKey: Guid(f835c6120f747a749b0a0c10f6c2c572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps/Main Camera.prefab using Guid(f835c6120f747a749b0a0c10f6c2c572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87d7f610b7d21c9ba6ecc726a13cc093') in 0.003635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps/Ekard_Humanoid.prefab
+  artifactKey: Guid(5e948eb931d08954191a1d35a0853595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Prefaps/Ekard_Humanoid.prefab using Guid(5e948eb931d08954191a1d35a0853595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386831c24ef432710a19b26ce97d29ba') in 0.019010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.596689 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Scenes
+  artifactKey: Guid(4435b9f86faa46e4d89ad2ff3daaee3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Scenes using Guid(4435b9f86faa46e4d89ad2ff3daaee3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c752a20728170f0c9f15247ee3b97a18') in 0.019983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.726840 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Scenes/Ekard_Generic.unity
+  artifactKey: Guid(e59b3a4d9d30e764a87ad834e8d46af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Scenes/Ekard_Generic.unity using Guid(e59b3a4d9d30e764a87ad834e8d46af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db040abb506964c2b0d35cd66b5d95c') in 0.002769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.549162 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Scenes/Ekard_Humanoid.unity
+  artifactKey: Guid(66adb79077e938d4a99c6c92bd274be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Scenes/Ekard_Humanoid.unity using Guid(66adb79077e938d4a99c6c92bd274be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd42c0a30fc7cc670e74bd54bff7b955e') in 0.001933 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 95.123034 seconds.
+  path: Assets/Scenes/CHRIS TEST SCENE/CHRIS - HEALTH UI.unity
+  artifactKey: Guid(2d59909dcd5b58b469df19ac889e6912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/CHRIS TEST SCENE/CHRIS - HEALTH UI.unity using Guid(2d59909dcd5b58b469df19ac889e6912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9324f5c85b0e20979c4a5d1fb3870b7c') in 0.002372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.491691 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard.FBX
+  artifactKey: Guid(b3ac7d864261a9746b9ce84cdf06505d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard.FBX using Guid(b3ac7d864261a9746b9ce84cdf06505d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ea5391963e1b6386acccfa2b7d72e94') in 0.279424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_BattleIdle_01.fbx
+  artifactKey: Guid(b5610fb212a268243906cd0023ba0c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_BattleIdle_01.fbx using Guid(b5610fb212a268243906cd0023ba0c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0555a8b54884c733523dc3606041cbf') in 0.025152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Run_01.fbx
+  artifactKey: Guid(70f750aa77c120e4eb96fd01f061941d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Run_01.fbx using Guid(70f750aa77c120e4eb96fd01f061941d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70332e9ef6004f55d47fbecf95978860') in 0.023864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Attack_02.fbx
+  artifactKey: Guid(c1e3e83c912d822479af4fa1aae5eb42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Attack_02.fbx using Guid(c1e3e83c912d822479af4fa1aae5eb42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52f6a28eee26d2afcc15175936c35e02') in 0.025249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Attack_01.FBX
+  artifactKey: Guid(9758fdb7e722ee44287681dc667ee36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Attack_01.FBX using Guid(9758fdb7e722ee44287681dc667ee36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca75d9f689e8dd069375adf116bae704') in 0.022064 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Sword_12.FBX
+  artifactKey: Guid(fc9c3be43ccf0d04da42bfe4759dfbb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Sword_12.FBX using Guid(fc9c3be43ccf0d04da42bfe4759dfbb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e58957ed0d3730156461c43975b4b86') in 0.018224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Debuff_01.fbx
+  artifactKey: Guid(e6c9b4210a146794792aff515491ba16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Debuff_01.fbx using Guid(e6c9b4210a146794792aff515491ba16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '219e3ceaaccb9a91dd2b5aad0fda89c5') in 0.020295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Skill_01.fbx
+  artifactKey: Guid(74a0e06cc2ddac34f9a7187a91b08317) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Skill_01.fbx using Guid(74a0e06cc2ddac34f9a7187a91b08317) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59dcb81f6b7adf3c05190642a32ae664') in 0.021552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Stun_01.fbx
+  artifactKey: Guid(0e6f6c073ade8d240bcdf45767f1b953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Generic/Ekard_Stun_01.fbx using Guid(0e6f6c073ade8d240bcdf45767f1b953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3843453a001730326db7f28f563cec0c') in 0.022612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.148448 seconds.
+  path: Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Animator/Ekard_Generic.controller
+  artifactKey: Guid(dd1ba564703fb8240bb69db69f4af349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/JJ_Casual RPG Character - 8Ekard v1.1/Models/Animator/Ekard_Generic.controller using Guid(dd1ba564703fb8240bb69db69f4af349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47d240c97e7a393b8c2a5252ae2485fa') in 0.009579 seconds 
