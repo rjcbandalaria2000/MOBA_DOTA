@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 6b1deb45e53dc6045b1c24416e6b8c99, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 12412df388e317740a039d2c61edff91, type: 2}
 --- !u!1 &21379453
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,13 +5232,12 @@ GameObject:
   - component: {fileID: 675634897}
   - component: {fileID: 675634900}
   - component: {fileID: 675634899}
-  - component: {fileID: 675634898}
   m_Layer: 6
   m_Name: Base_BlueUIBlock (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 3
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &675634897
 Transform:
@@ -5254,20 +5253,6 @@ Transform:
   m_Father: {fileID: 1318814836}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &675634898
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675634896}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &675634899
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9001,7 +8986,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1179244158}
-  - component: {fileID: 1179244160}
   - component: {fileID: 1179244159}
   m_Layer: 0
   m_Name: TargetCollider
@@ -9036,19 +9020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc239d518d67c649a449bee113c4d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &1179244160
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179244157}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1184253338
 GameObject:
   m_ObjectHideFlags: 0
@@ -15573,7 +15544,6 @@ GameObject:
   - component: {fileID: 2085375964}
   - component: {fileID: 2085375967}
   - component: {fileID: 2085375966}
-  - component: {fileID: 2085375965}
   m_Layer: 6
   m_Name: TowerUIBlock (4)
   m_TagString: Untagged
@@ -15595,20 +15565,6 @@ Transform:
   m_Father: {fileID: 1340441839}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &2085375965
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085375963}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2085375966
 MeshRenderer:
   m_ObjectHideFlags: 0

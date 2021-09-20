@@ -67,6 +67,7 @@ MonoBehaviour:
   isMoving: 0
   isAttacking: 0
   attackInterval: 0
+  rotationSpeed: 0
 --- !u!1102 &-3315398481927023185
 AnimatorState:
   serializedVersion: 6
@@ -110,6 +111,7 @@ MonoBehaviour:
   isMoving: 0
   isAttacking: 0
   attackInterval: 0
+  rotationSpeed: 0
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -124,19 +126,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isAttacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attackInterval
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

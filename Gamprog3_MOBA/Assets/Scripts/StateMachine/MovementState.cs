@@ -26,7 +26,7 @@ public class MovementState : UnitStateMachine
 
        
 
-        if (Physics.Raycast(ray.origin, ray.direction, out hit) && unit.GetComponent<PlayerControls>().unitStates != States.Idle)
+        if (Physics.Raycast(ray.origin, ray.direction, out hit)) //&& unit.GetComponent<PlayerControls>().unitStates != States.Idle)
         { 
             
             //var direction = hit.transform.position - unit.transform.position;
