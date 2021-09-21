@@ -20,14 +20,22 @@ public class DetectTarget : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         FactionComponent targetFaction = other.gameObject.GetComponent<FactionComponent>();
-        if (targetFaction.unitFaction != this.transform.parent.gameObject.GetComponent<FactionComponent>().unitFaction)
+        if (targetFaction)
         {
-            Unit targetUnit = other.gameObject.GetComponent<Unit>();
-            if (targetUnit)
+            if (targetFaction.unitFaction != this.transform.parent.gameObject.GetComponent<FactionComponent>().unitFaction)
             {
+                Unit targetUnit = other.gameObject.GetComponent<Unit>();
+                if (targetUnit)
+                    {
                 unit.GetComponent<PlayerControls>().unitStates = States.Attacking;
                 Debug.Log("Attacking Enemy");
+                }
             }
         }
+        else
+        {
+            Debug.Log("No Faction");
+        }
+       
     }
 }
