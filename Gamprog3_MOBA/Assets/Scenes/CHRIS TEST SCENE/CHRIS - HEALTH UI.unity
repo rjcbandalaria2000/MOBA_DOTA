@@ -2403,7 +2403,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2411,7 +2411,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.68
+  m_Height: 0.00001
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -2448,6 +2448,20 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6229006255646631607, guid: 5e948eb931d08954191a1d35a0853595, type: 3}
   m_PrefabInstance: {fileID: 303774599}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &303774607
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303774600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.21393013
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0.01, y: 0.22, z: 0}
 --- !u!1 &306848017
 GameObject:
   m_ObjectHideFlags: 0
