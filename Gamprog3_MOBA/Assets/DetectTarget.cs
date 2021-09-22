@@ -5,10 +5,12 @@ using UnityEngine;
 public class DetectTarget : MonoBehaviour
 {
     GameObject unit;
+    public Animator playerAnimator;
     // Start is called before the first frame update
     void Start()
     {
         unit = this.transform.parent.gameObject;
+        playerAnimator = this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,8 @@ public class DetectTarget : MonoBehaviour
             Unit targetUnit = other.gameObject.GetComponent<Unit>();
             if (targetUnit)
             {
-                unit.GetComponent<PlayerControls>().unitStates = States.Attacking;
+                // unit.GetComponent<PlayerControls>().unitStates = States.Attacking;
+                playerAnimator.SetBool("IsAttacking", true);
                 Debug.Log("Attacking Enemy");
             }
         }

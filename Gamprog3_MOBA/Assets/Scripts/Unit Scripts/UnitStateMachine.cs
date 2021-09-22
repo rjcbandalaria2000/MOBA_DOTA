@@ -16,15 +16,13 @@ public class UnitStateMachine : StateMachineBehaviour
     public float rotationSpeed = 0.0f; 
     
 
+
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
         unit = animator.gameObject;
-        if (unit)
-        {
-            rotationSpeed = unit.GetComponent<Unit>().turnRate;
-        }
+       
        // NavMeshAgent unitNavMesh = unit.GetComponent<NavMeshAgent>();
     }
 

@@ -2391,8 +2391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f30f278c3bb002448658b055a0ad5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitStates: 0
   playerAnimator: {fileID: 303774606}
+  newPos: {x: 0, y: 0, z: 0}
 --- !u!195 &303774603
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2448,20 +2448,22 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6229006255646631607, guid: 5e948eb931d08954191a1d35a0853595, type: 3}
   m_PrefabInstance: {fileID: 303774599}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &303774607
-CapsuleCollider:
+--- !u!54 &303774607
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303774600}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.21393013
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0.01, y: 0.22, z: 0}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &306848017
 GameObject:
   m_ObjectHideFlags: 0
@@ -9034,6 +9036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc239d518d67c649a449bee113c4d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
 --- !u!1 &1184253338
 GameObject:
   m_ObjectHideFlags: 0
@@ -10905,7 +10908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &1479603000
 CapsuleCollider:
   m_ObjectHideFlags: 0
