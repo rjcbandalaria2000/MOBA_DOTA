@@ -8,8 +8,8 @@ public class Unit : MonoBehaviour
     HealthComponent unitHealth;
     [SerializeField]
     Skill[] unitSkills;
-    public float turnRate = 1.0f; 
-
+    public float turnRate = 1.0f / GameManager.distanceUnit; 
+        
     // Start is called before the first frame update
     void Start()
     {

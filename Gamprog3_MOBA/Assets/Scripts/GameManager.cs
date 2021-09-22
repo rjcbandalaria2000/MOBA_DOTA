@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     float gameTime = 0;
-    
+
+    public static float distanceUnit = 85.714f; // Distance Formula: 1200(Dota Units) / 14(Unity Units)
 
     // Start is called before the first frame update
     void Start()
