@@ -7,7 +7,10 @@ public class MovementState : UnitStateMachine
 {
     NavMeshAgent unitNavMesh;
     Ray ray;
-    RaycastHit hit; 
+    RaycastHit hit;
+
+    Vector3 newLocation;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -23,24 +26,25 @@ public class MovementState : UnitStateMachine
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
+        newLocation = unit.GetComponent<PlayerControls>().newPos;
 
        
 
-        if (Physics.Raycast(ray.origin, ray.direction, out hit)) //&& unit.GetComponent<PlayerControls>().unitStates != States.Idle)
-        { 
-            
-            //var direction = hit.transform.position - unit.transform.position;
-            //unit.transform.rotation = Quaternion.Slerp(unit.transform.rotation,
-            //    Quaternion.LookRotation(direction),
-            //    rotationSpeed * Time.deltaTime);
-            //Debug.Log("Rotation Speed: " + rotationSpeed);
-            unitNavMesh.SetDestination(hit.point);
-        }
-        //Debug.Log(Vector3.Distance(unit.transform.position, hit.point));
-        if (Vector3.Distance(unit.transform.position, hit.point) <= 2)
+        Debug.Log(Vector3.Distance(unit.transform.position,newLocation));
+
+        if (newLocation != null)
         {
-            unit.GetComponent<PlayerControls>().unitStates = States.Idle;
-            // unitNavMesh.SetDestination(hit.point);
+            unitNavMesh.SetDestination(newLocation);
+        }
+        else
+        {
+            unit.GetComponent<Animator>().SetBool("IsMoving", false);
+        }
+
+       if (Vector3.Distance(unit.transform.position, newLocation) <= 0.1 )
+        {
+            newLocation = Vector3.zero;
+            unit.GetComponent<Animator>().SetBool("IsMoving", false);
         }
 
 
@@ -53,19 +57,14 @@ public class MovementState : UnitStateMachine
         base.OnStateExit(animator, stateInfo, layerIndex);
 
         unitNavMesh.SetDestination(unit.transform.position);
-
+        unit.GetComponent<PlayerControls>().newPos =  Vector3.zero;
         Debug.Log("Exit movement");
     }
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
+
+
+ //var direction = hit.transform.position - unit.transform.position;
+            //unit.transform.rotation = Quaternion.Slerp(unit.transform.rotation,
+            //    Quaternion.LookRotation(direction),
+            //    rotationSpeed * Time.deltaTime);
+            //Debug.Log("Rotation Speed: " + rotationSpeed);
