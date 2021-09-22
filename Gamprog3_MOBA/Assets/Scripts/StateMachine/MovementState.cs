@@ -20,6 +20,7 @@ public class MovementState : UnitStateMachine
 
         unitNavMesh = unit.GetComponent<NavMeshAgent>();
 
+       
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -47,7 +48,7 @@ public class MovementState : UnitStateMachine
             unit.GetComponent<Animator>().SetBool("IsMoving", false);
         }
 
-
+       
 
     }
 
@@ -63,8 +64,8 @@ public class MovementState : UnitStateMachine
 }
 
 
- //var direction = hit.transform.position - unit.transform.position;
-            //unit.transform.rotation = Quaternion.Slerp(unit.transform.rotation,
-            //    Quaternion.LookRotation(direction),
-            //    rotationSpeed * Time.deltaTime);
-            //Debug.Log("Rotation Speed: " + rotationSpeed);
+//var direction = hit.transform.position - unit.transform.position;
+//unit.transform.rotation = Quaternion.Slerp(unit.transform.rotation,
+//    Quaternion.LookRotation(direction),
+//    rotationSpeed * Time.deltaTime);
+//Debug.Log("Rotation Speed: " + rotationSpeed);

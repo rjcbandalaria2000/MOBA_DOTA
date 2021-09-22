@@ -27,7 +27,9 @@ public class PlayerControls : MonoBehaviour
     {
         //player = this.GetComponent<NavMeshAgent>();
         playerAnimator = this.GetComponent<Animator>();
-      
+
+    
+
        // unitStates = States.Idle;
 
     }
