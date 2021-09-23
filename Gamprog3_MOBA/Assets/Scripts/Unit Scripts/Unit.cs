@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField]
-    HealthComponent unitHealth;
+    public string name;
+
+    
+    public HealthComponent unitHealth;
     [SerializeField]
     Skill[] unitSkills;
     public float turnRate = 1.0f / GameManager.distanceUnit; 
+
+
         
     // Start is called before the first frame update
     void Start()
