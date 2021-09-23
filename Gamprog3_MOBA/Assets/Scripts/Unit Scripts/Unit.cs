@@ -5,6 +5,8 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     [SerializeField]
+    public GameObject targetInRange;
+    [SerializeField]
     public GameObject target;
     [SerializeField]
     Skill[] unitSkills;
