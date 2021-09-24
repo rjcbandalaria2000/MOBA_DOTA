@@ -29,6 +29,15 @@ public class UnitStateMachine : StateMachineBehaviour
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
+        if (unit.GetComponent<Unit>().target)
+        {
+            target = unit.GetComponent<Unit>().target;
+            animator.SetFloat("Distance", Vector3.Distance(unit.transform.position, target.transform.position));
+        }
+        else
+        {
+            animator.SetFloat("Distance", 0);
+        }
     }
 
 

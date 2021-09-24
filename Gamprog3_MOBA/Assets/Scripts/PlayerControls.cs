@@ -41,49 +41,39 @@ public class PlayerControls : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(1))
-       {
+        {
            
             playerAnimator.SetBool("IsMoving", true);
 
             if (Physics.Raycast(ray.origin, ray.direction, out hit)) //&& unit.GetComponent<PlayerControls>().unitStates != States.Idle)
-            {
+            { }
+                FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
+                if (targetFaction)
+                {
+                    if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
+                    {
 
-                newPos = hit.point;
+                    Debug.Log("Attack Unit");
+                    }
+                    else
+                    {
+                    Debug.Log("Friendly");
+                    }
+                }
+                else
+                {
+                    newPos = hit.point;
+                }
                 
-            }
-
-
-            /* RaycastHit hit;
-             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-             if (Physics.Raycast(ray.origin, ray.direction, out hit))
-             {
-                 newPos = hit.point;
-
-                 FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
-                 if (targetFaction)
-                 {
-                     if(targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
-                     {
-
-                         Debug.Log("Attack Unit");
-                     }
-                     else
-                     {
-                         Debug.Log("Friendly");
-                     }
-                 }
-             }*/
-
         }
-
-
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             playerAnimator.SetBool("IsMoving", false);
             newPos = this.transform.position;
-           // unitStates = States.Idle;
+           
         }
+
 
        /*if (unitStates == States.Moving)
        {

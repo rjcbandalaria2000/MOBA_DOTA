@@ -32,10 +32,10 @@ public class DetectTarget : MonoBehaviour
                 Unit targetUnit = other.gameObject.GetComponent<Unit>();
                 if (targetUnit)
                 {
-                    unit.GetComponent<Unit>().target = targetUnit.gameObject;
+                    //unit.GetComponent<Unit>().target = targetUnit.gameObject;
                     // unit.GetComponent<PlayerControls>().unitStates = States.Attacking;
                     // playerAnimator.SetBool("IsAttacking", true);
-                    Debug.Log("Attacking Enemy");
+                    //Debug.Log("Attacking Enemy");
                 }
             }
         }
