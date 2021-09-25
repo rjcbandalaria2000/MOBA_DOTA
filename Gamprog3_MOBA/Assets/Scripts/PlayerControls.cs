@@ -46,25 +46,27 @@ public class PlayerControls : MonoBehaviour
             playerAnimator.SetBool("IsMoving", true);
 
             if (Physics.Raycast(ray.origin, ray.direction, out hit)) //&& unit.GetComponent<PlayerControls>().unitStates != States.Idle)
-            { }
+            {
                 FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
                 if (targetFaction)
                 {
                     if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
                     {
+                        Unit controlledUnit = this.GetComponent<Unit>();
+                        controlledUnit.target = hit.transform.gameObject;
+                        Debug.Log("Attack Unit");
 
-                    Debug.Log("Attack Unit");
                     }
                     else
                     {
-                    Debug.Log("Friendly");
+                        Debug.Log("Friendly");
                     }
                 }
                 else
                 {
                     newPos = hit.point;
                 }
-                
+            } 
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -73,17 +75,6 @@ public class PlayerControls : MonoBehaviour
             newPos = this.transform.position;
            
         }
-
-
-       /*if (unitStates == States.Moving)
-       {
-           playerAnimator.SetBool("isMoving", true);
-       }
-       else
-       {
-           playerAnimator.SetBool("isMoving", false);
-           unitStates = States.Idle;
-       }*/
     }
 
    
