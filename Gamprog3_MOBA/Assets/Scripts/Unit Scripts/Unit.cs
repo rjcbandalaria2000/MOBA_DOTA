@@ -9,14 +9,13 @@ public class Unit : MonoBehaviour
     
     public HealthComponent unitHealth;
     [SerializeField]
-    public GameObject targetInRange;
-    [SerializeField]
     public GameObject target;
     [SerializeField]
     Skill[] unitSkills;
+    //For attack test, will make a component for attack
     [SerializeField]
     public float attackRange;
-     
+    public float damage;
     public float turnRate = 1.0f / GameManager.distanceUnit; 
 
 
@@ -32,5 +31,26 @@ public class Unit : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void UseSkill()
+    {
+        // Attack skill for testing 
+        Unit unitTarget = target.GetComponent<Unit>();
+        if (unitTarget)
+        {
+            FactionComponent targetFaction = target.GetComponent<FactionComponent>();
+            if (targetFaction)
+            {
+                if(targetFaction.unitFaction != this.gameObject.GetComponent<FactionComponent>().unitFaction)
+                {
+                    HealthComponent targetHealth = target.GetComponent<HealthComponent>();
+                    if (targetHealth)
+                    {
+                        targetHealth.TakeDamage(damage);
+                    }
+                }
+            }
+        }
     }
 }
