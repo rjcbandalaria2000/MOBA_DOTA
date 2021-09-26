@@ -22,6 +22,7 @@ public class ChaseState : UnitStateMachine
         if (animator.GetFloat("Distance") > unit.GetComponent<Unit>().attackRange)
         {
             unitNavmesh.SetDestination(target.transform.position);
+            animator.SetBool("IsMoving", true);
         }
         else
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Unit : MonoBehaviour
 {
@@ -16,14 +17,14 @@ public class Unit : MonoBehaviour
     [SerializeField]
     public float attackRange;
     public float damage;
-    public float turnRate = 1.0f / GameManager.distanceUnit; 
-
-
+    public float turnRate = 1.0f / GameManager.distanceUnit;
+    public float moveSpeed = 0;
+    NavMeshAgent unitNavmesh;
         
     // Start is called before the first frame update
     void Start()
     {
-        attackRange /= GameManager.distanceUnit;
+        InitializeUnit();
 
     }
 
@@ -31,6 +32,18 @@ public class Unit : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void InitializeUnit()
+    {
+        attackRange /= GameManager.distanceUnit;
+        moveSpeed /= GameManager.distanceUnit;
+        unitNavmesh = this.GetComponent<NavMeshAgent>();
+        
+        if (unitNavmesh)
+        {
+            unitNavmesh.speed = moveSpeed;
+        }
     }
 
     public void UseSkill()

@@ -7,7 +7,11 @@ public class UnitStats : MonoBehaviour
     public float baseDamage;
     public int strength;
     public int intelligence;
-    public int agility; 
+    public int agility;
+    public int movementSpeed;
+    public int attackSpeed; 
+    
+
     
     // Start is called before the first frame update
     void Start()

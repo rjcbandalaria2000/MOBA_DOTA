@@ -16,11 +16,16 @@ public class AttackState : UnitStateMachine
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         if (animator.GetFloat("Distance") <= unit.GetComponent<Unit>().attackRange)
         {
+           
+            animator.SetBool("IsMoving", false);
             Debug.Log("Attack");
+            animator.SetBool("IsAttacking", false);
+            
         }
         else
         {
             animator.SetBool("inRange", false);
+            animator.SetBool("IsAttacking", false);
         }
     }
 

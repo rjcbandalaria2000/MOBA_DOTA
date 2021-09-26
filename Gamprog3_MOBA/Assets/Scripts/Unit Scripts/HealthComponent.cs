@@ -48,9 +48,23 @@ public class HealthComponent : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if(currentHP > 0)
+        if (currentHP > 0)
         {
             currentHP -= damage;
         }
+        else
+        {
+            Death();
+        }
+    }
+
+    public void Death()
+    {
+        OnDeath();
+    }
+
+    public void OnDeath()
+    {
+        Debug.Log("Unit Dead");
     }
 }
