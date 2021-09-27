@@ -12,7 +12,8 @@ public enum States
 
 public class PlayerControls : MonoBehaviour
 {
-    //public GameObject player;
+    [SerializeField]
+    GameObject arrowIndicator;
 
     //public NavMeshAgent player;
 
@@ -47,6 +48,7 @@ public class PlayerControls : MonoBehaviour
 
             if (Physics.Raycast(ray.origin, ray.direction, out hit)) //&& unit.GetComponent<PlayerControls>().unitStates != States.Idle)
             {
+                SpawnArrowIndicator(hit.point);
                 FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
                 if (targetFaction)
                 {
@@ -89,5 +91,14 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-   
+   void SpawnArrowIndicator(Vector3 location)
+    {
+        GameObject spawnedArrow = Instantiate(arrowIndicator, location, Quaternion.identity);
+        if (spawnedArrow)
+        {
+            Destroy(spawnedArrow, 0.5f);
+        }
+        
+        
+    }
 }

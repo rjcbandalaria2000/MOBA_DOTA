@@ -17,6 +17,7 @@ public class DisplayHealthBar : MonoBehaviour
         healthSlider = this.GetComponent<Slider>();
         healthComponent = this.transform.parent.gameObject.transform.parent.
             GetComponent<HealthComponent>();
+        SetMaxHealth(healthComponent.GetMaxHP());
     }
     public void SetCurrentHealth(float health)
     {

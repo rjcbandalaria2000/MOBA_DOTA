@@ -144,6 +144,7 @@ MonoBehaviour:
   attackInterval: 1.7
   attackTime: 0
   rotationSpeed: 0
+  locationAccuracy: 1
 --- !u!114 &-4513873741324841639
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,6 +164,7 @@ MonoBehaviour:
   attackInterval: 0
   attackTime: 0
   rotationSpeed: 0
+  locationAccuracy: 1
 --- !u!1102 &-3315398481927023185
 AnimatorState:
   serializedVersion: 6
@@ -236,6 +238,7 @@ MonoBehaviour:
   attackInterval: 0
   attackTime: 0
   rotationSpeed: 0
+  locationAccuracy: 1
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -268,7 +271,7 @@ AnimatorController:
     m_DefaultFloat: 1.7
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: inRange
     m_Type: 4
     m_DefaultFloat: 0
@@ -311,7 +314,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 70f750aa77c120e4eb96fd01f061941d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -435,10 +438,10 @@ AnimatorStateMachine:
     m_Position: {x: 530, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3315398481927023185}
-    m_Position: {x: 600, y: 200, z: 0}
+    m_Position: {x: 590, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 899212082366744581}
-    m_Position: {x: 590, y: 120, z: 0}
+    m_Position: {x: 610, y: 100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -497,3 +500,4 @@ MonoBehaviour:
   attackInterval: 0
   attackTime: 0
   rotationSpeed: 0
+  locationAccuracy: 1

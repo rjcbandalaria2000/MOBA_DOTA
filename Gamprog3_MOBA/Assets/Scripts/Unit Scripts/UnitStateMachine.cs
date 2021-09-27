@@ -14,7 +14,9 @@ public class UnitStateMachine : StateMachineBehaviour
     public float attackInterval;
     [SerializeField]
     protected float attackTime;
-    public float rotationSpeed = 0.0f; 
+    public float rotationSpeed = 0.0f;
+    [SerializeField]
+    protected float locationAccuracy = 1;
     
 
 
