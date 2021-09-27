@@ -64,6 +64,12 @@ public class PlayerControls : MonoBehaviour
                 }
                 else
                 {
+                    //Clears the selected target
+                    Unit controlledUnit = this.GetComponent<Unit>();
+                    if (controlledUnit.target)
+                    {
+                        controlledUnit.target = null;
+                    }
                     newPos = hit.point;
                 }
             } 
@@ -73,7 +79,13 @@ public class PlayerControls : MonoBehaviour
         {
             playerAnimator.SetBool("IsMoving", false);
             newPos = this.transform.position;
-           
+            //Clears the selected target 
+            Unit controlledUnit = this.GetComponent<Unit>();
+            if (controlledUnit.target)
+            {
+                controlledUnit.target = null;
+            }
+
         }
     }
 
