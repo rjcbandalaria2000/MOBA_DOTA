@@ -48,14 +48,14 @@ public class HealthComponent : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (currentHP > 0)
+        currentHP -= damage;
+        if (currentHP <= 0)
         {
-            currentHP -= damage;
-        }
-        else
-        {
+            currentHP = 0;
             Death();
+            
         }
+       
     }
 
     public void Death()
@@ -65,6 +65,7 @@ public class HealthComponent : MonoBehaviour
 
     public void OnDeath()
     {
+        Destroy(this.gameObject);
         Debug.Log("Unit Dead");
     }
 }
