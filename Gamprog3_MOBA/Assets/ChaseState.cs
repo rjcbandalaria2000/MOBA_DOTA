@@ -1,31 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class AttackState : UnitStateMachine
+public class ChaseState : UnitStateMachine
 {
+    NavMeshAgent unitNavmesh;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
+
+        unitNavmesh = unit.GetComponent<NavMeshAgent>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
-        if (animator.GetFloat("Distance") <= unit.GetComponent<Unit>().attackRange)
+        if (animator.GetFloat("Distance") > unit.GetComponent<Unit>().attackRange)
         {
-           
-            animator.SetBool("IsMoving", false);
-            Debug.Log("Attack");
-            animator.SetBool("IsAttacking", false);
-            
+            unitNavmesh.SetDestination(target.transform.position);
+            animator.SetBool("IsMoving", true);
         }
         else
         {
-            animator.SetBool("inRange", false);
-            animator.SetBool("IsAttacking", false);
+            unit.transform.position = unit.transform.position;
+            Debug.Log("Target In Range");
+            animator.SetBool("inRange", true);
         }
     }
 
@@ -34,4 +37,6 @@ public class AttackState : UnitStateMachine
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
     }
+
+  
 }

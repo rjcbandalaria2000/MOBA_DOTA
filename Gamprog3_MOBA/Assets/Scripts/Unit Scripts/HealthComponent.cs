@@ -12,7 +12,6 @@ public class HealthComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         currentHP = maxHP;
     }
 
@@ -45,5 +44,27 @@ public class HealthComponent : MonoBehaviour
     public void SetMaxHP(float maxHealth)
     {
         maxHP = maxHealth;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (currentHP > 0)
+        {
+            currentHP -= damage;
+        }
+        else
+        {
+            Death();
+        }
+    }
+
+    public void Death()
+    {
+        OnDeath();
+    }
+
+    public void OnDeath()
+    {
+        Debug.Log("Unit Dead");
     }
 }

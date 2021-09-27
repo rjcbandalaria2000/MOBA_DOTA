@@ -42,11 +42,11 @@ public class MovementState : UnitStateMachine
             unit.GetComponent<Animator>().SetBool("IsMoving", false);
         }
 
-       if (Vector3.Distance(unit.transform.position, newLocation) <= 1 )
-        {
+       if (Vector3.Distance(unit.transform.position, newLocation) <= locationAccuracy )
+       {
             newLocation = Vector3.zero;
             unit.GetComponent<Animator>().SetBool("IsMoving", false);
-        }
+       }
 
        
 

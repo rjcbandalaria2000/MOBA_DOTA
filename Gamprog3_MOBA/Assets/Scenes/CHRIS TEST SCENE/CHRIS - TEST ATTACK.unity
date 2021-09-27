@@ -9649,6 +9649,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugPanel: {fileID: 1944588102}
+  name: {fileID: 0}
+  HP_Bar: {fileID: 0}
 --- !u!4 &1321666144
 Transform:
   m_ObjectHideFlags: 0
@@ -10769,8 +10771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f30f278c3bb002448658b055a0ad5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitStates: 0
   playerAnimator: {fileID: 0}
+  newPos: {x: 0, y: 0, z: 0}
 --- !u!54 &1479603006
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10845,8 +10847,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9fbe046de036dc4daad852ec48f4a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
   unitHealth: {fileID: 1479603009}
+  targetInRange: {fileID: 0}
+  target: {fileID: 0}
   unitSkills: []
+  attackRange: 0
+  turnRate: 0.011666706
 --- !u!1 &1480184260
 GameObject:
   m_ObjectHideFlags: 0

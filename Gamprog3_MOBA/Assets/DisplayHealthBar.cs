@@ -7,13 +7,17 @@ public class DisplayHealthBar : MonoBehaviour
 {
     [SerializeField]
     Slider healthSlider;
-
+    [SerializeField]
+    HealthComponent healthComponent; 
 
 
     // Start is called before the first frame update
     void Start()
     {
         healthSlider = this.GetComponent<Slider>();
+        healthComponent = this.transform.parent.gameObject.transform.parent.
+            GetComponent<HealthComponent>();
+        SetMaxHealth(healthComponent.GetMaxHP());
     }
     public void SetCurrentHealth(float health)
     {
@@ -25,5 +29,10 @@ public class DisplayHealthBar : MonoBehaviour
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
     }
-    
+
+    private void Update()
+    {
+        healthSlider.value = healthComponent.GetCurrentHealth();
+    }
+
 }

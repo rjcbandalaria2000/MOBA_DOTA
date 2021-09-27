@@ -12,7 +12,8 @@ public enum States
 
 public class PlayerControls : MonoBehaviour
 {
-    //public GameObject player;
+    [SerializeField]
+    GameObject arrowIndicator;
 
     //public NavMeshAgent player;
 
@@ -41,60 +42,63 @@ public class PlayerControls : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(1))
-       {
+        {
            
             playerAnimator.SetBool("IsMoving", true);
 
             if (Physics.Raycast(ray.origin, ray.direction, out hit)) //&& unit.GetComponent<PlayerControls>().unitStates != States.Idle)
             {
+                SpawnArrowIndicator(hit.point);
+                FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
+                if (targetFaction)
+                {
+                    if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
+                    {
+                        Unit controlledUnit = this.GetComponent<Unit>();
+                        controlledUnit.target = hit.transform.gameObject;
+                        Debug.Log("Attack Unit");
 
-                newPos = hit.point;
-                
-            }
-
-
-            /* RaycastHit hit;
-             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-             if (Physics.Raycast(ray.origin, ray.direction, out hit))
-             {
-                 newPos = hit.point;
-
-                 FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
-                 if (targetFaction)
-                 {
-                     if(targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
-                     {
-
-                         Debug.Log("Attack Unit");
-                     }
-                     else
-                     {
-                         Debug.Log("Friendly");
-                     }
-                 }
-             }*/
-
+                    }
+                    else
+                    {
+                        Debug.Log("Friendly");
+                    }
+                }
+                else
+                {
+                    //Clears the selected target
+                    Unit controlledUnit = this.GetComponent<Unit>();
+                    if (controlledUnit.target)
+                    {
+                        controlledUnit.target = null;
+                    }
+                    newPos = hit.point;
+                }
+            } 
         }
-
-
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             playerAnimator.SetBool("IsMoving", false);
             newPos = this.transform.position;
-           // unitStates = States.Idle;
-        }
+            //Clears the selected target 
+            Unit controlledUnit = this.GetComponent<Unit>();
+            if (controlledUnit.target)
+            {
+                controlledUnit.target = null;
+            }
 
-       /*if (unitStates == States.Moving)
-       {
-           playerAnimator.SetBool("isMoving", true);
-       }
-       else
-       {
-           playerAnimator.SetBool("isMoving", false);
-           unitStates = States.Idle;
-       }*/
+        }
     }
 
-   
+   void SpawnArrowIndicator(Vector3 location)
+    {
+        GameObject spawnedArrow = Instantiate(arrowIndicator, location, Quaternion.identity);
+        if (spawnedArrow)
+        {
+            Destroy(spawnedArrow, 0.5f);
+        }
+        
+        
+    }
 }
