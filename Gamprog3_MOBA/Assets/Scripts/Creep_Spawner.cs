@@ -6,21 +6,51 @@ public class Creep_Spawner : MonoBehaviour
 {
     public GameObject[] creeps;
     public List<Transform> waypoint = new List<Transform>();
-   // public int creepIndex; 
-    public GameObject spawnPoint;
-   // public int SiegeSpawn = SingletonManager.Get<GameManager>().GetWaves() % 5;
+    [SerializeField]
+    int creepIndex = 0;
+    public GameObject spawner;
+    public Creeps_ScriptableObject creepScript;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject meeleMinions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
-        //GameObject rangeMinions = Instantiate(creeps[1], spawner.transform.position, Quaternion.identity);
+        //CreepSpawning(3);
+        StartCoroutine(SpawnCreepsRoutine());
     }
 
     // Update is called once per frame
     void Update()
     {
       
+    }
+
+    IEnumerator SpawnCreepsRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(10.0f);
+            Debug.Log("SpawnTime");
+        
+            CreepSpawning(3);
+        }
+        
+        
+      
+        
+    }
+
+    void CreepSpawning(int numOfCreeps)
+    {
+        for (int i = 0; i < numOfCreeps; i++)
+        {
+            Debug.Log("Spawn for the love of God");
+            GameObject minions = Instantiate(creeps[creepIndex], spawner.transform.position, Quaternion.identity);
+            Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
+            if (spawnedMinion)
+            {
+                //spawnedMinion.SetDamage(creepScript.ATK);
+            }
+        }
     }
 }

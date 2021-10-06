@@ -7,7 +7,6 @@ public class Unit : MonoBehaviour
 {
     public string name;
 
-    public HealthComponent unitHealth;
     [SerializeField]
     public GameObject target;
     [SerializeField]
@@ -20,21 +19,18 @@ public class Unit : MonoBehaviour
     public float moveSpeed = 0;
     NavMeshAgent unitNavmesh;
 
-    public Creeps_ScriptableObject creepsObj;
+    public float GetDamage()
+    {
+        return damage;
+    }
+    public void SetDamage(float damageValue)
+    {
+        damage = damageValue;
+    }
         
     // Start is called before the first frame update
     void Start()
     {
-        if(creepsObj != null)
-        {
-            InitializeCreeps();
-        }
-        else // Hero Characters
-        {
-            InitializeUnit();
-        }
-
- 
 
     }
 
@@ -74,20 +70,6 @@ public class Unit : MonoBehaviour
                     }
                 }
             }
-        }
-    }
-
-    void InitializeCreeps()
-    {
-        name = creepsObj.creepName;
-        unitHealth.SetMaxHP(creepsObj.maxHP);
-        damage = creepsObj.ATK;
-        attackRange = creepsObj.attackRange;
-        moveSpeed = creepsObj.moveSpeed;
-
-        if (unitNavmesh)
-        {
-            unitNavmesh.speed = moveSpeed;
         }
     }
 }
