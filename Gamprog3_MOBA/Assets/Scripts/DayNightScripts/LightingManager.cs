@@ -14,8 +14,6 @@ public class LightingManager : MonoBehaviour
 
     [SerializeField, Range(0,600)]
     public float dayTimer; // LIGHTING -> DAY/NIGHT CYCLE
-    //public float gameTime = 0; // Running game time
-    //public float timeMultiplier = 1f;
 
     // Start is called before the first frame update
     void Start()

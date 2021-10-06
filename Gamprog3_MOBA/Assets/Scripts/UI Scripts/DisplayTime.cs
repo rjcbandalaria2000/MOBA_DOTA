@@ -22,7 +22,8 @@ public class DisplayTime : MonoBehaviour
     {
         float minutes = gameManager.GetGameTime() / 60f;
         float seconds = gameManager.GetGameTime() % 60f;
-
+        Debug.Log("Minutes: " + minutes);
+        Debug.Log("Seconds: " + seconds);
         timerText.text = minutes.ToString("00") + " : " + seconds.ToString("00");
     }
 }
