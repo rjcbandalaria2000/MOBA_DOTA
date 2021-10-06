@@ -8,6 +8,7 @@ public class UnitStateMachine : StateMachineBehaviour
     public GameObject unit;
     public GameObject target;
 
+
     public bool isMoving;
     public bool isAttacking;
 
@@ -26,6 +27,7 @@ public class UnitStateMachine : StateMachineBehaviour
 
         unit = animator.gameObject;
        
+
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

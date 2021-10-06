@@ -3229,8 +3229,7 @@ MonoBehaviour:
   - {fileID: 1736560492}
   - {fileID: 1288500620}
   - {fileID: 1334121412}
-  spawner: {fileID: 697353716}
-  SiegeSpawn: 0
+  spawnPoint: {fileID: 697353716}
 --- !u!1 &384557574
 GameObject:
   m_ObjectHideFlags: 0
@@ -6023,8 +6022,7 @@ MonoBehaviour:
   - {fileID: 1736560492}
   - {fileID: 1288500620}
   - {fileID: 1334121412}
-  spawner: {fileID: 142056937}
-  SiegeSpawn: 0
+  spawnPoint: {fileID: 142056937}
 --- !u!1 &641792174
 GameObject:
   m_ObjectHideFlags: 0
