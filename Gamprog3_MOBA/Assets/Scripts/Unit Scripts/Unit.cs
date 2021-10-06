@@ -29,7 +29,7 @@ public class Unit : MonoBehaviour
         {
             InitializeCreeps();
         }
-        else
+        else // Hero Characters
         {
             InitializeUnit();
         }
@@ -82,5 +82,12 @@ public class Unit : MonoBehaviour
         name = creepsObj.creepName;
         unitHealth.SetMaxHP(creepsObj.maxHP);
         damage = creepsObj.ATK;
+        attackRange = creepsObj.attackRange;
+        moveSpeed = creepsObj.moveSpeed;
+
+        if (unitNavmesh)
+        {
+            unitNavmesh.speed = moveSpeed;
+        }
     }
 }
