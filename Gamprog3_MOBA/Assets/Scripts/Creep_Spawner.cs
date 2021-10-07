@@ -7,7 +7,7 @@ public class Creep_Spawner : MonoBehaviour
     public GameObject[] creeps;
     public List<Transform> waypoint = new List<Transform>();
     [SerializeField]
-    int creepIndex = 0;
+
     public GameObject spawner;
     public Creeps_ScriptableObject creepScript;
 
@@ -34,10 +34,6 @@ public class Creep_Spawner : MonoBehaviour
         
             CreepSpawning(3);
         }
-        
-        
-      
-        
     }
 
     void CreepSpawning(int numOfCreeps)
@@ -45,7 +41,7 @@ public class Creep_Spawner : MonoBehaviour
         for (int i = 0; i < numOfCreeps; i++)
         {
             Debug.Log("Spawn for the love of God");
-            GameObject minions = Instantiate(creeps[creepIndex], spawner.transform.position, Quaternion.identity);
+            GameObject minions = Instantiate(creeps[0], spawner.transform.position, Quaternion.identity);
             Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
             if (spawnedMinion)
             {

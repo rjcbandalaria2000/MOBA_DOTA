@@ -3229,7 +3229,8 @@ MonoBehaviour:
   - {fileID: 1736560492}
   - {fileID: 1288500620}
   - {fileID: 1334121412}
-  spawnPoint: {fileID: 697353716}
+  spawner: {fileID: 0}
+  creepScript: {fileID: 0}
 --- !u!1 &384557574
 GameObject:
   m_ObjectHideFlags: 0
@@ -6022,7 +6023,8 @@ MonoBehaviour:
   - {fileID: 1736560492}
   - {fileID: 1288500620}
   - {fileID: 1334121412}
-  spawnPoint: {fileID: 142056937}
+  spawner: {fileID: 0}
+  creepScript: {fileID: 0}
 --- !u!1 &641792174
 GameObject:
   m_ObjectHideFlags: 0
@@ -9615,14 +9617,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
-  unitHealth: {fileID: 0}
   target: {fileID: 0}
   unitSkills: []
   attackRange: 0
   damage: 0
   turnRate: 0.011666706
   moveSpeed: 0
-  creepsObj: {fileID: 0}
 --- !u!114 &1037081972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12579,14 +12579,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Dummy
-  unitHealth: {fileID: 0}
   target: {fileID: 0}
   unitSkills: []
   attackRange: 0
   damage: 0
   turnRate: 1
   moveSpeed: 0
-  creepsObj: {fileID: 0}
 --- !u!1 &1480184260
 GameObject:
   m_ObjectHideFlags: 0
@@ -15226,14 +15224,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Knight
-  unitHealth: {fileID: 1584224783}
   target: {fileID: 0}
   unitSkills: []
   attackRange: 150
   damage: 25
   turnRate: 1
   moveSpeed: 300
-  creepsObj: {fileID: 0}
 --- !u!114 &1702858613
 MonoBehaviour:
   m_ObjectHideFlags: 0
