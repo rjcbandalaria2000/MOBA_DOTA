@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 12412df388e317740a039d2c61edff91, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 49c1f9bd3bde6b844b84d0c6a166991d, type: 2}
 --- !u!1 &21379453
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 142056938}
   m_Layer: 7
-  m_Name: Spawner
+  m_Name: Barracks1SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -759,7 +759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142056937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.763, y: 0, z: 0}
+  m_LocalPosition: {x: 1.151, y: 0.144, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 615959194}
@@ -2238,6 +2238,7 @@ GameObject:
   - component: {fileID: 270870304}
   - component: {fileID: 270870306}
   - component: {fileID: 270870305}
+  - component: {fileID: 270870307}
   m_Layer: 0
   m_Name: Waypoint1M
   m_TagString: Waypoint
@@ -2254,7 +2255,7 @@ Transform:
   m_GameObject: {fileID: 270870303}
   m_LocalRotation: {x: -0, y: -0.40150052, z: -0, w: 0.9158588}
   m_LocalPosition: {x: 0.28, y: -3.930367, z: 1.57}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1708017654}
   m_RootOrder: 0
@@ -2309,6 +2310,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270870303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &270870307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270870303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000001}
+  m_Center: {x: 0.000015258789, y: 0, z: -0.0000038146973}
 --- !u!1 &287308824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,7 +3230,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379145568}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38879d2cc25c3774090d070437c57671, type: 3}
   m_Name: 
@@ -3229,8 +3243,7 @@ MonoBehaviour:
   - {fileID: 1736560492}
   - {fileID: 1288500620}
   - {fileID: 1334121412}
-  spawner: {fileID: 0}
-  creepScript: {fileID: 0}
+  spawnPoint: {fileID: 697353717}
 --- !u!1 &384557574
 GameObject:
   m_ObjectHideFlags: 0
@@ -5932,7 +5945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615959193}
   m_LocalRotation: {x: -0, y: -0.69919115, z: -0, w: 0.7149348}
-  m_LocalPosition: {x: 0.20000014, y: 0.26666665, z: 11}
+  m_LocalPosition: {x: 0.20000014, y: 0.333, z: 11}
   m_LocalScale: {x: 0.66666657, y: 0.6666667, z: 0.66666657}
   m_Children:
   - {fileID: 1661043769}
@@ -5948,7 +5961,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615959193}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -6016,15 +6029,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creeps:
-  - {fileID: 2521171318122320108, guid: a614ca50cef10424d8012b05722890bf, type: 3}
+  - {fileID: 8208928159149777398, guid: 31b4f9ced51ee3945baecff539fad42f, type: 3}
   waypoint:
   - {fileID: 270870304}
   - {fileID: 391669950}
   - {fileID: 1736560492}
   - {fileID: 1288500620}
   - {fileID: 1334121412}
-  spawner: {fileID: 0}
-  creepScript: {fileID: 0}
+  - {fileID: 215934334}
+  - {fileID: 1717857119}
+  spawnPoint: {fileID: 142056937}
 --- !u!1 &641792174
 GameObject:
   m_ObjectHideFlags: 0
@@ -9619,10 +9633,8 @@ MonoBehaviour:
   name: 
   target: {fileID: 0}
   unitSkills: []
-  attackRange: 0
-  damage: 0
+  unitStats: {fileID: 0}
   turnRate: 0.011666706
-  moveSpeed: 0
 --- !u!114 &1037081972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12581,10 +12593,8 @@ MonoBehaviour:
   name: Dummy
   target: {fileID: 0}
   unitSkills: []
-  attackRange: 0
-  damage: 0
+  unitStats: {fileID: 0}
   turnRate: 1
-  moveSpeed: 0
 --- !u!1 &1480184260
 GameObject:
   m_ObjectHideFlags: 0
@@ -15197,6 +15207,7 @@ MonoBehaviour:
   agility: 0
   movementSpeed: 0
   attackSpeed: 0
+  attackRange: 0
 --- !u!114 &1702858611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15226,10 +15237,8 @@ MonoBehaviour:
   name: Knight
   target: {fileID: 0}
   unitSkills: []
-  attackRange: 150
-  damage: 25
+  unitStats: {fileID: 0}
   turnRate: 1
-  moveSpeed: 300
 --- !u!114 &1702858613
 MonoBehaviour:
   m_ObjectHideFlags: 0
