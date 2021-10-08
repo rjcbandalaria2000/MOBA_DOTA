@@ -12,7 +12,7 @@ public class DetectTarget : MonoBehaviour
     {
         unit = this.transform.parent.gameObject;
         sphereCollider = this.GetComponent<SphereCollider>();
-        sphereCollider.radius = unit.GetComponent<Unit>().attackRange / GameManager.distanceUnit;
+        //sphereCollider.radius = unit.GetComponent<Unit>().attackRange / GameManager.distanceUnit;
       
     }
 

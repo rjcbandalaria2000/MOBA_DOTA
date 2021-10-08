@@ -28,11 +28,6 @@ public class PlayerControls : MonoBehaviour
     {
         //player = this.GetComponent<NavMeshAgent>();
         playerAnimator = this.GetComponent<Animator>();
-
-    
-
-       // unitStates = States.Idle;
-
     }
 
     // Update is called once per frame
@@ -98,7 +93,5 @@ public class PlayerControls : MonoBehaviour
         {
             Destroy(spawnedArrow, 0.5f);
         }
-        
-        
     }
 }
