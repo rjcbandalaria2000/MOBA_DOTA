@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum AttackType
+{
+    Melee,
+    Ranged,
+}
+
 public class Unit : MonoBehaviour
 {
     public string name;
-
     [SerializeField]
     public GameObject target;
     [SerializeField]
     Skill[] unitSkills;
     [SerializeField]
     UnitStats unitStats;
+    [SerializeField]
+    AttackType attackType;
     //For attack test, will make a component for attack
-    
-    //public float attackRange;
-    //public float damage;
     public float turnRate = 1.0f / GameManager.distanceUnit;
-    //public float moveSpeed = 0;
     NavMeshAgent unitNavmesh;
 
         

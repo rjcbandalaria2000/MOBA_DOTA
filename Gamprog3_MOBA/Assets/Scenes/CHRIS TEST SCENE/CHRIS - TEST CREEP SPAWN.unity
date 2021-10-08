@@ -9201,6 +9201,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 0.011666706
 --- !u!114 &1037081972
 MonoBehaviour:
@@ -11996,6 +11997,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 1
 --- !u!1 &1480184260
 GameObject:
@@ -14476,6 +14478,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 1
 --- !u!114 &1702858613
 MonoBehaviour:
@@ -17916,6 +17919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5689653888176826773, guid: 31b4f9ced51ee3945baecff539fad42f, type: 3}
+      propertyPath: name
+      value: Melee Creep
+      objectReference: {fileID: 0}
     - target: {fileID: 8208928159149777398, guid: 31b4f9ced51ee3945baecff539fad42f, type: 3}
       propertyPath: m_Name
       value: MeleeCreep
