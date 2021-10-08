@@ -11,27 +11,21 @@ public class Unit : MonoBehaviour
     public GameObject target;
     [SerializeField]
     Skill[] unitSkills;
-    //For attack test, will make a component for attack
     [SerializeField]
-    public float attackRange;
-    public float damage;
+    UnitStats unitStats;
+    //For attack test, will make a component for attack
+    
+    //public float attackRange;
+    //public float damage;
     public float turnRate = 1.0f / GameManager.distanceUnit;
-    public float moveSpeed = 0;
+    //public float moveSpeed = 0;
     NavMeshAgent unitNavmesh;
 
-    public float GetDamage()
-    {
-        return damage;
-    }
-    public void SetDamage(float damageValue)
-    {
-        damage = damageValue;
-    }
         
     // Start is called before the first frame update
     void Start()
     {
-
+        InitializeUnit();
     }
 
     // Update is called once per frame
@@ -42,13 +36,13 @@ public class Unit : MonoBehaviour
 
     void InitializeUnit()
     {
-        attackRange /= GameManager.distanceUnit;
-        moveSpeed /= GameManager.distanceUnit;
+        //attackRange /= GameManager.distanceUnit;
+        //moveSpeed /= GameManager.distanceUnit;
         unitNavmesh = this.GetComponent<NavMeshAgent>();
-        
+        unitStats = this.GetComponent<UnitStats>();
         if (unitNavmesh)
         {
-            unitNavmesh.speed = moveSpeed;
+            unitNavmesh.speed = unitStats.GetMovementSpeed()/GameManager.distanceUnit;
         }
     }
 
@@ -66,7 +60,7 @@ public class Unit : MonoBehaviour
                     HealthComponent targetHealth = target.GetComponent<HealthComponent>();
                     if (targetHealth)
                     {
-                        targetHealth.TakeDamage(damage);
+                        targetHealth.TakeDamage(unitStats.GetBaseDamage());
                     }
                 }
             }

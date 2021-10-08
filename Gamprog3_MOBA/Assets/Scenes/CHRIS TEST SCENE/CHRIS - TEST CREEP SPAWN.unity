@@ -9200,10 +9200,8 @@ MonoBehaviour:
   name: 
   target: {fileID: 0}
   unitSkills: []
-  attackRange: 0
-  damage: 0
+  unitStats: {fileID: 0}
   turnRate: 0.011666706
-  moveSpeed: 0
 --- !u!114 &1037081972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11997,10 +11995,8 @@ MonoBehaviour:
   name: Dummy
   target: {fileID: 0}
   unitSkills: []
-  attackRange: 0
-  damage: 0
+  unitStats: {fileID: 0}
   turnRate: 1
-  moveSpeed: 0
 --- !u!1 &1480184260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14443,12 +14439,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1d2366f7cd37a448cf4f71a7bc3099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 0
+  baseDamage: 25
   strength: 0
   intelligence: 0
   agility: 0
-  movementSpeed: 0
+  movementSpeed: 300
   attackSpeed: 0
+  attackRange: 0
 --- !u!114 &1702858611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14478,10 +14475,8 @@ MonoBehaviour:
   name: Knight
   target: {fileID: 0}
   unitSkills: []
-  attackRange: 150
-  damage: 25
+  unitStats: {fileID: 0}
   turnRate: 1
-  moveSpeed: 300
 --- !u!114 &1702858613
 MonoBehaviour:
   m_ObjectHideFlags: 0
