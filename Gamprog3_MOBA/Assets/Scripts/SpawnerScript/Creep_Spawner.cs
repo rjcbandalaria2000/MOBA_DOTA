@@ -29,32 +29,49 @@ public class Creep_Spawner : MonoBehaviour
     {
         while (true)
         {
+            for (int i = 0; i < 3; i++)
+            {
+                yield return new WaitForSeconds(1.0f);
+                Debug.Log("SpawnTime");
+                CreepSpawning();
+            }
+            Debug.Log("FinishSpawning"); //+1 Wave
             yield return new WaitForSeconds(5.0f);
-            Debug.Log("SpawnTime");
-        
-            CreepSpawning(3);
+
         }
     }
 
-    void CreepSpawning(int numOfCreeps)
+    void CreepSpawning()
     {
-        for (int i = 0; i < numOfCreeps; i++)
+
+        Debug.Log("Spawn for the love of God");
+        GameObject minions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
+        // Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
+
+        AI_Script minionAI = minions.gameObject.GetComponent<AI_Script>();
+        if (minionAI)
         {
-            Debug.Log("Spawn for the love of God");
-            GameObject minions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
-           // Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
-
-            AI_Script minionAI = minions.gameObject.GetComponent<AI_Script>();
-            if(minionAI)
-            {
-                minionAI.waypoints = waypoint;
-                //minionAI.moveToWaypoint();
-            }
-
-            //if (spawnedMinion)
-            //{
-            //    //spawnedMinion.SetDamage(creepScript.ATK);
-            //}
+            minionAI.waypoints = waypoint;
+            //minionAI.moveToWaypoint();
         }
+
+        //for (int i = 0; i < numOfCreeps; i++)
+        //{
+        //    Debug.Log("Spawn for the love of God");
+        //    GameObject minions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
+        //   // Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
+
+        //    AI_Script minionAI = minions.gameObject.GetComponent<AI_Script>();
+        //    if(minionAI)
+        //    {
+        //        minionAI.waypoints = waypoint;
+        //        //minionAI.moveToWaypoint();
+        //    }
+
+        //    //if (spawnedMinion)
+        //    //{
+        //    //    //spawnedMinion.SetDamage(creepScript.ATK);
+        //    //}
+        //}
     }
 }
