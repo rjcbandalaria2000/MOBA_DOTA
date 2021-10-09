@@ -48,7 +48,7 @@ public class Creep_Spawner : MonoBehaviour
             if(minionAI)
             {
                 minionAI.waypoints = waypoint;
-                minionAI.moveToWaypoint();
+                //minionAI.moveToWaypoint();
             }
 
             //if (spawnedMinion)

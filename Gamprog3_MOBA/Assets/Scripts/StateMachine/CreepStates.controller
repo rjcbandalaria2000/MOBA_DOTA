@@ -362,8 +362,8 @@ MonoBehaviour:
   attackTime: 0
   rotationSpeed: 0
   locationAccuracy: 1
-  waypoints: []
-  currentWaypoint: 0
+  aiMovement: {fileID: 0}
+  aiNavMesh: {fileID: 0}
 --- !u!1102 &899212082366744581
 AnimatorState:
   serializedVersion: 6

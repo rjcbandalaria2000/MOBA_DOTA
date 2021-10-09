@@ -1924,12 +1924,12 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8208928159149777398}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a59b9202cdb93394781b8e79c967d8a3, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1784547520e96b54fb33724f563ae80d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1947,10 +1947,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9fbe046de036dc4daad852ec48f4a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  name: Melee Creep
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 4306729268436369394}
+  attackType: 0
   turnRate: 0.011666706
 --- !u!114 &4306729268436369394
 MonoBehaviour:
@@ -2000,6 +2001,8 @@ MonoBehaviour:
   waypoints: []
   creepNavMesh: {fileID: 9189949057668051206}
   waypointIndex: 0
+  lastWaypoint: {fileID: 0}
+  aiAnimator: {fileID: 0}
 --- !u!54 &3193486080943101181
 Rigidbody:
   m_ObjectHideFlags: 0
