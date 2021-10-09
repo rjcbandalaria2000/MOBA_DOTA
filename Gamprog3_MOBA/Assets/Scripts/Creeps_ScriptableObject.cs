@@ -9,7 +9,8 @@ public class Creeps_ScriptableObject : ScriptableObject
     public string creepName;
     public int maxHP;
     public int ATK;
-
-
+    public int attackRange;
+    public int moveSpeed;
+    
 
 }
