@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     float gameTime = 0;
-    public int waves = 999;
+    [SerializeField] int waves = 0;
 
     public static float distanceUnit = 85.714f; // Distance Formula: 1200(Dota Units) / 14(Unity Units)
 
@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
     public int GetWaves()
     {
         return waves;
+    }
+
+    public void AddWave()
+    {
+        waves += 1;
     }
 
 }

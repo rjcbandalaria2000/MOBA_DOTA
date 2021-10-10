@@ -3152,7 +3152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379145568}
   m_LocalRotation: {x: -0, y: -0.69919115, z: -0, w: 0.7149348}
-  m_LocalPosition: {x: -2.17, y: 0.26666665, z: 11.06}
+  m_LocalPosition: {x: -2.17, y: 0.41, z: 11.06}
   m_LocalScale: {x: 0.66666657, y: 0.6666667, z: 0.66666657}
   m_Children:
   - {fileID: 902492917}
@@ -3230,20 +3230,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379145568}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38879d2cc25c3774090d070437c57671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   creeps:
-  - {fileID: 2521171318122320108, guid: 5bef7b8877e67fa4b92a4b9b5859546e, type: 3}
+  - {fileID: 4170969489604921282, guid: 6b99c91e7f9f73b40bf7f8c3929cd02f, type: 3}
   waypoint:
   - {fileID: 270870304}
   - {fileID: 391669950}
   - {fileID: 1736560492}
   - {fileID: 1288500620}
   - {fileID: 1334121412}
-  spawnPoint: {fileID: 697353717}
+  - {fileID: 215934334}
+  - {fileID: 1717857119}
+  spawnPoint: {fileID: 697353716}
 --- !u!1 &384557574
 GameObject:
   m_ObjectHideFlags: 0
@@ -4653,7 +4655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTime: 0
-  waves: 999
+  waves: 0
 --- !u!4 &475999202
 Transform:
   m_ObjectHideFlags: 0
@@ -6468,7 +6470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697353717}
   m_Layer: 7
-  m_Name: Spawner
+  m_Name: Barracks_Spawnpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6481,13 +6483,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697353716}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75516766, y: 0, z: -0.2232486}
+  m_LocalRotation: {x: -0, y: 0.09231749, z: -0, w: 0.9957297}
+  m_LocalPosition: {x: 1.091, y: 0.52, z: 0.035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 379145569}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 10.594, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9634,6 +9636,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 0.011666706
 --- !u!114 &1037081972
 MonoBehaviour:
@@ -12594,6 +12597,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 1
 --- !u!1 &1480184260
 GameObject:
@@ -15238,6 +15242,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 1
 --- !u!114 &1702858613
 MonoBehaviour:

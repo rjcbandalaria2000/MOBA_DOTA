@@ -36,6 +36,7 @@ public class Creep_Spawner : MonoBehaviour
                 CreepSpawning();
             }
             Debug.Log("FinishSpawning"); //+1 Wave
+            //SingletonManager.Get<GameManager>().AddWave();
             yield return new WaitForSeconds(5.0f);
 
         }
