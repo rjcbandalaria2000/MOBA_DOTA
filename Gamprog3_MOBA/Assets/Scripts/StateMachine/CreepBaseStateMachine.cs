@@ -1,43 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class UnitStateMachine : StateMachineBehaviour
+public class CreepBaseStateMachine : StateMachineBehaviour
 {
     public GameObject unit;
     public GameObject target;
-
-
-    public bool isMoving;
-    public bool isAttacking;
-
     public float attackInterval;
     [SerializeField]
     protected float attackTime;
     public float rotationSpeed = 0.0f;
     [SerializeField]
     protected float locationAccuracy = 1;
-    
-
-
+    [SerializeField]
+    bool isAttacking;
+    [SerializeField]
+    bool isMoving;
+    [SerializeField]
+    float targetDistance;
+    [SerializeField]
+    bool inRange;
+    // Start is called before the first frame update
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         unit = animator.gameObject;
-       
+
 
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
-        target = unit.GetComponent<Unit>().target;
+
+        //Debug.Log("StateUpdate");
+        //target = unit.GetComponent<Unit>().target;
+        //Debug.Log("Target: " + target.name);
         if (target != null)
         {
             Debug.Log("Target Detected");
             animator.SetBool("hasTarget", true);
-            //target = unit.GetComponent<Unit>().target;
+            target = unit.GetComponent<Unit>().target;
             //For Chasing
             animator.SetFloat("Distance", Vector3.Distance(unit.transform.position, target.transform.position));
             if (!animator.GetBool("IsAttacking"))
@@ -68,6 +71,4 @@ public class UnitStateMachine : StateMachineBehaviour
             animator.SetBool("hasTarget", false);
         }
     }
-
-
 }

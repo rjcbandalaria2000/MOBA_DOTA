@@ -9634,6 +9634,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 0.011666706
 --- !u!114 &1037081972
 MonoBehaviour:
@@ -12594,6 +12595,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 1
 --- !u!1 &1480184260
 GameObject:
@@ -15238,6 +15240,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
+  attackType: 0
   turnRate: 1
 --- !u!114 &1702858613
 MonoBehaviour:

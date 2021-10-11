@@ -69,4 +69,8 @@ public class Unit : MonoBehaviour
             }
         }
     }
+    public void SetTarget(GameObject targetAcquired)
+    {
+        target = targetAcquired;
+    }
 }

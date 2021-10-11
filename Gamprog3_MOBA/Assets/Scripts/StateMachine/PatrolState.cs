@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolState : UnitStateMachine
+public class PatrolState : CreepBaseStateMachine
 {
 
     public AI_Script aiMovement;
@@ -21,19 +21,22 @@ public class PatrolState : UnitStateMachine
     {
         if (aiMovement)
         {
-            float distanceToWaypoint = Vector3.Distance(unit.transform.position, 
+            if (aiMovement.waypointIndex < aiMovement.waypoints.Count)
+            {
+                float distanceToWaypoint = Vector3.Distance(unit.transform.position,
                 aiMovement.waypoints[aiMovement.waypointIndex].position);
-            if(distanceToWaypoint > locationAccuracy)
-            {
-                GoToWaypoint();
-            }
-            else if(distanceToWaypoint <= locationAccuracy)
-            {
-                if(aiMovement.waypointIndex < aiMovement.waypoints.Count)
+                if (distanceToWaypoint > locationAccuracy)
                 {
-                    aiMovement.waypointIndex++;
+                    GoToWaypoint();
                 }
-                
+                else if (distanceToWaypoint <= locationAccuracy)
+                {
+                    if (aiMovement.waypointIndex < aiMovement.waypoints.Count)
+                    {
+                        aiMovement.waypointIndex++;
+                    }
+
+                }
             }
             
         }
