@@ -9,6 +9,7 @@ public class Creep_Spawner : MonoBehaviour
     [SerializeField]
 
     public GameObject spawnPoint;
+    [SerializeField] int waves = 1;
     //public Creeps_ScriptableObject creepScript;
 
 
@@ -29,50 +30,62 @@ public class Creep_Spawner : MonoBehaviour
     {
         while (true)
         {
-            for (int i = 0; i < 3; i++)
+          
+            if (waves % 5 == 0 && waves > 0 && creeps[1] != null)
             {
                 yield return new WaitForSeconds(1.0f);
-                Debug.Log("SpawnTime");
-                CreepSpawning();
+                siegeSpawn();
             }
-            Debug.Log("FinishSpawning"); //+1 Wave
-            //SingletonManager.Get<GameManager>().AddWave();
+            else
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    yield return new WaitForSeconds(1.0f);
+                    Debug.Log("SpawnTime");
+                    CreepSpawning();
+                }
+            }
+
+            Debug.Log("FinishSpawning"); 
+            
+            this.waves += 1;
             yield return new WaitForSeconds(5.0f);
 
+            
         }
+       
+
+
     }
+
+    
 
     void CreepSpawning()
     {
 
-        Debug.Log("Spawn for the love of God");
+        //Debug.Log("Spawn for the love of God");
         GameObject minions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
         // Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
 
         AI_Script minionAI = minions.gameObject.GetComponent<AI_Script>();
+
         if (minionAI)
         {
             minionAI.waypoints = waypoint;
             //minionAI.moveToWaypoint();
         }
+    }
 
-        //for (int i = 0; i < numOfCreeps; i++)
-        //{
-        //    Debug.Log("Spawn for the love of God");
-        //    GameObject minions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
-        //   // Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
+    void siegeSpawn()
+    {
 
-        //    AI_Script minionAI = minions.gameObject.GetComponent<AI_Script>();
-        //    if(minionAI)
-        //    {
-        //        minionAI.waypoints = waypoint;
-        //        //minionAI.moveToWaypoint();
-        //    }
-
-        //    //if (spawnedMinion)
-        //    //{
-        //    //    //spawnedMinion.SetDamage(creepScript.ATK);
-        //    //}
-        //}
+        Debug.Log("Siege Spawn");
+        GameObject siege = Instantiate(creeps[1], spawnPoint.transform.position, Quaternion.identity);
+        AI_Script siegeAI = siege.gameObject.GetComponent<AI_Script>();
+        if (siegeAI)
+        {
+            siegeAI.waypoints = waypoint;
+        }
+       
     }
 }
