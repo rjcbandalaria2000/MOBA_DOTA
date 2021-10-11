@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolState : CreepBaseStateMachine
+public class PatrolState : UnitStateMachine
 {
 
     public AI_Script aiMovement;
@@ -19,6 +19,7 @@ public class PatrolState : CreepBaseStateMachine
  
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
         if (aiMovement)
         {
             if (aiMovement.waypointIndex < aiMovement.waypoints.Count)
@@ -46,7 +47,7 @@ public class PatrolState : CreepBaseStateMachine
    
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        base.OnStateExit(animator, stateInfo, layerIndex);
     }
 
     void GoToWaypoint()
