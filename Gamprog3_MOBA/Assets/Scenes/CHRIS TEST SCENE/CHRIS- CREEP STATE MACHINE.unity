@@ -9634,7 +9634,7 @@ MonoBehaviour:
   target: {fileID: 0}
   unitSkills: []
   unitStats: {fileID: 0}
-  attackType: 0
+  attackType: 1
   turnRate: 0.011666706
 --- !u!114 &1037081972
 MonoBehaviour:
@@ -9649,7 +9649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHP: 0
-  maxHP: 100
+  maxHP: 500
 --- !u!65 &1037081973
 BoxCollider:
   m_ObjectHideFlags: 0

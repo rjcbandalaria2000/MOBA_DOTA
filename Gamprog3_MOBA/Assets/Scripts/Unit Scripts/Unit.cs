@@ -63,6 +63,7 @@ public class Unit : MonoBehaviour
                     HealthComponent targetHealth = target.GetComponent<HealthComponent>();
                     if (targetHealth)
                     {
+                        Debug.Log("Damage: " + target.name);
                         targetHealth.TakeDamage(unitStats.GetBaseDamage());
                     }
                 }

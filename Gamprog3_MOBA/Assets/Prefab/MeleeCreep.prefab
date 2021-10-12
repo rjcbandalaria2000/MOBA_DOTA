@@ -2008,7 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1d2366f7cd37a448cf4f71a7bc3099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 0
+  baseDamage: 25
   strength: 0
   intelligence: 0
   agility: 0
