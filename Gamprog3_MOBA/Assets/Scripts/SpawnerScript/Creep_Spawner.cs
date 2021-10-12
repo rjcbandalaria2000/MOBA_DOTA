@@ -12,6 +12,9 @@ public class Creep_Spawner : MonoBehaviour
     [SerializeField] int waves = 1;
     //public Creeps_ScriptableObject creepScript;
 
+    public int creepQuantity;
+    public float delayTime;
+    public float waveDelayTime;
 
     // Start is called before the first frame update
     void Start()
@@ -30,26 +33,25 @@ public class Creep_Spawner : MonoBehaviour
     {
         while (true)
         {
-          
-            if (waves % 5 == 0 && waves > 0 && creeps[1] != null)
+            this.waves += 1;
+
+            for (int i = 0; i < creepQuantity; i++)
             {
-                yield return new WaitForSeconds(1.0f);
-                siegeSpawn();
-            }
-            else
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    yield return new WaitForSeconds(1.0f);
-                    Debug.Log("SpawnTime");
-                    CreepSpawning();
-                }
+                yield return new WaitForSeconds(delayTime);
+                Debug.Log("SpawnTime");
+                CreepSpawning();
             }
 
+            if (waves % 5 == 0 && waves > 0 && creeps[1] != null)
+            {
+                yield return new WaitForSeconds(delayTime);
+                siegeSpawn();
+            }
+           
             Debug.Log("FinishSpawning"); 
             
-            this.waves += 1;
-            yield return new WaitForSeconds(5.0f);
+          
+            yield return new WaitForSeconds(waveDelayTime);
 
             
         }
@@ -58,11 +60,8 @@ public class Creep_Spawner : MonoBehaviour
 
     }
 
-    
-
     void CreepSpawning()
     {
-
         //Debug.Log("Spawn for the love of God");
         GameObject minions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
         // Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
