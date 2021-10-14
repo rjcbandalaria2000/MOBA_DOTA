@@ -47,19 +47,20 @@ public class DebuggerManager : MonoBehaviour
     {
         Debug.Log("Select Tower to Destroy");
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             //RaycastHit hit;
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hitInfo))
             {
-                Debug.Log(hitInfo.collider.gameObject);
+                //Debug.Log(hitInfo.collider.gameObject);
 
-                Unit unitSelected = hitInfo.transform.gameObject.GetComponent<Unit>();
+                TowerComponent towerSelect = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
 
-                if (unitSelected != null && unitSelected.CompareTag("Tower"))
+                if (towerSelect.CompareTag("Tower"))
                 {
-                    Destroy(unitSelected.gameObject);
+                    Destroy(towerSelect.gameObject);
+                    Debug.Log("Destroy Tower");
                 }
                 else
                 {
