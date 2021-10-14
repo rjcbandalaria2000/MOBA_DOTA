@@ -26,27 +26,27 @@ public class AI_Script : MonoBehaviour
         aiAnimator.SetBool("IsMoving", true);
     }
 
-    public void moveToWaypoint()
-    {
+    //public void moveToWaypoint()
+    //{
         
-        if(waypoints.Count > 0)
-        {
-            Debug.Log("Go to waypoint");
-            creepNavMesh.SetDestination(waypoints[waypointIndex].position);
-        }
-        else
-        {
-            Debug.Log("NUll");
+    //    if(waypoints.Count > 0)
+    //    {
+    //        Debug.Log("Go to waypoint");
+    //        creepNavMesh.SetDestination(waypoints[waypointIndex].position);
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("NUll");
 
-        }
-    }
+    //    }
+    //}
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Waypoint"))
-        {
-            waypointIndex += 1;
-            moveToWaypoint();
-        }
-    }
+    //public void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Waypoint"))
+    //    {
+    //        waypointIndex += 1;
+    //        moveToWaypoint();
+    //    }
+    //}
 }

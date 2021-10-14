@@ -27,7 +27,9 @@ public class UnitSelect : MonoBehaviour
                 if(unitSelected)
                 {
                     UI.name.text = unitSelected.name;
-                    UI.HP_Bar.fillAmount = hitInfo.collider.gameObject.transform.parent.GetComponent<HealthComponent>().GetCurrentHealth() / hitInfo.collider.gameObject.GetComponent<HealthComponent>().GetMaxHP();
+                    UI.HP_Bar_Slider.value = unitSelected.gameObject.GetComponent<HealthComponent>().GetCurrentHealth() / unitSelected.gameObject.GetComponent<HealthComponent>().GetMaxHP();
+
+                    //UI.HP_Bar.fillAmount = unitSelected.gameObject.GetComponent<HealthComponent>().GetCurrentHealth() / unitSelected.gameObject.GetComponent<HealthComponent>().GetMaxHP();
                 }
                 else
                 {
