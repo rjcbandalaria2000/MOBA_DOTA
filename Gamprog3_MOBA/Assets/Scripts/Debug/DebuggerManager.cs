@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DebuggerManager : MonoBehaviour
 {
     [SerializeField]
     float timeMultiplier = 1f;
     public GameObject player;
+    public GameObject[] towerButton;
 
     // Start is called before the first frame update
     void Start()
     {
+        for(int i = 0; i < towerButton.Length; i++)
+        {
+            towerButton[i].SetActive(false);
+        }
         
     }
 
@@ -43,30 +49,47 @@ public class DebuggerManager : MonoBehaviour
         player.gameObject.GetComponent<HealthComponent>().SetCurrentHealth(player.gameObject.GetComponent<HealthComponent>().GetMaxHP());
     }
 
-    public void destroyTower()
+    /*public void destroyTower()
     {
         Debug.Log("Select Tower to Destroy");
 
         if (Input.GetMouseButtonDown(0))
         {
-            //RaycastHit hit;
+            RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo))
+
+            if (Physics.Raycast(ray, out hit))
             {
                 //Debug.Log(hitInfo.collider.gameObject);
 
-                TowerComponent towerSelect = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
+                BoxCollider towerSelect = hit.collider as BoxCollider;
 
-                if (towerSelect.CompareTag("Tower"))
+                if (towerSelect != null)
                 {
                     Destroy(towerSelect.gameObject);
                     Debug.Log("Destroy Tower");
                 }
-                else
-                {
-                    Debug.Log("Not Tower");
-                }
+               
             }
+            else
+            {
+                
+                    Debug.Log("Not Tower");
+                
+            }
+        }
+    }*/
+
+    public void destroyTower(int index)
+    {
+        Destroy(towerButton[index].GetComponentsInParent<GameObject>()[index]);
+    }
+
+    public void selectToDestroyTower()
+    {
+        for (int i = 0; i < towerButton.Length; i++)
+        {
+            towerButton[i].SetActive(true);
         }
     }
 }
