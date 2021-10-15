@@ -7,7 +7,7 @@ public class Creep_Spawner : MonoBehaviour
     public GameObject[] creeps;
     public List<Transform> waypoint = new List<Transform>();
     [SerializeField]
-
+    Faction faction;
     public GameObject spawnPoint;
     [SerializeField] int waves = 1;
     //public Creeps_ScriptableObject creepScript;
@@ -65,7 +65,12 @@ public class Creep_Spawner : MonoBehaviour
         //Debug.Log("Spawn for the love of God");
         GameObject minions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
         // Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
+        FactionComponent minionFaction = minions.GetComponent<FactionComponent>();
 
+        if (minionFaction)
+        { 
+            minionFaction.unitFaction = faction;
+        }
         AI_Script minionAI = minions.gameObject.GetComponent<AI_Script>();
 
         if (minionAI)

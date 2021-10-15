@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Skill : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Skill : MonoBehaviour
     int manaCost;
     [SerializeField]
     int castRange;
+    
+    public UnityEvent onApply;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +24,9 @@ public class Skill : MonoBehaviour
         
     }
 
-    virtual public void ActivateSkill()
+    virtual public void ActivateSkill(GameObject target, GameObject attacker = null)
     {
-
+        OnActivate(target, attacker);
     }
 
     virtual public void DeactivateSkill()
@@ -30,7 +34,7 @@ public class Skill : MonoBehaviour
 
     }
 
-    virtual public void OnActivate()
+    virtual public void OnActivate(GameObject target, GameObject attacker = null)
     {
 
     }

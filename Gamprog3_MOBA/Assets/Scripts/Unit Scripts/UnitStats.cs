@@ -18,7 +18,8 @@ public class UnitStats : MonoBehaviour
     int attackSpeed;
     [SerializeField]
     float attackRange;
-
+    [SerializeField]
+    float projectileSpeed;
     #region StatGetters
     public float GetBaseDamage()
     {
@@ -47,6 +48,10 @@ public class UnitStats : MonoBehaviour
     public float GetAttackRange()
     {
         return attackRange;
+    }
+    public float GetProjectileSpeed()
+    {
+        return projectileSpeed;
     }
     #endregion
     #region StatSetters
