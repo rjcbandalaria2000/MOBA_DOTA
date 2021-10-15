@@ -6,7 +6,8 @@ public class Skill : MonoBehaviour
 {
     [SerializeField]
     int manaCost;
-    
+    [SerializeField]
+    int castRange;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +18,25 @@ public class Skill : MonoBehaviour
     void Update()
     {
         
+    }
+
+    virtual public void ActivateSkill()
+    {
+
+    }
+
+    virtual public void DeactivateSkill()
+    {
+
+    }
+
+    virtual public void OnActivate()
+    {
+
+    }
+
+    virtual public void OnDeactivateSkill()
+    {
+
     }
 }
