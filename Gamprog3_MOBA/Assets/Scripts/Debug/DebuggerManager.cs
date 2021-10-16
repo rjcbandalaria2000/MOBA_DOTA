@@ -83,6 +83,11 @@ public class DebuggerManager : MonoBehaviour
     public void destroyTower(int index)
     {
         Destroy(towerButton[index].GetComponentsInParent<GameObject>()[index]);
+
+        for (int i = 0; i < towerButton.Length; i++)
+        {
+            towerButton[i].SetActive(false);
+        }
     }
 
     public void selectToDestroyTower()
