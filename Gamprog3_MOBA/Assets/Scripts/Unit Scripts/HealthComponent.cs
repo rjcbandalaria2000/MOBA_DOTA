@@ -7,8 +7,41 @@ public class HealthComponent : MonoBehaviour
     [SerializeField]
     private float currentHP;
     [SerializeField]
-    private float maxHP; 
+    private float maxHP;
+    [SerializeField]
+    private bool isDead;
 
+    #region Getter Setter 
+
+    public float GetCurrentHealth()
+    {
+        return currentHP;
+    }
+
+    public float GetMaxHP()
+    {
+        return maxHP;
+    }
+
+
+    public bool GetIsDead()
+    {
+        return isDead;
+    }
+    public void SetCurrentHealth(float health)
+    {
+        currentHP = health;
+    }
+
+  
+
+    public void SetMaxHP(float maxHealth)
+    {
+        maxHP = maxHealth;
+    }
+
+
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
@@ -26,26 +59,7 @@ public class HealthComponent : MonoBehaviour
 
     }
 
-    public void SetCurrentHealth(float health)
-    {
-        currentHP = health;
-    }
-
-    public float GetCurrentHealth()
-    {
-        return currentHP;
-    }
-
-    public float GetMaxHP()
-    {
-        return maxHP;
-    }
-
-    public void SetMaxHP(float maxHealth)
-    {
-        maxHP = maxHealth;
-    }
-
+   
     public void TakeDamage(float damage)
     {
         currentHP -= damage;
@@ -63,9 +77,10 @@ public class HealthComponent : MonoBehaviour
         OnDeath();
     }
 
-    public void OnDeath()
+    private void OnDeath()
     {
         Destroy(this.gameObject);
         Debug.Log("Unit Dead");
+        isDead = true;
     }
 }

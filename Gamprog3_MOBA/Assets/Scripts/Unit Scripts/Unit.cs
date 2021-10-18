@@ -15,7 +15,7 @@ public class Unit : MonoBehaviour
     [SerializeField]
     public GameObject target;
     [SerializeField]
-    Skill[] unitSkills;
+    List<Skill> unitSkills;
     [SerializeField]
     UnitStats unitStats;
     [SerializeField]

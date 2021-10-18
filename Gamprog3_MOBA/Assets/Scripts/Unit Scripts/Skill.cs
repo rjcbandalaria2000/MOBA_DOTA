@@ -29,9 +29,9 @@ public class Skill : MonoBehaviour
         OnActivate(target, attacker);
     }
 
-    virtual public void DeactivateSkill()
+    virtual public void DeactivateSkill(GameObject target, GameObject attacker = null)
     {
-
+        OnDeactivateSkill(target, attacker);
     }
 
     virtual public void OnActivate(GameObject target, GameObject attacker = null)
@@ -39,7 +39,7 @@ public class Skill : MonoBehaviour
 
     }
 
-    virtual public void OnDeactivateSkill()
+    virtual public void OnDeactivateSkill(GameObject target, GameObject attacker = null)
     {
 
     }

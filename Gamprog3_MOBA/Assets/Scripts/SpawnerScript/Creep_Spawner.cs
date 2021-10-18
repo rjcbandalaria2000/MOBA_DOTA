@@ -11,16 +11,24 @@ public class Creep_Spawner : MonoBehaviour
     public GameObject spawnPoint;
     [SerializeField] int waves = 1;
     //public Creeps_ScriptableObject creepScript;
-
+    [SerializeField]
+    AttackType buildingAttackType;
     public int creepQuantity;
     public float delayTime;
     public float waveDelayTime;
+    public bool isSpawningSuperCreeps;
 
     // Start is called before the first frame update
     void Start()
     {
         //CreepSpawning(3);
-        StartCoroutine(SpawnCreepsRoutine());
+        if(creeps.Length > 0)
+        {
+            StartCoroutine(SpawnCreepsRoutine());
+            //StartSpawnSuperCreeps(); 
+        }
+       
+       
     }
 
     // Update is called once per frame
@@ -55,8 +63,6 @@ public class Creep_Spawner : MonoBehaviour
 
             
         }
-       
-
 
     }
 
@@ -95,11 +101,48 @@ public class Creep_Spawner : MonoBehaviour
 
     void spawnSuperCreep()
     {
+        Debug.Log("Spawning Super Creeps");
         GameObject superCreep = Instantiate(creeps[2], spawnPoint.transform.position, Quaternion.identity);
         AI_Script superCreepAI = superCreep.gameObject.GetComponent<AI_Script>();
         if(superCreepAI)
         {
             superCreepAI.waypoints = waypoint;
         }
+    }
+    
+    public void StopSpawningNormalCreeps()
+    {
+        Debug.Log("Stop Normal Spawning");
+        StopCoroutine(SpawnCreepsRoutine());
+    }
+
+    public void StartSpawnSuperCreeps()
+    {
+        StartCoroutine(SpawnSuperCreeps());
+    }
+
+    IEnumerator SpawnSuperCreeps()
+    {
+        while (true)
+        {
+            this.waves += 1;
+
+            for (int i = 0; i < creepQuantity; i++)
+            {
+                yield return new WaitForSeconds(delayTime);
+                Debug.Log("SpawnTime");
+                spawnSuperCreep();
+            }
+
+            if (waves % 5 == 0 && waves > 0 && creeps[1] != null)
+            {
+                yield return new WaitForSeconds(delayTime);
+                siegeSpawn();
+            }
+
+            Debug.Log("FinishSpawning");
+            yield return new WaitForSeconds(waveDelayTime);
+        }
+
     }
 }
