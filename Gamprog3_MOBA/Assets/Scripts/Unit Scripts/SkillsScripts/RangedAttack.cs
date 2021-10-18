@@ -49,9 +49,18 @@ public class RangedAttack : Skill
         }
     }
 
-    void HitTarget(GameObject target) { 
+    //void HitTarget(GameObject target, GameObject source) {
 
-        
-    
-    }
+    //    HealthComponent targetHealth = target.GetComponent<HealthComponent>();
+    //    if (targetHealth)
+    //    {
+    //        UnitStats sourceStats = source.GetComponent<UnitStats>();
+    //        if (sourceStats)
+    //        {
+    //            targetHealth.TakeDamage(sourceStats.GetBaseDamage());
+    //        }
+
+    //    }
+
+    //}
 }

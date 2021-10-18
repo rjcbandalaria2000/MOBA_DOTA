@@ -7,8 +7,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float gameTime = 0;
     [SerializeField] int waves = 0;
-
     public static float distanceUnit = 85.714f; // Distance Formula: 1200(Dota Units) / 14(Unity Units)
+    [SerializeField]
+    List<GameObject> blueSpawner;
+    List<GameObject> redSpawners;
+
 
     private void Awake()
     {
