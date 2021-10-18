@@ -16,6 +16,7 @@ public class AttackState : UnitStateMachine
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
+        unit.transform.LookAt(target.transform.position);
 
         if (animator.GetFloat("Distance") <= unitStats.GetAttackRange())
         {

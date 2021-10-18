@@ -45,7 +45,7 @@ public class Projectile : MonoBehaviour
     {
         if (target)
         {
-            Vector3 distanceToTarget = this.gameObject.transform.position - target.gameObject.transform.position;
+            Vector3 distanceToTarget = target.gameObject.transform.position - this.gameObject.transform.position;
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
                 Quaternion.LookRotation(distanceToTarget), rotationSpeed * Time.deltaTime);
 
