@@ -28,7 +28,7 @@ public class HealthComponent : MonoBehaviour
 
     public void SetCurrentHealth(float health)
     {
-
+        currentHP = health;
     }
 
     public float GetCurrentHealth()

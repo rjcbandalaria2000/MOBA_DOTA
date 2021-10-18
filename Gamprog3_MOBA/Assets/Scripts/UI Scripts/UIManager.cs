@@ -7,13 +7,15 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject debugPanel;
+    [SerializeField] GameObject debugButton;
     public TextMeshProUGUI name;
-    public Image HP_Bar;
+    public Slider HP_Bar_Slider;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        debugPanel.SetActive(false);
+        debugButton.SetActive(true);
     }
 
     // Update is called once per frame
@@ -25,9 +27,11 @@ public class UIManager : MonoBehaviour
     public void ShowDebugPanel()
     {
         debugPanel.SetActive(true);
+        debugButton.SetActive(false);
     }
     public void HideDebugPanel()
     {
         debugPanel.SetActive(false);
+        debugButton.SetActive(true);
     }
 }

@@ -92,4 +92,14 @@ public class Creep_Spawner : MonoBehaviour
         }
        
     }
+
+    void spawnSuperCreep()
+    {
+        GameObject superCreep = Instantiate(creeps[2], spawnPoint.transform.position, Quaternion.identity);
+        AI_Script superCreepAI = superCreep.gameObject.GetComponent<AI_Script>();
+        if(superCreepAI)
+        {
+            superCreepAI.waypoints = waypoint;
+        }
+    }
 }
