@@ -8,16 +8,22 @@ public class DebuggerManager : MonoBehaviour
     [SerializeField]
     float timeMultiplier = 1f;
     public GameObject player;
-    public GameObject[] towerButton;
+    public List<GameObject> towerButton;
+
+    private void Awake()
+    {
+        SingletonManager.Register(this);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < towerButton.Length; i++)
+        for(int i = 0; i < towerButton.Count; i++)
         {
             towerButton[i].SetActive(false);
         }
         
+
     }
 
     // Update is called once per frame
@@ -82,9 +88,10 @@ public class DebuggerManager : MonoBehaviour
 
     public void destroyTower(int index)
     {
-        Destroy(towerButton[index].GetComponentsInParent<GameObject>()[index]);
+        towerButton.RemoveAt(index);
+        
 
-        for (int i = 0; i < towerButton.Length; i++)
+        for (int i = 0; i < towerButton.Count; i++)
         {
             towerButton[i].SetActive(false);
         }
@@ -92,7 +99,7 @@ public class DebuggerManager : MonoBehaviour
 
     public void selectToDestroyTower()
     {
-        for (int i = 0; i < towerButton.Length; i++)
+        for (int i = 0; i < towerButton.Count; i++)
         {
             towerButton[i].SetActive(true);
         }

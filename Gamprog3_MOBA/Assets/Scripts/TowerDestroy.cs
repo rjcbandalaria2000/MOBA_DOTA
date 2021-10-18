@@ -8,6 +8,7 @@ public class TowerDestroy : MonoBehaviour
     [SerializeField] UnityEvent destroyTowerEvent;
     public GameObject tower;
 
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -31,4 +32,5 @@ public class TowerDestroy : MonoBehaviour
         Debug.Log("Destroy");
         Destroy(tower);
     }
+
 }
