@@ -28,11 +28,16 @@ public class DetectTarget : MonoBehaviour
             {
                 if(unit.GetComponent<FactionComponent>().unitFaction != targetFaction.unitFaction)
                 {
-                    Unit unitParent = unit.GetComponent<Unit>();
-                    if (unitParent)
+                    AI_Script unitAI = unit.GetComponent<AI_Script>();
+                    if (unitAI)
                     {
-                        unitParent.SetTarget(detectedTarget.gameObject);
+                        unitAI.targets.Add(detectedTarget.gameObject);
                     }
+                    //Unit unitParent = unit.GetComponent<Unit>();
+                    //if (unitParent)
+                    //{
+                    //    unitParent.SetTarget(detectedTarget.gameObject);
+                    //}
                 }
             }
             

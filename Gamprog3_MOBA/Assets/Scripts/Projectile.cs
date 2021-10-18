@@ -64,9 +64,9 @@ public class Projectile : MonoBehaviour
                 //if (targetHealth)
                 //{
                 OnProjectileHit();
+                Destroy(this.gameObject);
                 //}
             }
-        
         }
 
     }

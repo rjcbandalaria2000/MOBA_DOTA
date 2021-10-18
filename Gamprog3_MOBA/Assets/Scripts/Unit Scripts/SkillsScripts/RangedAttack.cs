@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class RangedAttack : Skill
 {
-   [SerializeField]
-   GameObject projectile;
+    [SerializeField]
+    GameObject projectile;
+    [SerializeField]
+    Transform spawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //spawnPoint = this.gameObject.transform.parent.gameObject.transform.GetChild(0).transform;
     }
 
     // Update is called once per frame
@@ -33,7 +35,7 @@ public class RangedAttack : Skill
 
     void SpawnProjectile(GameObject target, GameObject source)
     {
-        GameObject spawnedProjectile = Instantiate(projectile, source.transform);
+        GameObject spawnedProjectile = Instantiate(projectile, source.transform.GetChild(0).transform.position, Quaternion.identity);
         Projectile projectileSpawned = spawnedProjectile.GetComponent<Projectile>();
         if (projectileSpawned)
         {
