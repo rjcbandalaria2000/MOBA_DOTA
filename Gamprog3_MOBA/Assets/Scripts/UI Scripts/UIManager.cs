@@ -10,12 +10,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject debugButton;
     public TextMeshProUGUI name;
     public Slider HP_Bar_Slider;
+    public Button DestroyTowerButton;
 
     // Start is called before the first frame update
     void Start()
     {
         debugPanel.SetActive(false);
         debugButton.SetActive(true);
+        DestroyTowerButton.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

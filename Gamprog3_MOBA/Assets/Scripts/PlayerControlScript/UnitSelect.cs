@@ -6,6 +6,7 @@ public class UnitSelect : MonoBehaviour
 {
     // Start is called before the first frame update
     public UIManager UI;
+    public TowerDestroy towerDestroyer;
 
     void Start()
     {
@@ -23,7 +24,9 @@ public class UnitSelect : MonoBehaviour
                 Debug.Log(hitInfo.collider.gameObject);
 
                 Unit unitSelected = hitInfo.transform.gameObject.GetComponent<Unit>();
+                TowerComponent towerSelected = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
 
+           
                 if(unitSelected)
                 {
                     UI.name.text = unitSelected.name;
@@ -35,9 +38,10 @@ public class UnitSelect : MonoBehaviour
                 {
                     Debug.Log("Not Unit");
                 }
-               
 
             }
         }
     }
+
+   
 }
