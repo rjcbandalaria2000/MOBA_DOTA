@@ -5,6 +5,8 @@ using UnityEngine;
 public class Creep_Spawner : MonoBehaviour
 {
     public GameObject[] creeps;
+    public GameObject regularCreeps;
+
     public List<Transform> waypoint = new List<Transform>();
     [SerializeField]
     Faction faction;

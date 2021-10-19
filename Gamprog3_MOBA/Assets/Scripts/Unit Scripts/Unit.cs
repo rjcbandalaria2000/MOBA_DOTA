@@ -46,6 +46,7 @@ public class Unit : MonoBehaviour
         if (unitNavmesh)
         {
             unitNavmesh.speed = unitStats.GetMovementSpeed()/GameManager.distanceUnit;
+            //unitNavmesh.angularSpeed = turnRate / GameManager.distanceUnit;
         }
     }
 
@@ -79,5 +80,10 @@ public class Unit : MonoBehaviour
     public Skill GetSkill(int skillIndex)
     {
         return unitSkills[skillIndex];
+    }
+
+    public void OnDeath()
+    {
+
     }
 }

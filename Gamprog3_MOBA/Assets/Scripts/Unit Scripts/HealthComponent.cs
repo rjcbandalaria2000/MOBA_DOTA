@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class HealthComponent : MonoBehaviour
 {
     [SerializeField]
@@ -10,6 +10,8 @@ public class HealthComponent : MonoBehaviour
     private float maxHP;
     [SerializeField]
     private bool isDead;
+
+    public UnityEvent<HealthComponent> death;
 
     #region Getter Setter 
 
@@ -51,7 +53,7 @@ public class HealthComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        death.Invoke(this);
     }
 
     public void InitializeHealth()

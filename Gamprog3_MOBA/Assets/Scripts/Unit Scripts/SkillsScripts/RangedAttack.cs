@@ -44,25 +44,26 @@ public class RangedAttack : Skill
                 projectileSpawned.SetSource(source);
                 projectileSpawned.SetTarget(target);
                 projectileSpawned.SetProjectileSpeed(sourceStats.GetProjectileSpeed());
-                //onApply.AddListener(HitTarget);
+                projectileSpawned.onTargetHit.AddListener(HitTarget);
             }
 
             
         }
     }
 
-    //void HitTarget(GameObject target, GameObject source) {
+    public void HitTarget(GameObject target, GameObject source)
+    {
 
-    //    HealthComponent targetHealth = target.GetComponent<HealthComponent>();
-    //    if (targetHealth)
-    //    {
-    //        UnitStats sourceStats = source.GetComponent<UnitStats>();
-    //        if (sourceStats)
-    //        {
-    //            targetHealth.TakeDamage(sourceStats.GetBaseDamage());
-    //        }
+        HealthComponent targetHealth = target.GetComponent<HealthComponent>();
+        if (targetHealth)
+        {
+            UnitStats sourceStats = source.GetComponent<UnitStats>();
+            if (sourceStats)
+            {
+                targetHealth.TakeDamage(sourceStats.GetBaseDamage());
+            }
 
-    //    }
+        }
 
-    //}
+    }
 }

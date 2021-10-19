@@ -21,12 +21,14 @@ public class SpawnerUpgrade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (redSpawner != null)
         {
             //Debug.Log(redSpawner.name);
             HealthComponent redSpawnerHealth = redSpawner.GetComponent<HealthComponent>();
             if (redSpawnerHealth)
             {
+                //redSpawnerHealth.death.AddListener()
                 if (redSpawnerHealth.GetIsDead() == true)
                 {
                     if (!blueSpawner.GetComponent<Creep_Spawner>().isSpawningSuperCreeps)

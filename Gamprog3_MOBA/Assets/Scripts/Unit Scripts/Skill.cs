@@ -9,8 +9,6 @@ public class Skill : MonoBehaviour
     int manaCost;
     [SerializeField]
     int castRange;
-    
-    public UnityEvent onApply;
    
     // Start is called before the first frame update
     void Start()

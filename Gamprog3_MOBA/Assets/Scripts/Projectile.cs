@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Projectile : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Projectile : MonoBehaviour
     float projectileSpeed;
     [SerializeField]
     float rotationSpeed;
+
+    public UnityEvent<GameObject, GameObject> onTargetHit;
 
     #region Getter Setter
     public void SetSource(GameObject sourceUnit)
@@ -51,6 +54,10 @@ public class Projectile : MonoBehaviour
 
             this.transform.Translate(0, 0, Time.deltaTime * projectileSpeed);
         }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -72,15 +79,16 @@ public class Projectile : MonoBehaviour
     }
     public void OnProjectileHit()
     {
-        HealthComponent targetHealth = target.GetComponent<HealthComponent>();
-        if (targetHealth)
-        {
-            UnitStats sourceStats = source.GetComponent<UnitStats>();
-            if (sourceStats) {
-                targetHealth.TakeDamage(sourceStats.GetBaseDamage());
-            }
+        onTargetHit.Invoke(target, source);
+        //HealthComponent targetHealth = target.GetComponent<HealthComponent>();
+        //if (targetHealth)
+        //{
+        //    UnitStats sourceStats = source.GetComponent<UnitStats>();
+        //    if (sourceStats) {
+        //        targetHealth.TakeDamage(sourceStats.GetBaseDamage());
+        //    }
             
-        }
+        //}
         //Skill skill = source.GetComponent<Unit>().GetSkill(0);
        // RangedAttack rangedSkill = skill.GetComponent<RangedAttack>();
 
