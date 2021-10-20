@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Creep_Spawner : MonoBehaviour
 {
-    public GameObject[] creeps;
+   // public GameObject[] creeps;
     public GameObject regularCreeps;
+    public GameObject SiegeCreep;
+    public GameObject SuperCreep;
 
     public List<Transform> waypoint = new List<Transform>();
     [SerializeField]
@@ -23,14 +25,10 @@ public class Creep_Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //CreepSpawning(3);
-        if(creeps.Length > 0)
-        {
-            StartCoroutine(SpawnCreepsRoutine());
-            //StartSpawnSuperCreeps(); 
-        }
-       
-       
+
+        StartCoroutine(SpawnCreepsRoutine());
+
+        
     }
 
     // Update is called once per frame
@@ -52,7 +50,7 @@ public class Creep_Spawner : MonoBehaviour
                 CreepSpawning();
             }
 
-            if (waves % 5 == 0 && waves > 0 && creeps[1] != null)
+            if (waves % 5 == 0 && waves > 0 && SiegeCreep != null)
             {
                 yield return new WaitForSeconds(delayTime);
                 siegeSpawn();
@@ -71,7 +69,7 @@ public class Creep_Spawner : MonoBehaviour
     void CreepSpawning()
     {
         //Debug.Log("Spawn for the love of God");
-        GameObject minions = Instantiate(creeps[0], spawnPoint.transform.position, Quaternion.identity);
+        GameObject minions = Instantiate(regularCreeps, spawnPoint.transform.position, Quaternion.identity);
         // Unit spawnedMinion = minions.gameObject.GetComponent<Unit>();
         FactionComponent minionFaction = minions.GetComponent<FactionComponent>();
 
@@ -92,7 +90,7 @@ public class Creep_Spawner : MonoBehaviour
     {
 
         Debug.Log("Siege Spawn");
-        GameObject siege = Instantiate(creeps[1], spawnPoint.transform.position, Quaternion.identity);
+        GameObject siege = Instantiate(SiegeCreep, spawnPoint.transform.position, Quaternion.identity);
         AI_Script siegeAI = siege.gameObject.GetComponent<AI_Script>();
         if (siegeAI)
         {
@@ -104,7 +102,7 @@ public class Creep_Spawner : MonoBehaviour
     void spawnSuperCreep()
     {
         Debug.Log("Spawning Super Creeps");
-        GameObject superCreep = Instantiate(creeps[2], spawnPoint.transform.position, Quaternion.identity);
+        GameObject superCreep = Instantiate(SuperCreep, spawnPoint.transform.position, Quaternion.identity);
         AI_Script superCreepAI = superCreep.gameObject.GetComponent<AI_Script>();
         if(superCreepAI)
         {
@@ -136,7 +134,7 @@ public class Creep_Spawner : MonoBehaviour
                 spawnSuperCreep();
             }
 
-            if (waves % 5 == 0 && waves > 0 && creeps[1] != null)
+            if (waves % 5 == 0 && waves > 0 && SiegeCreep != null)
             {
                 yield return new WaitForSeconds(delayTime);
                 siegeSpawn();
