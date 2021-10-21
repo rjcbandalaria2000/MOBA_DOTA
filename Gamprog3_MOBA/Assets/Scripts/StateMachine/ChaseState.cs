@@ -7,6 +7,7 @@ public class ChaseState : UnitStateMachine
 {
     NavMeshAgent unitNavmesh;
     UnitStats unitStats;
+    [SerializeField] float chaseAccuracy = 5.0f;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -20,7 +21,7 @@ public class ChaseState : UnitStateMachine
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
-        if (animator.GetFloat("Distance") > unitStats.GetAttackRange())
+        if (animator.GetFloat("Distance")  > unitStats.GetAttackRange())
         {
             unitNavmesh.SetDestination(target.transform.position);
             animator.SetBool("IsMoving", true);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackState : UnitStateMachine
 {
     UnitStats unitStats;
+    [SerializeField] float attackAccuracy = 5.0f;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -19,7 +20,7 @@ public class AttackState : UnitStateMachine
 
         unit.transform.LookAt(target.transform.position);
 
-        if (animator.GetFloat("Distance") <= unitStats.GetAttackRange())
+        if (animator.GetFloat("Distance") - attackAccuracy <= unitStats.GetAttackRange())
         {
            
             animator.SetBool("IsMoving", false);

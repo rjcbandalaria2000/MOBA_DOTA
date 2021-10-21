@@ -83,7 +83,7 @@ public class UnitStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        attackRange /= GameManager.distanceUnit;
     }
 
     // Update is called once per frame
