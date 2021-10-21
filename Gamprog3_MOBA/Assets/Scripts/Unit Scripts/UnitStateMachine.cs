@@ -8,10 +8,10 @@ public class UnitStateMachine : StateMachineBehaviour
     public GameObject unit;
     public GameObject target;
 
-
     public bool isMoving;
     public bool isAttacking;
-
+    
+    public float unitBaseAttackTime;
     public float attackInterval;
     [SerializeField]
     protected float attackTime;
@@ -25,7 +25,7 @@ public class UnitStateMachine : StateMachineBehaviour
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         unit = animator.gameObject;
-       
+        unitBaseAttackTime = unit.GetComponent<UnitStats>().GetBaseAttackTime();
 
     }
 
@@ -45,7 +45,7 @@ public class UnitStateMachine : StateMachineBehaviour
 
                 if (attackTime <= 0)
                 {
-                    attackTime = attackInterval;
+                    attackTime = unitBaseAttackTime;//attackInterval;
                     animator.SetBool("IsAttacking", true);
                     //animator.SetBool("isAttacking", false);
                 }
