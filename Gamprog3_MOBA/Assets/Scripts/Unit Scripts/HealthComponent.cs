@@ -53,7 +53,7 @@ public class HealthComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        death.Invoke(this);
+        //death.Invoke(this);
     }
 
     public void InitializeHealth()
@@ -84,5 +84,6 @@ public class HealthComponent : MonoBehaviour
         Destroy(this.gameObject);
         Debug.Log("Unit Dead");
         isDead = true;
+        death.Invoke(this);
     }
 }
