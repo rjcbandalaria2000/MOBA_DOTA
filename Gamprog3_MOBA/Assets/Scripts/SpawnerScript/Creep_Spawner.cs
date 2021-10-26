@@ -42,7 +42,7 @@ public class Creep_Spawner : MonoBehaviour
         while (true)
         {
             this.waves += 1;
-
+            yield return new WaitForSeconds(waveDelayTime);
             for (int i = 0; i < creepQuantity; i++)
             {
                 yield return new WaitForSeconds(delayTime);
@@ -59,7 +59,7 @@ public class Creep_Spawner : MonoBehaviour
             Debug.Log("FinishSpawning"); 
             
           
-            yield return new WaitForSeconds(waveDelayTime);
+            
 
             
         }
