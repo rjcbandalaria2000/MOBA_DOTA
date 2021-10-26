@@ -32,7 +32,9 @@ public class LightingManager : MonoBehaviour
         {
             dayTimer += Time.deltaTime;
             dayTimer %= 600; // Clamped between 0-600
-            ChangeLighting(dayTimer/ 600);
+            ChangeLighting(dayTimer / 600);
+            //Separate time for tracking the dayTime and do coroutine when daytime goes to 5mins 
+            //at least 5 sec transitiontime from day to night 
         }
     }
 
@@ -40,6 +42,7 @@ public class LightingManager : MonoBehaviour
     void ChangeLighting(float timeOfDay)
     {
         RenderSettings.ambientLight = lightPreset.ambientColor.Evaluate(timeOfDay);
+        directionalLight.color = lightPreset.directionalColor.Evaluate(timeOfDay);
         directionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timeOfDay * 360f) - 90f, 170, 0));
 
     }
