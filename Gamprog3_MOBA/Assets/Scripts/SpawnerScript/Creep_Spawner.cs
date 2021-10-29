@@ -22,11 +22,13 @@ public class Creep_Spawner : MonoBehaviour
     public float waveDelayTime;
     public bool isSpawningSuperCreeps;
 
+    private Coroutine spawnRoutine;
+
     // Start is called before the first frame update
     void Start()
     {
 
-        StartCoroutine(SpawnCreepsRoutine());
+        spawnRoutine = StartCoroutine(SpawnCreepsRoutine());
 
         
     }
@@ -113,7 +115,7 @@ public class Creep_Spawner : MonoBehaviour
     public void StopSpawningNormalCreeps()
     {
         Debug.Log("Stop Normal Spawning");
-        StopCoroutine(SpawnCreepsRoutine());
+        StopCoroutine(spawnRoutine);
     }
 
     public void StartSpawnSuperCreeps()
