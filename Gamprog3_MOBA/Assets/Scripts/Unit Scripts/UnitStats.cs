@@ -22,6 +22,10 @@ public class UnitStats : MonoBehaviour
     float projectileSpeed;
     [SerializeField]
     float baseAttackTime;
+    [SerializeField]
+    float baseArmor;
+    [SerializeField]
+    float totalArmor;
 
     #region StatGetters
     public float GetBaseDamage()
@@ -56,10 +60,17 @@ public class UnitStats : MonoBehaviour
     {
         return projectileSpeed;
     }
-
     public float GetBaseAttackTime()
     {
         return baseAttackTime;
+    }
+    public float GetBaseArmor()
+    {
+        return baseArmor;
+    }
+    public float GetTotalArmor()
+    {
+        return totalArmor;
     }
     #endregion
     #region StatSetters
@@ -86,6 +97,14 @@ public class UnitStats : MonoBehaviour
     public void SetAttackSpeed(int attackSpeedValue)
     {
         attackSpeed = attackSpeedValue;
+    }
+    public void SetBaseArmor(float baseArmorValue)
+    {
+        baseArmor = baseArmorValue;
+    }
+    public void SetTotalArmor(float totalArmorValue)
+    {
+        totalArmor = totalArmorValue;
     }
     #endregion
     // Start is called before the first frame update
