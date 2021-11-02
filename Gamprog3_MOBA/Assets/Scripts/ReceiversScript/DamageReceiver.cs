@@ -5,12 +5,12 @@ using UnityEngine;
 public class DamageReceiver : MonoBehaviour
 {
     [SerializeField]
-    UnitStats source;
+    GameObject source;
     float damageMultiplier;
     // Start is called before the first frame update
     void Start()
     {
-        source = this.transform.gameObject.GetComponent<UnitStats>();
+        source = this.gameObject;
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class DamageReceiver : MonoBehaviour
 
     public float CalculateDamageMultiplier()
     {
-        float unitTotalArmor = source.GetTotalArmor();
+        float unitTotalArmor = source.GetComponent<UnitStats>().GetTotalArmor();
         return damageMultiplier = 1 - ((0.052f * unitTotalArmor) /
             (0.9f + 0.048f * Mathf.Abs(unitTotalArmor)));
     }
