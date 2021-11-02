@@ -2,6 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AttackType
+{
+    Basic,
+    Pierce,
+    Siege,
+    Hero
+}
+public enum ArmorType
+{
+    Basic, 
+    Fortified,
+    Hero
+}
 public class UnitStats : MonoBehaviour
 {
     [SerializeField]

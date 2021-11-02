@@ -9,6 +9,8 @@ public class Skill : MonoBehaviour
     int manaCost;
     [SerializeField]
     int castRange;
+    [SerializeField]
+    AttackType attackType;
    
     // Start is called before the first frame update
     void Start()

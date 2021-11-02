@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public enum AttackType
+public enum CombatType
 {
     Melee,
     Ranged,
+}
+public enum UnitType
+{
+    Hero, 
+    MeleeCreep,
+    RangedCreep, 
+    SiegeCreep,
+    Tower,
 }
 
 public class Unit : MonoBehaviour
@@ -19,7 +27,9 @@ public class Unit : MonoBehaviour
     [SerializeField]
     UnitStats unitStats;
     [SerializeField]
-    AttackType attackType;
+    UnitType unitType;
+    [SerializeField]
+    CombatType combatType;
     //For attack test, will make a component for attack
     public float turnRate = 1.0f / GameManager.distanceUnit;
     NavMeshAgent unitNavmesh;

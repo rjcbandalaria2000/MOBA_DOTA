@@ -25,4 +25,6 @@ public class DamageReceiver : MonoBehaviour
         return damageMultiplier = 1 - ((0.052f * unitTotalArmor) /
             (0.9f + 0.048f * Mathf.Abs(unitTotalArmor)));
     }
+
+
 }
