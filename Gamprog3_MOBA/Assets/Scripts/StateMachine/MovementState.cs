@@ -31,7 +31,7 @@ public class MovementState : UnitStateMachine
 
        
 
-        Debug.Log(Vector3.Distance(unit.transform.position,newLocation));
+        //Debug.Log(Vector3.Distance(unit.transform.position,newLocation));
 
         if (newLocation != null)
         {
