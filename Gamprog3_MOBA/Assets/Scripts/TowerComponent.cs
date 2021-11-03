@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TowerComponent : MonoBehaviour
 {
@@ -9,8 +10,16 @@ public class TowerComponent : MonoBehaviour
     [SerializeField] private bool isInvincible;
     public GameObject referenceTower;
 
+    public UnityEvent<TowerComponent> destroyed;
+
     // Start is called before the first frame update
     void Start()
+    {
+       
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         if (referenceTower != null)
         {
@@ -22,29 +31,7 @@ public class TowerComponent : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    //if(other.gameObject.GetComponent<Unit>() != null)
-    //    //{
-    //    //    targets.Add(other.gameObject);
-    //    //}
-    //    targets.Add(other.gameObject);
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    //if (other.gameObject.GetComponent<Unit>() != null)
-    //    //{
-    //    //    targets.Remove(other.gameObject);
-    //    //}
-    //    targets.Remove(other.gameObject);
-    //}
 }
