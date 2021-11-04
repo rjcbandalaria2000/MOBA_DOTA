@@ -7,7 +7,7 @@ public class UnitStateMachine : StateMachineBehaviour
 {
     public GameObject unit;
     public GameObject target;
-
+   
     public bool isMoving;
     public bool isAttacking;
     
@@ -33,6 +33,7 @@ public class UnitStateMachine : StateMachineBehaviour
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         target = unit.GetComponent<Unit>().target;
+       
         if (target != null)
         {
             Debug.Log("Target Detected");
@@ -57,11 +58,8 @@ public class UnitStateMachine : StateMachineBehaviour
                 }
 
             }
-            else
-            {
-
-            }
         }
+
         else
         {
             animator.SetFloat("Distance", 0);

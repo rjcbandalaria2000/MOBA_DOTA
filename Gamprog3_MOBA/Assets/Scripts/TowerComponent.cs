@@ -29,6 +29,8 @@ public class TowerComponent : MonoBehaviour
         {
             isInvincible = false;
         }
+
+      
     }
 
    
