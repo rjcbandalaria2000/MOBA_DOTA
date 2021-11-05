@@ -58,7 +58,7 @@ public class TestRangedAttack : Skill
             UnitStats sourceStats = source.GetComponent<UnitStats>();
             if (sourceStats)
             {
-                targetDamageReceiver.ReceiveDamage(sourceStats.GetBaseDamage());
+                targetDamageReceiver.ReceiveDamage(sourceStats.GetBaseDamage(), attackType);
             }
         }
 

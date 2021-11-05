@@ -39,7 +39,8 @@ public class UnitStats : MonoBehaviour
     float baseArmor;
     [SerializeField]
     float totalArmor;
-
+    [SerializeField]
+    ArmorType unitArmorType;
     #region StatGetters
     public float GetBaseDamage()
     {
@@ -84,6 +85,10 @@ public class UnitStats : MonoBehaviour
     public float GetTotalArmor()
     {
         return totalArmor;
+    }
+    public ArmorType GetArmorType()
+    {
+        return unitArmorType;
     }
     #endregion
     #region StatSetters

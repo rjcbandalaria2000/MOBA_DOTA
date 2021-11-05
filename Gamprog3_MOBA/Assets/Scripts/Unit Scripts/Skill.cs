@@ -10,7 +10,7 @@ public class Skill : MonoBehaviour
     [SerializeField]
     int castRange;
     [SerializeField]
-    AttackType attackType;
+    protected AttackType attackType;
    
     // Start is called before the first frame update
     void Start()

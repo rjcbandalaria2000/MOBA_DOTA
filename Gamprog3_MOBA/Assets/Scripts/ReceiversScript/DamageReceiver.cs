@@ -8,6 +8,15 @@ public class DamageReceiver : MonoBehaviour
     GameObject source;
     [SerializeField]
     float damageMultiplier;
+    [SerializeField]
+    float basicAttackMultiplier;
+    [SerializeField]
+    float pierceAttackMultiplier;
+    [SerializeField]
+    float siegeAttackMultiplier;
+    [SerializeField]
+    float heroAttackMultiplier; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +37,10 @@ public class DamageReceiver : MonoBehaviour
         return multiplier;
     }
 
-    public void ReceiveDamage(float damage)
+    public void ReceiveDamage(float damage, AttackType damageAttackType)
     {
         damageMultiplier = CalculateDamageMultiplier();
+        float attackMultiplier; 
         Debug.Log("Damage Multiplier: " + damageMultiplier);
         HealthComponent sourceHealth = source.GetComponent<HealthComponent>();
         if (sourceHealth)
@@ -39,5 +49,17 @@ public class DamageReceiver : MonoBehaviour
         }
     }
 
+    public float DetermineAttackMultiplier(AttackType attackType)
+    {
+        UnitStats sourceStats = source.GetComponent<UnitStats>();
+        if (sourceStats)
+        {
+            if(sourceStats.GetArmorType() == ArmorType.Basic && attackType == AttackType.Basic)
+            {
+                
+            }
+        }
+        return 0; 
+    }
 
 }
