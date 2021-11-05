@@ -124,6 +124,7 @@ public class UnitStats : MonoBehaviour
     void Start()
     {
         attackRange /= GameManager.distanceUnit;
+        totalArmor += baseArmor;
     }
 
     // Update is called once per frame
