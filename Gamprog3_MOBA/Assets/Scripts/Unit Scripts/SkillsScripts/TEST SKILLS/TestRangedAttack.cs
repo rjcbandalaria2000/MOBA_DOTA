@@ -61,17 +61,5 @@ public class TestRangedAttack : Skill
                 targetDamageReceiver.ReceiveDamage(sourceStats.GetBaseDamage(), attackType);
             }
         }
-
-        //HealthComponent targetHealth = target.GetComponent<HealthComponent>();
-        //if (targetHealth)
-        //{
-        //    UnitStats sourceStats = source.GetComponent<UnitStats>();
-        //    if (sourceStats)
-        //    {
-        //        targetHealth.TakeDamage(sourceStats.GetBaseDamage());
-        //    }
-
-        //}
-
     }
 }

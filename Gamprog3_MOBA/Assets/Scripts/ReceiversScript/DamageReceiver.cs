@@ -40,26 +40,78 @@ public class DamageReceiver : MonoBehaviour
     public void ReceiveDamage(float damage, AttackType damageAttackType)
     {
         damageMultiplier = CalculateDamageMultiplier();
-        float attackMultiplier; 
-        Debug.Log("Damage Multiplier: " + damageMultiplier);
+        float attackMultiplier = DetermineAttackMultiplier(damageAttackType); 
+        Debug.Log("Damage Multiplier: " + attackMultiplier);
         HealthComponent sourceHealth = source.GetComponent<HealthComponent>();
         if (sourceHealth)
         {
-            sourceHealth.TakeDamage(damage * damageMultiplier);
+            sourceHealth.TakeDamage(damage * damageMultiplier * attackMultiplier);
         }
     }
 
     public float DetermineAttackMultiplier(AttackType attackType)
-    {
-        UnitStats sourceStats = source.GetComponent<UnitStats>();
-        if (sourceStats)
-        {
-            if(sourceStats.GetArmorType() == ArmorType.Basic && attackType == AttackType.Basic)
+    { 
+       UnitStats sourceStats = source.GetComponent<UnitStats>();
+       if (sourceStats)
+       {
+            if (sourceStats.GetArmorType() == ArmorType.Basic && attackType == AttackType.Basic)
             {
-                
+                return 1.0f;
+            }  
+            else if (sourceStats.GetArmorType() == ArmorType.Basic && attackType == AttackType.Pierce)
+            {
+                return 1.5f;
             }
+            else if (sourceStats.GetArmorType() == ArmorType.Basic && attackType == AttackType.Siege)
+            {
+                return 1.0f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Basic && attackType == AttackType.Hero)
+            {
+                return 1.0f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Fortified && attackType == AttackType.Basic)
+            {
+                return 0.7f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Fortified && attackType == AttackType.Pierce)
+            {
+                return 0.35f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Fortified && attackType == AttackType.Siege)
+            {
+                return 2.50f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Fortified && attackType == AttackType.Hero)
+            {
+                return 0.5f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Hero && attackType == AttackType.Basic)
+            {
+                return 0.75f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Hero && attackType == AttackType.Pierce)
+            {
+                return 0.5f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Hero && attackType == AttackType.Siege)
+            {
+                return 1.0f;
+            }
+            else if (sourceStats.GetArmorType() == ArmorType.Hero && attackType == AttackType.Hero)
+            {
+                return 1.0f;
+            }
+            else
+            {
+                return 0f;
+            }
+       }
+        else
+        {
+            return 0f;
         }
-        return 0; 
+
     }
 
 }
