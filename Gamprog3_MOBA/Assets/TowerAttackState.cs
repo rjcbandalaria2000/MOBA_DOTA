@@ -5,20 +5,23 @@ using UnityEngine;
 public class TowerAttackState : StateMachineBehaviour
 {
     TowerComponent tower;
+    Unit unit;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         tower = animator.gameObject.GetComponent<TowerComponent>();
+
+        unit = animator.gameObject.GetComponent<Unit>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (tower.targets != null)
+        if (unit.target != null)
         {
 
-           
+            //unit.UseSkill();
             Debug.Log("Tower Attack");
             animator.SetBool("isAttacking", false);
 

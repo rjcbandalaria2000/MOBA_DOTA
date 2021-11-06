@@ -30,7 +30,38 @@ public class TowerComponent : MonoBehaviour
             isInvincible = false;
         }
 
-      
+        if (this.gameObject.GetComponent<Unit>() == true)
+        {
+            if(targets.Count > 0 && this.gameObject.GetComponent<Unit>().target == null)
+            {
+                this.gameObject.GetComponent<Unit>().SetTarget(targets[0]);
+            }
+            
+        }
+
+        if (targets.Count > 0)
+        {
+            Unit towerUnit = this.gameObject.GetComponent<Unit>();
+            if (towerUnit)
+            {
+                if (towerUnit.target == null)
+                {
+                    for (int i = 0; i < targets.Count; i++)
+                    {
+                        if (targets[i] != null)
+                        {
+                            towerUnit.target = targets[i];
+                            break;
+                        }
+                        else
+                        {
+                            targets.RemoveAt(i);
+                        }
+
+                    }
+                }
+            }
+        }
     }
 
    
