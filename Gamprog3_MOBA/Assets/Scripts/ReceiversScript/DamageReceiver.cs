@@ -8,14 +8,6 @@ public class DamageReceiver : MonoBehaviour
     GameObject source;
     [SerializeField]
     float damageMultiplier;
-    [SerializeField]
-    float basicAttackMultiplier;
-    [SerializeField]
-    float pierceAttackMultiplier;
-    [SerializeField]
-    float siegeAttackMultiplier;
-    [SerializeField]
-    float heroAttackMultiplier; 
     
     // Start is called before the first frame update
     void Start()
@@ -107,10 +99,10 @@ public class DamageReceiver : MonoBehaviour
                 return 0f;
             }
        }
-        else
-        {
+       else
+       {
             return 0f;
-        }
+       }
 
     }
 
