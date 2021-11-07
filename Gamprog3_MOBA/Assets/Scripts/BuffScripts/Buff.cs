@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Buff : MonoBehaviour
 {
+    [SerializeField]
+    protected string buffName;
+    [SerializeField]
     protected UnitStats buffStats;
     // Start is called before the first frame update
     void Start()
