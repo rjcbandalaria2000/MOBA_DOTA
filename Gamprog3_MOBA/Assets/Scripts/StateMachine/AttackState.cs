@@ -19,14 +19,21 @@ public class AttackState : UnitStateMachine
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
         unit.transform.LookAt(target.transform.position);
-
-        if (animator.GetFloat("Distance") - attackAccuracy <= unitStats.GetAttackRange())
+        if (target)
         {
-           
-            animator.SetBool("IsMoving", false);
-            Debug.Log("Attack");
-            animator.SetBool("IsAttacking", false);
-            
+            if (animator.GetFloat("Distance") - attackAccuracy <= unitStats.GetAttackRange())
+            {
+
+                animator.SetBool("IsMoving", false);
+                Debug.Log("Attack");
+                animator.SetBool("IsAttacking", false);
+
+            }
+            else
+            {
+                animator.SetBool("inRange", false);
+                animator.SetBool("IsAttacking", false);
+            }
         }
         else
         {
