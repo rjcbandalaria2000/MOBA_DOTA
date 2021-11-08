@@ -137,4 +137,14 @@ public class UnitStats : MonoBehaviour
     {
         
     }
+
+    public void AddBonusArmor(float bonusArmorValue)
+    {
+        totalArmor += bonusArmorValue;
+    }
+
+    public void RemoveBonusArmor(float bonusArmorValue)
+    {
+        totalArmor -= bonusArmorValue;
+    }
 }

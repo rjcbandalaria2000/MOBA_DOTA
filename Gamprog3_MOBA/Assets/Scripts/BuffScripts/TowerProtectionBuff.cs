@@ -5,13 +5,13 @@ using UnityEngine;
 public class TowerProtectionBuff : Buff
 {
     [SerializeField]
-    GameObject source;
-    [SerializeField]
     int bonusArmor;
     // Start is called before the first frame update
     void Start()
     {
-        source = this.gameObject.transform.parent.gameObject;
+        buffName = "Tower Protection";
+        //targetUnit = this.gameObject;
+        //ActivateBuff(targetUnit);
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class TowerProtectionBuff : Buff
         if (targetStats)
         {
             Debug.Log("Give armor");
-            targetStats.SetTotalArmor(targetStats.GetBaseArmor() + bonusArmor);
+            targetStats.AddBonusArmor(bonusArmor);
         }
 
     }
@@ -45,7 +45,7 @@ public class TowerProtectionBuff : Buff
         UnitStats targetStats = target.GetComponent<UnitStats>();
         if (targetStats)
         {
-            targetStats.SetTotalArmor(targetStats.GetTotalArmor() - bonusArmor);
+            targetStats.RemoveBonusArmor(bonusArmor);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerProtectionAura : Aura
 {
     [SerializeField]
-    GameObject source;
+    GameObject targetUnit;
     [SerializeField]
     int bonusArmor;
     [SerializeField]
@@ -13,7 +13,7 @@ public class TowerProtectionAura : Aura
     // Start is called before the first frame update
     void Start()
     {
-        source = this.gameObject.transform.parent.gameObject;
+        targetUnit = this.gameObject.transform.parent.gameObject;
     }
 
     // Update is called once per frame
@@ -23,6 +23,7 @@ public class TowerProtectionAura : Aura
     }
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("Aura Given To: " + other.gameObject.name);
         Unit collidedUnit = other.gameObject.GetComponent<Unit>();
         if (collidedUnit)
         {
@@ -31,11 +32,12 @@ public class TowerProtectionAura : Aura
             if (collidedUnitFaction)
             {
                 Debug.Log("Unit Faction Detected");
-                FactionComponent sourceFaction = source.GetComponent<FactionComponent>();
+                FactionComponent sourceFaction = targetUnit.GetComponent<FactionComponent>();
                 if (sourceFaction)
                 {
                     if (collidedUnitFaction.unitFaction == sourceFaction.unitFaction)
                     {
+                        Debug.Log("Aura Given To: " + other.gameObject.name);
                         Debug.Log("Armor Buff");
                         ActivateAura(other.gameObject);
                     }
@@ -55,7 +57,7 @@ public class TowerProtectionAura : Aura
             if (collidedUnitFaction)
             {
                 Debug.Log("Unit Faction Detected");
-                FactionComponent sourceFaction = source.GetComponent<FactionComponent>();
+                FactionComponent sourceFaction = targetUnit.GetComponent<FactionComponent>();
                 if (sourceFaction)
                 {
                     if (collidedUnitFaction.unitFaction == sourceFaction.unitFaction)
@@ -74,13 +76,17 @@ public class TowerProtectionAura : Aura
     }
     public override void OnActiveAura(GameObject target)
     {
+        Buff towerBuff = Instantiate(buff.GetComponent<Buff>());
+        towerBuff.targetUnit = target;
+        towerBuff.gameObject.transform.parent = target.transform;
+        towerBuff.ActivateBuff(target);
         //base.OnActiveBuff(target);
-        UnitStats targetStats = target.GetComponent<UnitStats>();
-        if (targetStats)
-        {
-            Debug.Log("Give armor");
-            targetStats.SetTotalArmor(targetStats.GetBaseArmor() + bonusArmor);
-        }
+        //UnitStats targetStats = target.GetComponent<UnitStats>();
+        //if (targetStats)
+        //{
+        //    Debug.Log("Give armor");
+        //    targetStats.SetTotalArmor(targetStats.GetBaseArmor() + bonusArmor);
+        //}
 
     }
     public override void DeactivateAura(GameObject target)
@@ -89,11 +95,17 @@ public class TowerProtectionAura : Aura
     }
     public override void OnDeactiveAura(GameObject target)
     {
-        //base.OnDeactiveBuff(target);
-        UnitStats targetStats = target.GetComponent<UnitStats>();
-        if (targetStats)
+        TowerProtectionBuff targetTowerBuff = target.GetComponentInChildren<TowerProtectionBuff>();
+        if (targetTowerBuff)
         {
-            targetStats.SetTotalArmor(targetStats.GetTotalArmor() - bonusArmor);
+            targetTowerBuff.DeactivateBuff(target);
+            Destroy(targetTowerBuff.gameObject);
         }
+        //base.OnDeactiveBuff(target);
+        //UnitStats targetStats = target.GetComponent<UnitStats>();
+        //if (targetStats)
+        //{
+        //    targetStats.SetTotalArmor(targetStats.GetTotalArmor() - bonusArmor);
+        //}
     }
 }

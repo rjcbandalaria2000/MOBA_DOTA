@@ -1,24 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Assertions;
 public class Buff : MonoBehaviour
 {
     [SerializeField]
-    protected string buffName;
+    public GameObject targetUnit;
     [SerializeField]
-    protected UnitStats buffStats;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    protected GameObject sourceUnit { get; set; }
+    [SerializeField]
+    protected string buffName;
+    //[SerializeField]
+    //protected UnitStats buffStats;
 
     virtual public void ActivateBuff(GameObject target)
     {
@@ -30,7 +23,7 @@ public class Buff : MonoBehaviour
     }
     virtual public void OnActiveBuff(GameObject target)
     {
-
+        
     }
     virtual public void OnDeactiveBuff(GameObject target)
     {
