@@ -7,28 +7,35 @@ public class TowerComponent : MonoBehaviour
 {
     [SerializeField] public List<GameObject> targets;
     public Collider rangeCollider;
-    [SerializeField] private bool isInvincible;
+   // [SerializeField] private bool isInvincible;
     public GameObject referenceTower;
-
+    public HealthComponent towerHealth;
     public UnityEvent<TowerComponent> destroyed;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        towerHealth = this.gameObject.GetComponent<HealthComponent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (referenceTower != null)
+
+        if(towerHealth)
         {
-            isInvincible = true;
+            if (referenceTower != null)
+            {
+                towerHealth.isInvincible = true;
+            }
+            else
+            {
+                referenceTower = null;
+                towerHealth.isInvincible = false;
+            }
         }
-        else
-        {
-            isInvincible = false;
-        }
+        
+       
 
         if (this.gameObject.GetComponent<Unit>() == true)
         {

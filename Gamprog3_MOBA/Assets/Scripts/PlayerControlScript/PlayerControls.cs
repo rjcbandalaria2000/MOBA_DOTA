@@ -50,9 +50,23 @@ public class PlayerControls : MonoBehaviour
                     if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
                     {
                         Unit controlledUnit = this.GetComponent<Unit>();
-                        controlledUnit.target = hit.transform.gameObject;
-                        Debug.Log("Attack Unit");
+                        //HealthComponent healthUnit = this.GetComponent<HealthComponent>();
+                        //if (healthUnit)
+                        //{
+                        //    if (healthUnit.isInvincible)
+                        //    {
+                        //        Debug.Log("Immune");
+                        //        return;
+                        //    }
+                               
+                        //}
+                        //else
+                        //{}
+                           
+                            controlledUnit.target = hit.transform.gameObject;
+                            Debug.Log("Attack Unit");
 
+                        
                     }
                     else
                     {

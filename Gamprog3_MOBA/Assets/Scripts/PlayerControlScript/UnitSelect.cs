@@ -24,7 +24,7 @@ public class UnitSelect : MonoBehaviour
                 Debug.Log(hitInfo.collider.gameObject);
 
                 Unit unitSelected = hitInfo.transform.gameObject.GetComponent<Unit>();
-                TowerComponent towerSelected = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
+                //TowerComponent towerSelected = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
 
            
                 if(unitSelected)

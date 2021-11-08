@@ -21,8 +21,7 @@ public class AttackState : UnitStateMachine
         unit.transform.LookAt(target.transform.position);
 
         if (animator.GetFloat("Distance") - attackAccuracy <= unitStats.GetAttackRange())
-        {
-           
+        {          
             animator.SetBool("IsMoving", false);
             Debug.Log("Attack");
             animator.SetBool("IsAttacking", false);
