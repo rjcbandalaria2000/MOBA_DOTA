@@ -17,11 +17,23 @@ public class DetectTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+            
     }
     private void OnTriggerEnter(Collider other)
     {
         Unit detectedTarget = other.gameObject.GetComponent<Unit>();
+        HealthComponent healthTarget = other.gameObject.GetComponent<HealthComponent>();
+
+        if (healthTarget)
+        {
+            if(healthTarget.isInvincible)
+            {
+                Debug.Log("Immune");
+                return;
+            }
+           
+        }
+
         if (detectedTarget)
         {
             FactionComponent targetFaction = other.GetComponent<FactionComponent>();
@@ -48,6 +60,19 @@ public class DetectTarget : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Unit detectedTarget = other.gameObject.GetComponent<Unit>();
+        HealthComponent healthTarget = other.gameObject.GetComponent<HealthComponent>();
+
+
+        if (healthTarget)
+        {
+            if (healthTarget.isInvincible)
+            {
+                Debug.Log("Immune");
+                return;
+            }
+
+        }
+
         if (detectedTarget)
         {
             FactionComponent targetFaction = other.GetComponent<FactionComponent>();

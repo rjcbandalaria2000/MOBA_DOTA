@@ -11,6 +11,8 @@ public class HealthComponent : MonoBehaviour
     [SerializeField]
     private bool isDead;
 
+    public bool isInvincible = false;
+
     public UnityEvent<HealthComponent> death;
 
     #region Getter Setter 
@@ -64,6 +66,18 @@ public class HealthComponent : MonoBehaviour
    
     public void TakeDamage(float damage)
     {
+        //if (SingletonManager.Get<InvincibleComponent>().isInvincible)
+        //{
+        //    Debug.Log("Immune");
+        //    return;
+        //}
+
+        if (isInvincible)
+        {
+            Debug.Log("Immune");
+            return;
+        }
+
         currentHP -= damage;
         if (currentHP <= 0)
         {
