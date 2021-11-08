@@ -12,7 +12,7 @@ public class UnitStateMachine : StateMachineBehaviour
     public bool isAttacking;
     
     public float unitBaseAttackTime;
-    public float attackInterval;
+    //public float attackInterval;
     [SerializeField]
     protected float attackTime;
     public float rotationSpeed = 0.0f;

@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class BaseUnitState : StateMachineBehaviour
 {
+    GameObject controlledUnit;
+    GameObject targetUnit;
+
 
 
     // OnStateEnter is called before OnStateEnter is called on any state inside this state machine
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        //controlledUnit = animator.gameObject;
     }
 
     // OnStateUpdate is called before OnStateUpdate is called on any state inside this state machine
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //targetUnit = controlledUnit.GetComponent<Unit>().target;
         if(SingletonManager.Get<GameManager>().gameEnded())
         {
             animator.SetBool("IsGameEnded", true);
         }
+        //if (targetUnit)
+        //{
+
+        //}
     }
 
     // OnStateExit is called before OnStateExit is called on any state inside this state machine
