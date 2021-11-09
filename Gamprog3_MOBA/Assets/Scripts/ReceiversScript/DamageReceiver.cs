@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class DamageReceiver : MonoBehaviour
 {
-    [SerializeField]
     GameObject source;
-    [SerializeField]
-    float damageMultiplier;
     
     // Start is called before the first frame update
     void Start()
@@ -31,7 +28,7 @@ public class DamageReceiver : MonoBehaviour
 
     public void ReceiveDamage(float damage, AttackType damageAttackType)
     {
-        damageMultiplier = CalculateDamageMultiplier();
+        float damageMultiplier = CalculateDamageMultiplier();
         float attackMultiplier = DetermineAttackMultiplier(damageAttackType); 
         Debug.Log("Damage Multiplier: " + attackMultiplier);
         HealthComponent sourceHealth = source.GetComponent<HealthComponent>();
