@@ -15,6 +15,7 @@ public enum UnitType
     RangedCreep, 
     SiegeCreep,
     Tower,
+    Base,
 }
 
 public class Unit : MonoBehaviour
