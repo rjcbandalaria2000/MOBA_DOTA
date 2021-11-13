@@ -27,13 +27,6 @@ public class SpawnerUpgrade : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-      
-    }
-
     void UpgradeBlueSpawner(HealthComponent spawner)
     {
         if (redSpawner != null)

@@ -10,9 +10,11 @@ public class HealthComponent : MonoBehaviour
     private float maxHP;
     [SerializeField]
     private bool isDead;
-
+    [SerializeField]
+    bool isRegenerating;
+    public float healthRegen;
     public bool isInvincible = false;
-
+    Coroutine activateHealthRegen;
     public UnityEvent<HealthComponent> death;
 
     #region Getter Setter 
@@ -50,6 +52,7 @@ public class HealthComponent : MonoBehaviour
     void Start()
     {
         currentHP = maxHP;
+        activateHealthRegen = StartCoroutine(healthRegeneration());
     }
 
     // Update is called once per frame
@@ -99,5 +102,23 @@ public class HealthComponent : MonoBehaviour
         Debug.Log("Unit Dead");
         isDead = true;
         death.Invoke(this);
+    }
+    IEnumerator healthRegeneration()
+    {
+        while (!isDead)
+        {
+            yield return new WaitForSeconds(0.0f);
+            UnitStats unitStats = this.gameObject.GetComponent<UnitStats>();
+            if (unitStats)
+            {
+                healthRegen = unitStats.GetStrength() * 0.1f;
+                if(currentHP < maxHP)
+                {
+                    currentHP += healthRegen;
+                }
+                
+            }
+        }
+        
     }
 }

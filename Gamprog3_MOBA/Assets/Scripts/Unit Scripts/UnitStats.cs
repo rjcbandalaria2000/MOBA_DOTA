@@ -2,6 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AttackType
+{
+    Basic,
+    Pierce,
+    Siege,
+    Hero
+}
+public enum ArmorType
+{
+    Basic, 
+    Fortified,
+    Hero
+}
 public class UnitStats : MonoBehaviour
 {
     [SerializeField]
@@ -22,7 +35,12 @@ public class UnitStats : MonoBehaviour
     float projectileSpeed;
     [SerializeField]
     float baseAttackTime;
-
+    [SerializeField]
+    float baseArmor;
+    [SerializeField]
+    float totalArmor;
+    [SerializeField]
+    ArmorType unitArmorType;
     #region StatGetters
     public float GetBaseDamage()
     {
@@ -56,10 +74,21 @@ public class UnitStats : MonoBehaviour
     {
         return projectileSpeed;
     }
-
     public float GetBaseAttackTime()
     {
         return baseAttackTime;
+    }
+    public float GetBaseArmor()
+    {
+        return baseArmor;
+    }
+    public float GetTotalArmor()
+    {
+        return totalArmor;
+    }
+    public ArmorType GetArmorType()
+    {
+        return unitArmorType;
     }
     #endregion
     #region StatSetters
@@ -87,16 +116,35 @@ public class UnitStats : MonoBehaviour
     {
         attackSpeed = attackSpeedValue;
     }
+    public void SetBaseArmor(float baseArmorValue)
+    {
+        baseArmor = baseArmorValue;
+    }
+    public void SetTotalArmor(float totalArmorValue)
+    {
+        totalArmor = totalArmorValue;
+    }
     #endregion
     // Start is called before the first frame update
     void Start()
     {
         attackRange /= GameManager.distanceUnit;
+        totalArmor += baseArmor;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void AddBonusArmor(float bonusArmorValue)
+    {
+        totalArmor += bonusArmorValue;
+    }
+
+    public void RemoveBonusArmor(float bonusArmorValue)
+    {
+        totalArmor -= bonusArmorValue;
     }
 }
