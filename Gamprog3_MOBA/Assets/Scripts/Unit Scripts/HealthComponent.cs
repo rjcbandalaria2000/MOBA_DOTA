@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.Events;
 public class HealthComponent : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class HealthComponent : MonoBehaviour
     [SerializeField]
     private bool isDead;
     [SerializeField]
-    bool isRegenerating;
+    bool canRegen;
     public float healthRegen;
     public bool isInvincible = false;
     Coroutine activateHealthRegen;
@@ -51,8 +52,7 @@ public class HealthComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHP = maxHP;
-        activateHealthRegen = StartCoroutine(healthRegeneration());
+        InitializeHealth();
     }
 
     // Update is called once per frame
@@ -63,9 +63,26 @@ public class HealthComponent : MonoBehaviour
 
     public void InitializeHealth()
     {
-
+        Unit unit = this.gameObject.GetComponent<Unit>();
+        Assert.IsNotNull(unit);
+        UnitStats unitStats = this.gameObject.GetComponent<UnitStats>();
+        Assert.IsNotNull(unitStats);
+        maxHP = CalculateMaxHealth();
+        currentHP = maxHP;
+        if(unit.unitType == UnitType.Hero)
+        {
+            canRegen = true;
+            activateHealthRegen = StartCoroutine(healthRegeneration());
+        }
+        
     }
 
+    public float CalculateMaxHealth()
+    {
+        UnitStats unitStats = this.gameObject.GetComponent<UnitStats>();
+        Assert.IsNotNull(unitStats);
+        return unitStats.GetBaseHP() + (unitStats.GetStrength() * 20f);
+    }
    
     public void TakeDamage(float damage)
     {

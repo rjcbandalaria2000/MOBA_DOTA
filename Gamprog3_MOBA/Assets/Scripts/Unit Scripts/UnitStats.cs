@@ -15,10 +15,24 @@ public enum ArmorType
     Fortified,
     Hero
 }
+
+public enum PrimaryAttribute
+{
+    None,
+    Strength,
+    Agility,
+    Intelligence,
+}
 public class UnitStats : MonoBehaviour
 {
     [SerializeField]
+    float baseHP;
+    [SerializeField]
+    float initialDamage;
+    [SerializeField]
     float baseDamage;
+    [SerializeField]
+    float totalDamage;
     [SerializeField]
     int strength;
     [SerializeField]
@@ -29,6 +43,8 @@ public class UnitStats : MonoBehaviour
     int movementSpeed;
     [SerializeField]
     int attackSpeed;
+    [SerializeField]
+    int totalAttackSpeed;
     [SerializeField]
     float attackRange;
     [SerializeField]
@@ -41,10 +57,16 @@ public class UnitStats : MonoBehaviour
     float totalArmor;
     [SerializeField]
     ArmorType unitArmorType;
+    [SerializeField]
+    PrimaryAttribute unitPrimaryAttribute;
     #region StatGetters
     public float GetBaseDamage()
     {
         return baseDamage;
+    }
+    public float GetTotalDamage()
+    {
+        return totalDamage;
     }
     public int GetStrength()
     {
@@ -90,11 +112,19 @@ public class UnitStats : MonoBehaviour
     {
         return unitArmorType;
     }
+    public float GetBaseHP()
+    {
+        return baseHP;
+    }
     #endregion
     #region StatSetters
     public void SetBaseDamage(float damageValue)
     {
         baseDamage = damageValue;
+    }
+    public void SetTotalDamage(float totalDamageValue)
+    {
+        totalDamage = totalDamageValue;
     }
     public void SetStrength(int strengthValue)
     {
@@ -124,18 +154,30 @@ public class UnitStats : MonoBehaviour
     {
         totalArmor = totalArmorValue;
     }
+    public void SetBaseHP(float baseHPValue)
+    {
+        baseHP = baseHPValue;
+    }
     #endregion
     // Start is called before the first frame update
     void Start()
     {
-        attackRange /= GameManager.distanceUnit;
-        totalArmor += baseArmor;
+        InitializeUnitStats();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void InitializeUnitStats()
+    {
+        attackRange /= GameManager.distanceUnit;
+        totalArmor = CalculateTotalArmor();
+        totalAttackSpeed = CalculateAttackSpeed();
+        CalculateBaseDamage();
+
     }
 
     public void AddBonusArmor(float bonusArmorValue)
@@ -147,4 +189,34 @@ public class UnitStats : MonoBehaviour
     {
         totalArmor -= bonusArmorValue;
     }
+
+    public void CalculateBaseDamage()
+    {
+        if(unitPrimaryAttribute == PrimaryAttribute.Strength)
+        {
+            baseDamage = initialDamage + strength;
+        }
+        else if (unitPrimaryAttribute == PrimaryAttribute.Agility)
+        {
+            baseDamage = initialDamage + agility;
+        }
+        else if (unitPrimaryAttribute == PrimaryAttribute.Intelligence)
+        {
+            baseDamage = initialDamage + intelligence;
+        }
+        else
+        {
+            baseDamage = initialDamage;
+        }
+    }
+
+    public float CalculateTotalArmor()
+    {
+        return baseArmor + (agility * 0.16f);
+    }
+
+    public int CalculateAttackSpeed()
+    {
+        return attackSpeed + agility;
+    } 
 }

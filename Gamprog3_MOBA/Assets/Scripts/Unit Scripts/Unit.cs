@@ -15,6 +15,7 @@ public enum UnitType
     RangedCreep, 
     SiegeCreep,
     Tower,
+    Building,
 }
 
 public class Unit : MonoBehaviour
@@ -27,7 +28,7 @@ public class Unit : MonoBehaviour
     [SerializeField]
     UnitStats unitStats;
     [SerializeField]
-    UnitType unitType;
+    public UnitType unitType;
     [SerializeField]
     CombatType combatType;
     //For attack test, will make a component for attack
