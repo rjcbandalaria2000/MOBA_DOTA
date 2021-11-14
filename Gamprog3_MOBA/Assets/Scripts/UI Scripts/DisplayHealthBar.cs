@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.UI;
 
 public class DisplayHealthBar : MonoBehaviour
@@ -17,7 +18,10 @@ public class DisplayHealthBar : MonoBehaviour
         healthSlider = this.GetComponent<Slider>();
         healthComponent = this.transform.parent.gameObject.transform.parent.
             GetComponent<HealthComponent>();
-        SetMaxHealth(healthComponent.GetMaxHP());
+        Assert.IsNotNull(healthComponent);
+        healthSlider.maxValue = healthComponent.maxHP;
+        healthSlider.value = healthComponent.GetCurrentHealth();
+        //SetMaxHealth(healthComponent.GetMaxHP());
     }
     public void SetCurrentHealth(float health)
     {

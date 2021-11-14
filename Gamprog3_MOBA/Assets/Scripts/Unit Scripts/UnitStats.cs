@@ -46,7 +46,8 @@ public class UnitStats : MonoBehaviour
     [SerializeField]
     int movementSpeed;
     [SerializeField]
-    int attackSpeed;
+    int baseAttackSpeed;
+    public int attackSpeedModifier;
     [SerializeField]
     int totalAttackSpeed;
     [SerializeField]
@@ -55,6 +56,8 @@ public class UnitStats : MonoBehaviour
     float projectileSpeed;
     [SerializeField]
     float baseAttackTime;
+    [SerializeField]
+    float totalAttackTime;
     [SerializeField]
     float baseArmor;
     [SerializeField]
@@ -90,7 +93,7 @@ public class UnitStats : MonoBehaviour
     }
     public int GetAttackSpeed()
     {
-        return attackSpeed;
+        return baseAttackSpeed;
     }
     public float GetAttackRange()
     {
@@ -103,6 +106,10 @@ public class UnitStats : MonoBehaviour
     public float GetBaseAttackTime()
     {
         return baseAttackTime;
+    }
+    public float GetTotalAttackTime()
+    {
+        return totalAttackTime;
     }
     public float GetBaseArmor()
     {
@@ -156,7 +163,7 @@ public class UnitStats : MonoBehaviour
     }
     public void SetAttackSpeed(int attackSpeedValue)
     {
-        attackSpeed = attackSpeedValue;
+        baseAttackSpeed = attackSpeedValue;
     }
     public void SetBaseArmor(float baseArmorValue)
     {
@@ -187,8 +194,9 @@ public class UnitStats : MonoBehaviour
     {
         attackRange /= GameManager.distanceUnit;
         totalArmor = CalculateTotalArmor();
-        totalAttackSpeed = CalculateAttackSpeed();
+        totalAttackSpeed = CalculateAttackSpeedWithAgility();
         CalculateBaseDamage();
+        CalculateAttackTime();
 
     }
 
@@ -227,8 +235,14 @@ public class UnitStats : MonoBehaviour
         return baseArmor + (agility * 0.16f);
     }
 
-    public int CalculateAttackSpeed()
+    public int CalculateAttackSpeedWithAgility()
     {
-        return attackSpeed + agility;
+        return baseAttackSpeed + agility;
     } 
+
+    public void CalculateAttackTime()
+    {
+        float attackPerSecond = (baseAttackSpeed + totalAttackSpeed + attackSpeedModifier) / (100 * baseAttackTime);
+        totalAttackTime = 1 / attackPerSecond;
+    }
 }

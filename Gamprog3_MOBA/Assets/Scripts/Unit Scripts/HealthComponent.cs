@@ -8,7 +8,7 @@ public class HealthComponent : MonoBehaviour
     [SerializeField]
     private float currentHP;
     [SerializeField]
-    private float maxHP;
+    public float maxHP;
     [SerializeField]
     private bool isDead;
     [SerializeField]
@@ -17,7 +17,7 @@ public class HealthComponent : MonoBehaviour
     public bool isInvincible = false;
     Coroutine activateHealthRegen;
     public UnityEvent<HealthComponent> death;
-
+    
     #region Getter Setter 
 
     public float GetCurrentHealth()
@@ -52,7 +52,9 @@ public class HealthComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InitializeHealth();
+        //InitializeHealth();
+        maxHP = CalculateMaxHealth();
+        currentHP = maxHP;
     }
 
     // Update is called once per frame
@@ -63,6 +65,7 @@ public class HealthComponent : MonoBehaviour
 
     public void InitializeHealth()
     {
+        
         Unit unit = this.gameObject.GetComponent<Unit>();
         Assert.IsNotNull(unit);
         UnitStats unitStats = this.gameObject.GetComponent<UnitStats>();

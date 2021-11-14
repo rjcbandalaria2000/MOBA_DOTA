@@ -25,7 +25,7 @@ public class UnitStateMachine : StateMachineBehaviour
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         unit = animator.gameObject;
-        unitBaseAttackTime = unit.GetComponent<UnitStats>().GetBaseAttackTime();
+        
 
     }
 
@@ -33,7 +33,7 @@ public class UnitStateMachine : StateMachineBehaviour
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         target = unit.GetComponent<Unit>().target;
-       
+        unitBaseAttackTime = unit.GetComponent<UnitStats>().GetTotalAttackTime();
         if (target != null)
         {
             Debug.Log("Target Detected");
