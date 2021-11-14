@@ -102,5 +102,9 @@ public class DamageReceiver : MonoBehaviour
        }
 
     }
+    public float CalculateMagicalResistance()
+    {
+        return 1f; 
+    }
 
 }

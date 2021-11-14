@@ -49,8 +49,17 @@ public class ManaComponent : MonoBehaviour
     {
         UnitStats unitStats = this.GetComponent<UnitStats>();
         Assert.IsNotNull(unitStats);
-        maxMana = unitStats.GetIntelligence() * 12f;
+        maxMana = unitStats.GetBaseMana() + (unitStats.GetIntelligence() * 12f);
         currentMana = maxMana;
+    }
+
+    public void IncreaseMaxMana(float maxManaIncreaseValue)
+    {
+        float tempMana = maxMana;
+        maxMana += maxManaIncreaseValue;
+        float newMana = maxMana;
+        float addToCurrentMana = newMana - tempMana;
+        currentMana += addToCurrentMana;
     }
 
     // Update is called once per frame

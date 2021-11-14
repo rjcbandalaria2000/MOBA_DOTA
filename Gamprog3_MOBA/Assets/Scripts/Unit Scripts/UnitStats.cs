@@ -28,6 +28,8 @@ public class UnitStats : MonoBehaviour
     [SerializeField]
     float baseHP;
     [SerializeField]
+    float baseHealthRegen;
+    [SerializeField]
     float initialDamage;
     [SerializeField]
     float baseDamage;
@@ -37,6 +39,8 @@ public class UnitStats : MonoBehaviour
     int strength;
     [SerializeField]
     int intelligence;
+    [SerializeField]
+    float baseMana;
     [SerializeField]
     int agility;
     [SerializeField]
@@ -115,6 +119,14 @@ public class UnitStats : MonoBehaviour
     public float GetBaseHP()
     {
         return baseHP;
+    }
+    public float GetBaseHealthRegen()
+    {
+        return baseHealthRegen;
+    }
+    public float GetBaseMana()
+    {
+        return baseMana;
     }
     #endregion
     #region StatSetters

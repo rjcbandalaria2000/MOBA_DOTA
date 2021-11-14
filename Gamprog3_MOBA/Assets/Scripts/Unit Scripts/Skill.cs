@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum DamageType
+{
+    Physical,
+    Magical
+}
+
 public class Skill : MonoBehaviour
 {
     [SerializeField]
@@ -11,7 +17,8 @@ public class Skill : MonoBehaviour
     int castRange;
     [SerializeField]
     protected AttackType attackType;
-   
+    [SerializeField]
+    protected DamageType damageType;
     // Start is called before the first frame update
     void Start()
     {

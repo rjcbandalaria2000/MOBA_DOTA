@@ -128,7 +128,11 @@ public class HealthComponent : MonoBehaviour
             UnitStats unitStats = this.gameObject.GetComponent<UnitStats>();
             if (unitStats)
             {
-                healthRegen = unitStats.GetStrength() * 0.1f;
+                healthRegen = unitStats.GetBaseHealthRegen() + (unitStats.GetStrength() * 0.1f);
+                if(healthRegen <= 0)
+                {
+                    healthRegen = 0;
+                }
                 if(currentHP < maxHP)
                 {
                     currentHP += healthRegen;
