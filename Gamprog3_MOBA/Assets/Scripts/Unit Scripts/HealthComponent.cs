@@ -82,6 +82,14 @@ public class HealthComponent : MonoBehaviour
         }
 
         currentHP -= damage;
+
+         //display text if available/assign
+        
+         StartCoroutine(SingletonManager.Get<DisplayDamage>().displayDamage(damage));
+        
+        
+        
+        
         if (currentHP <= 0)
         {
             currentHP = 0;
@@ -121,4 +129,13 @@ public class HealthComponent : MonoBehaviour
         }
         
     }
+
+    //IEnumerator displayDamage(float damage)
+    //{
+    //    yield return new WaitForSeconds(0.1f);
+    //    SingletonManager.Get<DisplayDamage>().dmgValue.gameObject.SetActive(true);
+    //    SingletonManager.Get<DisplayDamage>().dmgValue.text = damage.ToString();
+    //    yield return new WaitForSeconds(1f);
+    //    SingletonManager.Get<DisplayDamage>().dmgValue.gameObject.SetActive(false);
+    //}
 }

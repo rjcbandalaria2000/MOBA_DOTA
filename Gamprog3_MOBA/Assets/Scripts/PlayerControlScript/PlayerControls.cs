@@ -35,7 +35,7 @@ public class PlayerControls : MonoBehaviour
     {
         RaycastHit hit;
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+        Unit controlledUnit = this.GetComponent<Unit>();
         if (Input.GetMouseButtonDown(1))
         {
            
@@ -49,7 +49,7 @@ public class PlayerControls : MonoBehaviour
                 {
                     if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
                     {
-                        Unit controlledUnit = this.GetComponent<Unit>();
+                       // Unit controlledUnit = this.GetComponent<Unit>();
                         //HealthComponent healthUnit = this.GetComponent<HealthComponent>();
                         //if (healthUnit)
                         //{
@@ -76,7 +76,7 @@ public class PlayerControls : MonoBehaviour
                 else
                 {
                     //Clears the selected target
-                    Unit controlledUnit = this.GetComponent<Unit>();
+                   // Unit controlledUnit = this.GetComponent<Unit>();
                     if (controlledUnit.target)
                     {
                         controlledUnit.target = null;
@@ -86,12 +86,14 @@ public class PlayerControls : MonoBehaviour
             } 
         }
 
+
+
         if (Input.GetKeyDown(KeyCode.S))
         {
             playerAnimator.SetBool("IsMoving", false);
             newPos = this.transform.position;
             //Clears the selected target 
-            Unit controlledUnit = this.GetComponent<Unit>();
+           // Unit controlledUnit = this.GetComponent<Unit>();
             if (controlledUnit.target)
             {
                 controlledUnit.target = null;
