@@ -100,6 +100,11 @@ public class PlayerControls : MonoBehaviour
             }
 
         }
+
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            //Skill
+        }
     }
 
    void SpawnArrowIndicator(Vector3 location)
