@@ -37,6 +37,7 @@ public class DisplayHealthBar : MonoBehaviour
     private void Update()
     {
         healthSlider.value = healthComponent.GetCurrentHealth();
+        healthSlider.maxValue = healthComponent.maxHP;
     }
 
 }

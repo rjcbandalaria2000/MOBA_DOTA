@@ -245,4 +245,10 @@ public class UnitStats : MonoBehaviour
         float attackPerSecond = (baseAttackSpeed + totalAttackSpeed + attackSpeedModifier) / (100 * baseAttackTime);
         totalAttackTime = 1 / attackPerSecond;
     }
+
+    public void IncreaseAttackRange(float attackRangeValue)
+    {
+        attackRange += attackRangeValue;
+        attackRange /= GameManager.distanceUnit;
+    }
 }
