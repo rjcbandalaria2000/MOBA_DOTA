@@ -1,23 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class TowerProtectionAura : Aura
+using UnityEngine.Assertions;
+public class VengefulAura : Aura
 {
     [SerializeField]
-    GameObject owner;
+    GameObject source;
     [SerializeField]
-    GameObject buff;
+    int auraRange;
+    [SerializeField]
+    SphereCollider auraDetector;
+    [SerializeField]
+    GameObject buffPrefab;
     // Start is called before the first frame update
     void Start()
     {
-        owner = this.gameObject.transform.parent.gameObject;
+        source = this.gameObject.transform.parent.gameObject;
+        auraDetector = this.GetComponent<SphereCollider>();
+        Assert.IsNotNull(auraDetector);
+        auraDetector.radius = auraRange / GameManager.distanceUnit;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+    public override void ActivateAura(GameObject target)
+    {
+        base.ActivateAura(target);
+    }
+    public override void DeactivateAura(GameObject target)
+    {
+        base.DeactivateAura(target);
+    }
+    public override void OnActiveAura(GameObject target)
+    {
+        //base.OnActiveAura(target);
+        Buff vengefulBuff = Instantiate(buffPrefab.GetComponent<Buff>());
+        vengefulBuff.targetUnit = target;
+        vengefulBuff.gameObject.transform.parent = target.transform;
+        vengefulBuff.ActivateBuff(target);
 
+    }
+    public override void OnDeactiveAura(GameObject target)
+    {
+        //base.OnDeactiveAura(target);
+        VengefulAuraBuff vengefulAuraBuff = target.GetComponentInChildren<VengefulAuraBuff>();
+        Assert.IsNotNull(vengefulAuraBuff);
+        vengefulAuraBuff.DeactivateBuff(target);
+        Destroy(vengefulAuraBuff.gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -29,13 +61,13 @@ public class TowerProtectionAura : Aura
             if (collidedUnitFaction)
             {
                 Debug.Log("Unit Faction Detected");
-                FactionComponent sourceFaction = owner.GetComponent<FactionComponent>();
+                FactionComponent sourceFaction = source.GetComponent<FactionComponent>();
                 if (sourceFaction)
                 {
                     if (collidedUnitFaction.unitFaction == sourceFaction.unitFaction)
                     {
                         Debug.Log("Aura Given To: " + other.gameObject.name);
-                        Debug.Log("Armor Buff");
+                        Debug.Log("Vengeful Buff");
                         ActivateAura(other.gameObject);
                     }
                 }
@@ -43,7 +75,6 @@ public class TowerProtectionAura : Aura
             }
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         Unit collidedUnit = other.gameObject.GetComponent<Unit>();
@@ -54,42 +85,17 @@ public class TowerProtectionAura : Aura
             if (collidedUnitFaction)
             {
                 Debug.Log("Unit Faction Detected");
-                FactionComponent sourceFaction = owner.GetComponent<FactionComponent>();
+                FactionComponent sourceFaction = source.GetComponent<FactionComponent>();
                 if (sourceFaction)
                 {
                     if (collidedUnitFaction.unitFaction == sourceFaction.unitFaction)
                     {
-                        Debug.Log("Armor Buff");
+                        Debug.Log("Vengeful Aura Removed");
                         DeactivateAura(other.gameObject);
                     }
                 }
 
             }
         }
-    }
-    public override void ActivateAura(GameObject target)
-    {
-        base.ActivateAura(target);
-    }
-    public override void OnActiveAura(GameObject target)
-    {
-        Buff towerBuff = Instantiate(buff.GetComponent<Buff>());
-        towerBuff.targetUnit = target;
-        towerBuff.gameObject.transform.parent = target.transform;
-        towerBuff.ActivateBuff(target);
-    }
-    public override void DeactivateAura(GameObject target)
-    {
-        base.DeactivateAura(target);
-    }
-    public override void OnDeactiveAura(GameObject target)
-    {
-        TowerProtectionBuff targetTowerBuff = target.GetComponentInChildren<TowerProtectionBuff>();
-        if (targetTowerBuff)
-        {
-            targetTowerBuff.DeactivateBuff(target);
-            Destroy(targetTowerBuff.gameObject);
-        }
-
     }
 }

@@ -187,7 +187,7 @@ public class UnitStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void InitializeUnitStats()
@@ -195,7 +195,8 @@ public class UnitStats : MonoBehaviour
         attackRange /= GameManager.distanceUnit;
         totalArmor = CalculateTotalArmor();
         totalAttackSpeed = CalculateAttackSpeedWithAgility();
-        CalculateBaseDamage();
+        CalculateBaseDamageForPrimaryAttribute();
+        totalDamage = baseDamage;
         CalculateAttackTime();
 
     }
@@ -210,9 +211,9 @@ public class UnitStats : MonoBehaviour
         totalArmor -= bonusArmorValue;
     }
 
-    public void CalculateBaseDamage()
+    public void CalculateBaseDamageForPrimaryAttribute()
     {
-        if(unitPrimaryAttribute == PrimaryAttribute.Strength)
+        if (unitPrimaryAttribute == PrimaryAttribute.Strength)
         {
             baseDamage = initialDamage + strength;
         }
@@ -238,7 +239,7 @@ public class UnitStats : MonoBehaviour
     public int CalculateAttackSpeedWithAgility()
     {
         return baseAttackSpeed + agility;
-    } 
+    }
 
     public void CalculateAttackTime()
     {
@@ -248,7 +249,21 @@ public class UnitStats : MonoBehaviour
 
     public void IncreaseAttackRange(float attackRangeValue)
     {
-        attackRange += attackRangeValue;
-        attackRange /= GameManager.distanceUnit;
+        attackRange += (attackRangeValue / GameManager.distanceUnit);
     }
+    public void DecreaseAttackRange(float attackRangeValue)
+    {
+        if (attackRange > 0)
+        {
+            attackRange -= (attackRangeValue / GameManager.distanceUnit);
+        }
+    }
+    public void IncreaseTotalDamage(float damageValue)
+    {
+        totalDamage += damageValue;
+    }
+    public void DecreaseTotalDamage(float damageValue)
+    {
+        totalDamage -= damageValue;
+    } 
 }

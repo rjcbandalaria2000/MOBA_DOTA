@@ -13,19 +13,19 @@ public class Buff : MonoBehaviour
     //[SerializeField]
     //protected UnitStats buffStats;
 
-    virtual public void ActivateBuff(GameObject target)
+    virtual public void ActivateBuff(GameObject target, GameObject source = null)
     {
         OnActiveBuff(target);
     }
-    virtual public void DeactivateBuff(GameObject target)
+    virtual public void DeactivateBuff(GameObject target, GameObject source = null)
     {
         OnDeactiveBuff(target);
     }
-    virtual public void OnActiveBuff(GameObject target)
+    virtual public void OnActiveBuff(GameObject target, GameObject source = null)
     {
         
     }
-    virtual public void OnDeactiveBuff(GameObject target)
+    virtual public void OnDeactiveBuff(GameObject target, GameObject source = null)
     {
 
     }

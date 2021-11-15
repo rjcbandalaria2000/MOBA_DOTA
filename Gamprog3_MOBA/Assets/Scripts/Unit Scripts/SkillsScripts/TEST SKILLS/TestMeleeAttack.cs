@@ -38,7 +38,7 @@ public class TestMeleeAttack : Skill
                         Debug.Log("Damage: " + target.name);
                         if (attackerStats)
                         {
-                            targetDamageReceiver.ReceiveDamage(attackerStats.GetBaseDamage(), attackType);
+                            targetDamageReceiver.ReceiveDamage(attackerStats.GetTotalDamage(), attackType);
                         }
 
                     }

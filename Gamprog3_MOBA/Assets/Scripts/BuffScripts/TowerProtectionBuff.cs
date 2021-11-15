@@ -20,11 +20,11 @@ public class TowerProtectionBuff : Buff
         
     }
 
-    public override void ActivateBuff(GameObject target)
+    public override void ActivateBuff(GameObject target, GameObject source = null)
     {
         base.ActivateBuff(target);
     }
-    public override void OnActiveBuff(GameObject target)
+    public override void OnActiveBuff(GameObject target, GameObject source = null)
     {
         //base.OnActiveBuff(target);
         UnitStats targetStats = target.GetComponent<UnitStats>();
@@ -35,11 +35,11 @@ public class TowerProtectionBuff : Buff
         }
 
     }
-    public override void DeactivateBuff(GameObject target)
+    public override void DeactivateBuff(GameObject target, GameObject source = null)
     {
         base.DeactivateBuff(target);
     }
-    public override void OnDeactiveBuff(GameObject target)
+    public override void OnDeactiveBuff(GameObject target, GameObject source = null)
     {
         //base.OnDeactiveBuff(target);
         UnitStats targetStats = target.GetComponent<UnitStats>();

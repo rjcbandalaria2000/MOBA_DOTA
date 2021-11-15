@@ -6,8 +6,6 @@ public class Aura : MonoBehaviour
 {
     [SerializeField]
     protected string auraName;
-    //[SerializeField]
-    //protected UnitStats buffStats;
     // Start is called before the first frame update
     void Start()
     {
