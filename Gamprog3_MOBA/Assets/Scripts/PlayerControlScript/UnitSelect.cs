@@ -6,7 +6,7 @@ public class UnitSelect : MonoBehaviour
 {
     // Start is called before the first frame update
     public UIManager UI;
-    public TowerDestroy towerDestroyer;
+    //public TowerDestroy towerDestroyer;
 
     void Start()
     {
@@ -31,6 +31,21 @@ public class UnitSelect : MonoBehaviour
                 {
                     UI.name.text = unitSelected.name;
                     UI.HP_Bar_Slider.value = unitSelected.gameObject.GetComponent<HealthComponent>().GetCurrentHealth() / unitSelected.gameObject.GetComponent<HealthComponent>().GetMaxHP();
+
+                    if(unitSelected.gameObject.GetComponent<UnitStats>() != null)
+                    {
+                        UnitStats selectedStats = unitSelected.gameObject.GetComponent<UnitStats>();
+                        UI.AtkVal.text = selectedStats.GetBaseDamage().ToString();
+                        UI.DefVal.text = selectedStats.GetBaseArmor().ToString();
+                        UI.SpeedVal.text = selectedStats.GetMovementSpeed().ToString();
+                       
+                    }
+                    else
+                    {
+                        UI.AtkVal.text = 0.ToString();
+                        UI.DefVal.text = 0.ToString();
+                        UI.SpeedVal.text = 0.ToString();
+                    }
 
                     //UI.HP_Bar.fillAmount = unitSelected.gameObject.GetComponent<HealthComponent>().GetCurrentHealth() / unitSelected.gameObject.GetComponent<HealthComponent>().GetMaxHP();
                 }
