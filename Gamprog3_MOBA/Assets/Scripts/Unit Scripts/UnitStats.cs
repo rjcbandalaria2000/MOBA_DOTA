@@ -41,6 +41,11 @@ public class UnitStats : MonoBehaviour
     float totalArmor;
     [SerializeField]
     ArmorType unitArmorType;
+
+    [Header("Status Effect")]
+    public bool isStuned = false;
+
+
     #region StatGetters
     public float GetBaseDamage()
     {

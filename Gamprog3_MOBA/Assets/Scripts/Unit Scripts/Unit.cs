@@ -23,8 +23,7 @@ public class Unit : MonoBehaviour
     public string name;
     [SerializeField]
     public GameObject target;
-    [SerializeField]
-    List<Skill> unitSkills;
+    public List<Skill> unitSkills;
     [SerializeField]
     UnitStats unitStats;
     [SerializeField]
@@ -35,7 +34,11 @@ public class Unit : MonoBehaviour
     public float turnRate = 1.0f / GameManager.distanceUnit;
     NavMeshAgent unitNavmesh;
 
-        
+    private void Awake()
+    {
+        SingletonManager.Register(this);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +86,19 @@ public class Unit : MonoBehaviour
         //}
         unitSkills[0].ActivateSkill(target, this.gameObject);
     }
+
+    public void useFirstSkill()
+    {
+        if(unitSkills[1] != null)
+        {
+            unitSkills[1].ActivateSkill(target, this.gameObject);
+        }
+        else
+        {
+            Debug.Log("No Skill");
+        }
+    }
+
     public void SetTarget(GameObject targetAcquired)
     {
         target = targetAcquired;

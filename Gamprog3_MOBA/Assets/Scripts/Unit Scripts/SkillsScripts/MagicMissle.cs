@@ -6,17 +6,16 @@ public class MagicMissle : Skill
 {
     public GameObject projectile;
     public GameObject targets;
-    public float skillCooldown;
-    public bool isCoolDown;
+   
     public float damage;
-    public PlayerControls playerControls; //use for targeting
+  
     [SerializeField]
-    Transform spawnPoint;
+    Transform skillSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerControls = this.gameObject.GetComponent<PlayerControls>();
+       
     }
 
     // Update is called once per frame
@@ -48,7 +47,7 @@ public class MagicMissle : Skill
             {
                 projectileSpawned.SetSource(source);
                 projectileSpawned.SetTarget(target);
-                projectileSpawned.SetProjectileSpeed(sourceStats.GetProjectileSpeed());
+                projectileSpawned.SetProjectileSpeed(900f/GameManager.distanceUnit);
                 projectileSpawned.onTargetHit.AddListener(HitTarget);
             }
 
@@ -72,11 +71,23 @@ public class MagicMissle : Skill
 
     }
 
-    IEnumerator coolDown(float coolDownValue)
-    {
-        isCoolDown = true;
-        yield return new WaitForSeconds(coolDownValue);
-        isCoolDown = false;
-        coolDownValue = skillCooldown;
-    }
+    //void spawnMagicMissle(GameObject target, GameObject source)
+    //{
+    //    GameObject skillSpawnPoint = Instantiate(projectile, source.transform.GetChild(0).transform.position, Quaternion.identity);
+    //    Projectile projectileSpawned = skillSpawnPoint.GetComponent<Projectile>();
+    //    if (projectileSpawned)
+    //    {
+    //        UnitStats sourceStats = source.GetComponent<UnitStats>();
+    //        if (sourceStats)
+    //        {
+    //            projectileSpawned.SetSource(source);
+    //            projectileSpawned.SetTarget(target);
+    //            projectileSpawned.SetProjectileSpeed(900f/GameManager.distanceUnit);
+    //            projectileSpawned.onTargetHit.AddListener(HitTarget);
+    //        }
+
+
+    //    }
+    //}
+   
 }

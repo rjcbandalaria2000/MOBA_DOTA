@@ -16,6 +16,11 @@ public class DisplayDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (this.gameObject.GetComponent<DamageReceiver>())
+        {
+            damageReceiver = this.gameObject.GetComponent<DamageReceiver>();
+        }
+        
         //dmgValue.gameObject.SetActive(false);
        // damageReceiver = this.gameObject.GetComponent<DamageReceiver>();
     }
@@ -31,7 +36,7 @@ public class DisplayDamage : MonoBehaviour
         if(this.gameObject != null)
         {
             yield return new WaitForSeconds(0.1f);
-            dmgValue.text = damage.ToString();
+            dmgValue.text = damage.ToString("0");
             yield return new WaitForSeconds(0.2f);
             dmgValue.text = "";
         }

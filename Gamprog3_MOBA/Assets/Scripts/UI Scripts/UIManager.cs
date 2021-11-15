@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     public Slider HP_Bar_Slider;
     public Button DestroyTowerButton;
 
-    [Header("Stats")]
+    [Header("Stats UI")]
     public Text AtkVal;
     public Text DefVal;
     public Text SpeedVal;

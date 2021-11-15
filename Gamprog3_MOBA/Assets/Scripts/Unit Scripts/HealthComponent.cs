@@ -85,11 +85,12 @@ public class HealthComponent : MonoBehaviour
 
          //display text if available/assign
         
-         StartCoroutine(SingletonManager.Get<DisplayDamage>().displayDamage(damage));
-        
-        
-        
-        
+        if(this.gameObject.GetComponent<DisplayDamage>())
+        {
+            DisplayDamage displayDamage = this.gameObject.GetComponent<DisplayDamage>();
+
+            StartCoroutine(displayDamage.displayDamage(damage));
+        }
         if (currentHP <= 0)
         {
             currentHP = 0;
