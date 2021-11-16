@@ -12,9 +12,12 @@ public enum DamageType
 public class Skill : MonoBehaviour
 {
     public float skillCooldown;
+    //public float currentSkillCooldown;
+    //public float maxSkillCoolDown;
     public bool isCoolDown;
     protected Coroutine coolDownRoutine;
 
+    public UIManager skillsUI;
 
     [SerializeField]
     int manaCost;
@@ -27,7 +30,7 @@ public class Skill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        //currentSkillCooldown = maxSkillCoolDown;
     }
 
     // Update is called once per frame
@@ -41,6 +44,7 @@ public class Skill : MonoBehaviour
         if(!isCoolDown)
         {
             OnActivate(target, attacker);
+
             coolDownRoutine = StartCoroutine(coolDown(skillCooldown));
         }
         else
@@ -64,11 +68,28 @@ public class Skill : MonoBehaviour
 
     }
 
+    public int getManaCost()
+    {
+        return manaCost;
+    }
+
+    //public IEnumerator coolDown(float coolDownValue)
+    //{
+    //    isCoolDown = true;
+    //    skillsUI.skill1_icon_Transparent.fillAmount = coolDownValue /100.0f;
+    //    yield return new WaitForSeconds(coolDownValue);
+    //    isCoolDown = false;
+    //    currentSkillCooldown = maxSkillCoolDown;
+    //}
+
     public IEnumerator coolDown(float coolDownValue)
     {
         isCoolDown = true;
+        skillsUI.skill1_icon_Transparent.fillAmount = 1;
         yield return new WaitForSeconds(coolDownValue);
+        skillsUI.skill1_icon_Transparent.fillAmount = 0;
         isCoolDown = false;
         coolDownValue = skillCooldown;
     }
+
 }

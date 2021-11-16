@@ -18,12 +18,28 @@ public class UIManager : MonoBehaviour
     public Text SpeedVal;
     public Text AttributeVal;
 
+    [Header("Player image")]
+    public GameObject heroImage;
+
+    [Header("Player Skills Icon")]
+    public GameObject skill1_icon;
+    public GameObject skill2_icon;
+    public GameObject skill3_icon;
+    public GameObject skill4_icon;
+
+    [Header("Player Skills Icon transparent")]
+    public Image skill1_icon_Transparent;
+    public Image skill2_icon_Transparent;
+    public Image skill3_icon_Transparent;
+    public Image skill4_icon_Transparent;
+
     // Start is called before the first frame update
     void Start()
     {
         debugPanel.SetActive(false);
         debugButton.SetActive(true);
         DestroyTowerButton.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame

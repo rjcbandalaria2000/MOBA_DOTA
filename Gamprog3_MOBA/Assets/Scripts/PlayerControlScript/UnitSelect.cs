@@ -38,7 +38,24 @@ public class UnitSelect : MonoBehaviour
                         UI.AtkVal.text = selectedStats.GetBaseDamage().ToString();
                         UI.DefVal.text = selectedStats.GetBaseArmor().ToString();
                         UI.SpeedVal.text = selectedStats.GetMovementSpeed().ToString();
-                       
+
+                        if (unitSelected.unitType == UnitType.Hero)
+                        {
+                            UI.heroImage.gameObject.SetActive(true);
+                            UI.skill1_icon.gameObject.SetActive(true);
+                            UI.skill2_icon.gameObject.SetActive(true);
+                            UI.skill3_icon.gameObject.SetActive(true);
+                            UI.skill4_icon.gameObject.SetActive(true);
+                        }
+                        else if (unitSelected.unitType != UnitType.Hero)
+                        {
+                            UI.heroImage.gameObject.SetActive(false);
+                            UI.skill1_icon.gameObject.SetActive(false);
+                            UI.skill2_icon.gameObject.SetActive(false);
+                            UI.skill3_icon.gameObject.SetActive(false);
+                            UI.skill4_icon.gameObject.SetActive(false);
+                        }
+                        
                     }
                     else
                     {

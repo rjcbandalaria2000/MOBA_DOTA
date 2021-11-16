@@ -52,7 +52,7 @@ public class HealthComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InitializeHealth();
+        InitializeHealth();
         maxHP = CalculateMaxHealth();
         currentHP = maxHP;
     }

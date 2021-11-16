@@ -74,6 +74,11 @@ public class DebuggerManager : MonoBehaviour
         player.gameObject.GetComponent<HealthComponent>().SetCurrentHealth(player.gameObject.GetComponent<HealthComponent>().GetMaxHP());
     }
 
+    public void restoreMana()
+    {
+        player.gameObject.GetComponent<ManaComponent>().SetCurrentMana(player.gameObject.GetComponent<ManaComponent>().GetMaxMana());
+    }
+
     /*public void destroyTower()
     {
         Debug.Log("Select Tower to Destroy");

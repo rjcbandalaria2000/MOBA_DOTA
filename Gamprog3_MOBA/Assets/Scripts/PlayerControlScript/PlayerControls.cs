@@ -151,7 +151,15 @@ public class PlayerControls : MonoBehaviour
                {
                     Debug.Log("MagicMissle");
                     Debug.Log(unitSelected.gameObject + " is the target");
-                    controlledUnit.unitSkills[1].ActivateSkill(skillTarget, this.gameObject); //Change in state machine
+                    if(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[1].getManaCost())
+                    {
+                       controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
+                       controlledUnit.unitSkills[1].ActivateSkill(skillTarget, this.gameObject); //Change in state machine
+                    }
+                    else
+                    {
+                            Debug.Log("Insufficient Mana");
+                    }
                }
                else
                {

@@ -47,7 +47,8 @@ public class MagicMissle : Skill
             {
                 projectileSpawned.SetSource(source);
                 projectileSpawned.SetTarget(target);
-                projectileSpawned.SetProjectileSpeed(900f/GameManager.distanceUnit);
+                // projectileSpawned.SetProjectileSpeed(900f/GameManager.distanceUnit);
+                projectileSpawned.SetProjectileSpeed(20f);
                 projectileSpawned.onTargetHit.AddListener(HitTarget);
             }
 
