@@ -29,12 +29,11 @@ public class MovementState : UnitStateMachine
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         newLocation = unit.GetComponent<PlayerControls>().newPos;
 
-       
-
         //Debug.Log(Vector3.Distance(unit.transform.position,newLocation));
 
         if (newLocation != null)
         {
+            //Debug.Log("New Destination: " + newLocation);
             unitNavMesh.SetDestination(newLocation);
         }
         else
@@ -44,7 +43,8 @@ public class MovementState : UnitStateMachine
 
        if (Vector3.Distance(unit.transform.position, newLocation) <= locationAccuracy )
        {
-            newLocation = Vector3.zero;
+            Debug.Log("Destination Reached");
+            newLocation = unit.transform.position;
             unit.GetComponent<Animator>().SetBool("IsMoving", false);
        }
 

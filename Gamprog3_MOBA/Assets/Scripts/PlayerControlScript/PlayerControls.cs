@@ -36,53 +36,89 @@ public class PlayerControls : MonoBehaviour
         RaycastHit hit;
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Unit controlledUnit = this.GetComponent<Unit>();
+        // On Right Click 
         if (Input.GetMouseButtonDown(1))
         {
-           
-            playerAnimator.SetBool("IsMoving", true);
+            //playerAnimator.SetBool("IsMoving", true);
 
             if (Physics.Raycast(ray.origin, ray.direction, out hit)) //&& unit.GetComponent<PlayerControls>().unitStates != States.Idle)
             {
                 SpawnArrowIndicator(hit.point);
-                FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
-
-                if (targetFaction)
+                Unit unitTarget = hit.transform.gameObject.GetComponent<Unit>();
+                if (unitTarget)
                 {
-                    if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
+                    FactionComponent unitFaction = unitTarget.gameObject.GetComponent<FactionComponent>();
+                    if(unitFaction.unitFaction != controlledUnit.GetComponent<FactionComponent>().unitFaction)
                     {
-                        controlledUnit.target = hit.transform.gameObject;
-                        Debug.Log("Attack Unit");
-
-                        if (controlledUnit.target.GetComponent<TowerComponent>() != null || controlledUnit.target.GetComponent<BaseComponent>() != null)
+                        HealthComponent unitHealthComponent = unitTarget.gameObject.GetComponent<HealthComponent>();
+                        if (unitHealthComponent)
                         {
-                            if (controlledUnit.target.GetComponent<HealthComponent>().isInvincible)
+                            if (unitHealthComponent.isInvincible)
                             {
-                                Debug.Log("Cant Target. Its invincible");
+                                Debug.Log("Is Invincible");
                                 controlledUnit.target = null;
-                                return;
+                            }
+                            else
+                            {
+                                controlledUnit.target = unitTarget.gameObject;
                             }
                         }
                     }
                     else
                     {
-                        playerAnimator.SetBool("IsMoving", false);
-                        controlledUnit.target = null;
-                        newPos = hit.point;
-                        Debug.Log("Friendly");
+                        Debug.Log("Friendly Unit");
                     }
                 }
                 else
                 {
-                    //Clears the selected target
-                   // Unit controlledUnit = this.GetComponent<Unit>();
+                    playerAnimator.SetBool("IsMoving", true);
                     if (controlledUnit.target)
                     {
                         controlledUnit.target = null;
                     }
                     newPos = hit.point;
+                    Debug.Log("Move to location: " + newPos);
                 }
+                //FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
+                ////Check if there is faction 
+                //if (targetFaction)
+                //{
+                //    // If faction is opposite to player 
+                //    if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
+                //    {
+                //        //Set Target
+                //        controlledUnit.target = hit.transform.gameObject;
+                //        Debug.Log("Attack Unit");
 
-               
+                //        if (controlledUnit.target.GetComponent<TowerComponent>() != null || controlledUnit.target.GetComponent<BaseComponent>() != null)
+                //        {
+                //            if (controlledUnit.target.GetComponent<HealthComponent>().isInvincible)
+                //            {
+                //                Debug.Log("Cant Target. Its invincible");
+                //                controlledUnit.target = null;
+                //                return;
+                //            }
+                //        }
+                //    }
+                //    //else
+                //    //{
+                //    //    //playerAnimator.SetBool("IsMoving", false);
+                //    //    controlledUnit.target = null;
+                //    //    //newPos = hit.point;
+                //    //    Debug.Log("Friendly");
+                //    //}
+                //}
+                //else // Set Position of Player 
+                //{
+                //    //Clears the selected target
+                //   // Unit controlledUnit = this.GetComponent<Unit>();
+                //    if (controlledUnit.target)
+                //    {
+                //        controlledUnit.target = null;
+                //    }
+                //    newPos = hit.point;
+                //    Debug.Log(hit.transform.name);
+                //}
             } 
         }
 
