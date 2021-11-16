@@ -130,6 +130,7 @@ public class UnitStats : MonoBehaviour
     {
         return baseHP;
     }
+    //Replace improve 
     public float GetBaseHealthRegen()
     {
         return baseHealthRegen;
@@ -248,6 +249,12 @@ public class UnitStats : MonoBehaviour
     {
         float attackPerSecond = (baseAttackSpeed + totalAttackSpeed + attackSpeedModifier) / (100 * baseAttackTime);
         totalAttackTime = 1 / attackPerSecond;
+    }
+
+    public float GetAttackTime()
+    {
+        float attackPerSecond = (baseAttackSpeed + totalAttackSpeed + attackSpeedModifier) / (100 * baseAttackTime);
+        return 1 / attackPerSecond; ;
     }
 
     public void IncreaseAttackRange(float attackRangeValue)

@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        projectileSpeed /= GameManager.distanceUnit;
     }
 
     // Update is called once per frame

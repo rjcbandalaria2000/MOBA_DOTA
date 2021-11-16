@@ -7,6 +7,7 @@ public class VengefulAuraBuff : Buff
 {
     [SerializeField]
     GameObject source;
+    public GameObject Source { get { return source; }}
     [SerializeField]
     List<float> attackRangeIncrease;
     [SerializeField]
