@@ -52,9 +52,9 @@ public class HealthComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InitializeHealth();
-        maxHP = CalculateMaxHealth();
-        currentHP = maxHP;
+        InitializeHealth();
+        //maxHP = CalculateMaxHealth();
+        //currentHP = maxHP;
     }
 
     // Update is called once per frame
@@ -136,7 +136,9 @@ public class HealthComponent : MonoBehaviour
     {
         while (!isDead)
         {
-            yield return new WaitForSeconds(0.0f);
+            //yield return null - similar to update instead of WaitForSeconds which is for the next frame
+            //yield return new WaitForSeconds(0.0f);
+            yield return null;
             UnitStats unitStats = this.gameObject.GetComponent<UnitStats>();
             if (unitStats)
             {

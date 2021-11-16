@@ -64,6 +64,9 @@ public class MagicMissle : Skill
             UnitStats sourceStats = source.GetComponent<UnitStats>();
             if (sourceStats)
             {
+                //Make a new stun state mechanim 
+                //Go to stun and wait for timer then return to idle 
+                //Same with nether swap 
                 targetHealth.TakeDamage(sourceStats.GetBaseDamage());
             }
 
