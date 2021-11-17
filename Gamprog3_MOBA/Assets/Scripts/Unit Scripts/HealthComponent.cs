@@ -17,7 +17,7 @@ public class HealthComponent : MonoBehaviour
     public bool isInvincible = false;
     Coroutine activateHealthRegen;
     public UnityEvent<HealthComponent> death;
-    
+    public UnityEvent<float> damaged;
     #region Getter Setter 
 
     public float GetCurrentHealth()
@@ -89,11 +89,6 @@ public class HealthComponent : MonoBehaviour
    
     public void TakeDamage(float damage)
     {
-        //if (SingletonManager.Get<InvincibleComponent>().isInvincible)
-        //{
-        //    Debug.Log("Immune");
-        //    return;
-        //}
 
         if (isInvincible)
         {
@@ -102,15 +97,8 @@ public class HealthComponent : MonoBehaviour
         }
 
         currentHP -= damage;
-
-         //display text if available/assign
-        
-        if(this.gameObject.GetComponent<DisplayDamage>())
-        {
-            DisplayDamage displayDamage = this.gameObject.GetComponent<DisplayDamage>();
-
-            StartCoroutine(displayDamage.displayDamage(damage));
-        }
+        damaged.Invoke(damage);
+    
         if (currentHP <= 0)
         {
             currentHP = 0;

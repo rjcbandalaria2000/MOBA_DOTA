@@ -30,7 +30,7 @@ public class DamageReceiver : MonoBehaviour
     public void ReceiveDamage(float damage, AttackType attackType, DamageType damageType)
     {
         float damageMultiplier = CalculateDamageMultiplier();
-        float attackMultiplier = DetermineAttackMultiplier(attackType);
+        float attackMultiplier = DetermineAttackTypeMultiplier(attackType);
         float magicalResistanceMultiplier = CalculateMagicalResistance();
         Debug.Log("Damage Multiplier: " + attackMultiplier);
         HealthComponent sourceHealth = source.GetComponent<HealthComponent>();
@@ -48,7 +48,7 @@ public class DamageReceiver : MonoBehaviour
         }
     }
 
-    public float DetermineAttackMultiplier(AttackType attackType)
+    public float DetermineAttackTypeMultiplier(AttackType attackType)
     { 
        UnitStats sourceStats = source.GetComponent<UnitStats>();
        if (sourceStats)
