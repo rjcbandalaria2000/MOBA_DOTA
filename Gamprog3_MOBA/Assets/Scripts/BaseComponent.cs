@@ -6,37 +6,41 @@ public class BaseComponent : MonoBehaviour
 {
     public List<GameObject> referenceTower;
     public HealthComponent towerHealth;
-
+    int towerTracker;
     // Start is called before the first frame update
     void Start()
     {
-       
+        towerTracker = referenceTower.Count;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (towerHealth)
+        if(towerTracker <= 0)
         {
-            if (referenceTower != null)
-            {
-                towerHealth.isInvincible = true;
-            }
-            else if (referenceTower.Count <= 0)
-            {
-
-                referenceTower = null;
-                towerHealth.isInvincible = false;
-
-            }
-
+            HealthComponent baseHealthComponent = this.gameObject.GetComponent<HealthComponent>();
+            baseHealthComponent.isInvincible = false;
+        }
+        else
+        {
+            HealthComponent baseHealthComponent = this.gameObject.GetComponent<HealthComponent>();
+            baseHealthComponent.isInvincible = true;
         }
 
-        if(referenceTower == null)
+        
+        for(int i = 0; i < referenceTower.Count; i++)
         {
-            referenceTower.Remove(null);
+            if(referenceTower[i] == null)
+            {
+                Debug.Log("One Tower Destroyed");
+                referenceTower.RemoveAt(i);
+                towerTracker--;
+            }
+            else
+            {
+                
+            }
         }
-
       
     }
 }
