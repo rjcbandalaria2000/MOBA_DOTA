@@ -63,6 +63,9 @@ public class UnitStats : MonoBehaviour
     [SerializeField]
     float totalArmor;
     [SerializeField]
+    float baseMagicResistance;
+    public float BaseMagicResistance { get { return baseMagicResistance; } }
+    [SerializeField]
     ArmorType unitArmorType;
     [SerializeField]
     PrimaryAttribute unitPrimaryAttribute;

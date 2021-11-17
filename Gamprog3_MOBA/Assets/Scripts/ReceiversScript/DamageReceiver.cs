@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class DamageReceiver : MonoBehaviour
 {
@@ -26,15 +27,24 @@ public class DamageReceiver : MonoBehaviour
         return multiplier;
     }
 
-    public void ReceiveDamage(float damage, AttackType damageAttackType)
+    public void ReceiveDamage(float damage, AttackType attackType, DamageType damageType)
     {
         float damageMultiplier = CalculateDamageMultiplier();
-        float attackMultiplier = DetermineAttackMultiplier(damageAttackType); 
+        float attackMultiplier = DetermineAttackMultiplier(attackType);
+        float magicalResistanceMultiplier = CalculateMagicalResistance();
         Debug.Log("Damage Multiplier: " + attackMultiplier);
         HealthComponent sourceHealth = source.GetComponent<HealthComponent>();
         if (sourceHealth)
         {
-            sourceHealth.TakeDamage(damage * damageMultiplier * attackMultiplier);
+            if(damageType == DamageType.Physical)
+            {
+                sourceHealth.TakeDamage(damage * damageMultiplier * attackMultiplier);
+            }
+            else if(damageType == DamageType.Magical)
+            {
+                sourceHealth.TakeDamage(damage * damageMultiplier * attackMultiplier * magicalResistanceMultiplier);
+            }
+            
         }
     }
 
@@ -104,7 +114,9 @@ public class DamageReceiver : MonoBehaviour
     }
     public float CalculateMagicalResistance()
     {
-        return 1f; 
+        UnitStats unitStats = source.GetComponent<UnitStats>();
+        Assert.IsNotNull(unitStats, "Unit Stats required to get Magical Resistance");
+        return 1 - unitStats.BaseMagicResistance; 
     }
 
 }
