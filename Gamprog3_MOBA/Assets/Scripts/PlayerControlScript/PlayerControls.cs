@@ -14,6 +14,7 @@ public class PlayerControls : MonoBehaviour
 {
     [SerializeField]
     GameObject arrowIndicator;
+    
 
     //public NavMeshAgent player;
 
@@ -79,46 +80,7 @@ public class PlayerControls : MonoBehaviour
                     newPos = hit.point;
                     Debug.Log("Move to location: " + newPos);
                 }
-                //FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
-                ////Check if there is faction 
-                //if (targetFaction)
-                //{
-                //    // If faction is opposite to player 
-                //    if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
-                //    {
-                //        //Set Target
-                //        controlledUnit.target = hit.transform.gameObject;
-                //        Debug.Log("Attack Unit");
-
-                //        if (controlledUnit.target.GetComponent<TowerComponent>() != null || controlledUnit.target.GetComponent<BaseComponent>() != null)
-                //        {
-                //            if (controlledUnit.target.GetComponent<HealthComponent>().isInvincible)
-                //            {
-                //                Debug.Log("Cant Target. Its invincible");
-                //                controlledUnit.target = null;
-                //                return;
-                //            }
-                //        }
-                //    }
-                //    //else
-                //    //{
-                //    //    //playerAnimator.SetBool("IsMoving", false);
-                //    //    controlledUnit.target = null;
-                //    //    //newPos = hit.point;
-                //    //    Debug.Log("Friendly");
-                //    //}
-                //}
-                //else // Set Position of Player 
-                //{
-                //    //Clears the selected target
-                //   // Unit controlledUnit = this.GetComponent<Unit>();
-                //    if (controlledUnit.target)
-                //    {
-                //        controlledUnit.target = null;
-                //    }
-                //    newPos = hit.point;
-                //    Debug.Log(hit.transform.name);
-                //}
+               
             } 
         }
 
@@ -153,8 +115,11 @@ public class PlayerControls : MonoBehaviour
                     Debug.Log(unitSelected.gameObject + " is the target");
                     if(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[1].getManaCost())
                     {
+                     
                        controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
+                       controlledUnit.unitSkills[1].skillIndex = 0;
                        controlledUnit.unitSkills[1].ActivateSkill(skillTarget, this.gameObject); //Change in state machine
+
                     }
                     else
                     {
@@ -173,6 +138,48 @@ public class PlayerControls : MonoBehaviour
             }
           }
         }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+
+            if (Physics.Raycast(ray, out RaycastHit hitInfo))
+            {
+                Unit unitSelected = hitInfo.transform.gameObject.GetComponent<Unit>();
+                FactionComponent targetFaction = hitInfo.transform.gameObject.GetComponent<FactionComponent>();
+                GameObject skillTarget = unitSelected.gameObject;
+                //TowerComponent towerSelected = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
+
+                if (!unitSelected.GetComponent<TowerComponent>() && !unitSelected.GetComponent<BaseComponent>())
+                {
+                    if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
+                    {
+                        Debug.Log("WaveofTerror");
+                        Debug.Log(hitInfo.transform.gameObject + " is the target");
+                        if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[2].getManaCost())
+                        {
+
+                            controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
+                            controlledUnit.unitSkills[2].skillIndex = 1;
+                            controlledUnit.unitSkills[2].ActivateSkill(skillTarget, this.gameObject); //Change in state machine
+
+                        }
+                        else
+                        {
+                            Debug.Log("Insufficient Mana");
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Invalid Target skill");
+                    }
+
+                }
+                else
+                {
+                    Debug.Log("Invalid Target skill");
+                }
+            }
+        }
     }
 
    void SpawnArrowIndicator(Vector3 location)
@@ -184,3 +191,45 @@ public class PlayerControls : MonoBehaviour
         }
     }
 }
+
+
+//FactionComponent targetFaction = hit.transform.gameObject.GetComponent<FactionComponent>();
+////Check if there is faction 
+//if (targetFaction)
+//{
+//    // If faction is opposite to player 
+//    if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
+//    {
+//        //Set Target
+//        controlledUnit.target = hit.transform.gameObject;
+//        Debug.Log("Attack Unit");
+
+//        if (controlledUnit.target.GetComponent<TowerComponent>() != null || controlledUnit.target.GetComponent<BaseComponent>() != null)
+//        {
+//            if (controlledUnit.target.GetComponent<HealthComponent>().isInvincible)
+//            {
+//                Debug.Log("Cant Target. Its invincible");
+//                controlledUnit.target = null;
+//                return;
+//            }
+//        }
+//    }
+//    //else
+//    //{
+//    //    //playerAnimator.SetBool("IsMoving", false);
+//    //    controlledUnit.target = null;
+//    //    //newPos = hit.point;
+//    //    Debug.Log("Friendly");
+//    //}
+//}
+//else // Set Position of Player 
+//{
+//    //Clears the selected target
+//   // Unit controlledUnit = this.GetComponent<Unit>();
+//    if (controlledUnit.target)
+//    {
+//        controlledUnit.target = null;
+//    }
+//    newPos = hit.point;
+//    Debug.Log(hit.transform.name);
+//}

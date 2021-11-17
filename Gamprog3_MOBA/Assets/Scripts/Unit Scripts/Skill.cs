@@ -16,6 +16,7 @@ public class Skill : MonoBehaviour
     //public float maxSkillCoolDown;
     public bool isCoolDown;
     protected Coroutine coolDownRoutine;
+    public int skillIndex;
 
     public UIManager skillsUI;
 
@@ -45,7 +46,7 @@ public class Skill : MonoBehaviour
         {
             OnActivate(target, attacker);
 
-            coolDownRoutine = StartCoroutine(coolDown(skillCooldown));
+            coolDownRoutine = StartCoroutine(SkillCoolDown(skillCooldown,skillIndex));
         }
         else
         {
@@ -82,14 +83,33 @@ public class Skill : MonoBehaviour
     //    currentSkillCooldown = maxSkillCoolDown;
     //}
 
-    public IEnumerator coolDown(float coolDownValue)
+    public IEnumerator SkillCoolDown(float coolDownValue, int index)
     {
         isCoolDown = true;
-        skillsUI.skill1_icon_Transparent.fillAmount = 1;
+        skillsUI.skill_icon_Transparent[index].fillAmount = 1;
         yield return new WaitForSeconds(coolDownValue);
-        skillsUI.skill1_icon_Transparent.fillAmount = 0;
+        skillsUI.skill_icon_Transparent[index].fillAmount = 0;
         isCoolDown = false;
         coolDownValue = skillCooldown;
+ 
     }
 
+    
+
+    //public IEnumerator MagicMissleCooldown(float coolDownValue)
+    //{
+
+    //    while (coolDownTimer < coolDownValue)
+    //    {
+    //        isCoolDown = true;
+    //        coolDownTimer++;
+    //        skillsUI.skill1_icon_Transparent.fillAmount = coolDownTimer / coolDownValue;
+    //    }
+    //    coolDownTimer = 0;
+
+    //    //skillsUI.skill1_icon_Transparent.fillAmount = 0;
+    //    isCoolDown = false;
+    //    coolDownValue = skillCooldown;
+    //    yield return null;
+    //}
 }
