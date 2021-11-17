@@ -113,7 +113,7 @@ public class PlayerControls : MonoBehaviour
                {
                     Debug.Log("MagicMissle");
                     Debug.Log(unitSelected.gameObject + " is the target");
-                    if(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[1].getManaCost())
+                    if(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[1].getManaCost() && controlledUnit.unitSkills[1].isCoolDown == false)
                     {
                      
                        controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
@@ -149,7 +149,7 @@ public class PlayerControls : MonoBehaviour
 
                 Debug.Log("WaveofTerror");
                 Debug.Log(hitInfo.transform.gameObject + " is the target");
-                if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[2].getManaCost())
+                if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[2].getManaCost() && controlledUnit.unitSkills[2].isCoolDown == false)
                 {
 
                     controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
