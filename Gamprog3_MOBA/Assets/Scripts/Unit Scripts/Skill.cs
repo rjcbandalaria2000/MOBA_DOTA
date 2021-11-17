@@ -23,7 +23,7 @@ public class Skill : MonoBehaviour
     [SerializeField]
     int manaCost;
     [SerializeField]
-    int castRange;
+    public float castRange;
     [SerializeField]
     protected AttackType attackType;
     [SerializeField]

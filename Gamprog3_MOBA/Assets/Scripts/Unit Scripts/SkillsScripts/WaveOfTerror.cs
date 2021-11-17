@@ -39,7 +39,9 @@ public class WaveOfTerror : Skill
     void SpawnProjectile(GameObject target, GameObject source)
     {
         GameObject spawnedProjectile = Instantiate(penetratingProjectile, source.transform.GetChild(0).transform.position, Quaternion.identity);
-        Projectile projectileSpawned = spawnedProjectile.GetComponent<Projectile>();
+        PenetratingProjectile projectileSpawned = spawnedProjectile.GetComponent<PenetratingProjectile>();
+        projectileSpawned.range = castRange/GameManager.distanceUnit;
+
         if (projectileSpawned)
         {
             UnitStats sourceStats = source.GetComponent<UnitStats>();

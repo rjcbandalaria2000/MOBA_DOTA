@@ -141,55 +141,78 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-
             if (Physics.Raycast(ray, out RaycastHit hitInfo))
             {
                 Unit unitSelected = hitInfo.transform.gameObject.GetComponent<Unit>();
                 FactionComponent targetFaction = hitInfo.transform.gameObject.GetComponent<FactionComponent>();
-                GameObject skillTarget = unitSelected.gameObject;
-                //TowerComponent towerSelected = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
+               
 
-                if (!unitSelected.GetComponent<TowerComponent>() && !unitSelected.GetComponent<BaseComponent>())
+                Debug.Log("WaveofTerror");
+                Debug.Log(hitInfo.transform.gameObject + " is the target");
+                if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[2].getManaCost())
                 {
-                    if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
-                    {
-                        Debug.Log("WaveofTerror");
-                        Debug.Log(hitInfo.transform.gameObject + " is the target");
-                        if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[2].getManaCost())
-                        {
 
-                            controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
-                            controlledUnit.unitSkills[2].skillIndex = 1;
-                            controlledUnit.unitSkills[2].ActivateSkill(skillTarget, this.gameObject); //Change in state machine
-
-                        }
-                        else
-                        {
-                            Debug.Log("Insufficient Mana");
-                        }
-                    }
-                    else
-                    {
-                        Debug.Log("Invalid Target skill");
-                    }
+                    controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
+                    controlledUnit.unitSkills[2].skillIndex = 1;
+                    controlledUnit.unitSkills[2].ActivateSkill(null, this.gameObject); //Change in state machine
 
                 }
                 else
                 {
-                    Debug.Log("Invalid Target skill");
+                    Debug.Log("Insufficient Mana");
                 }
             }
+            
+
+
+            //if (Physics.Raycast(ray, out RaycastHit hitInfo))
+            //{
+            //    Unit unitSelected = hitInfo.transform.gameObject.GetComponent<Unit>();
+            //    FactionComponent targetFaction = hitInfo.transform.gameObject.GetComponent<FactionComponent>();
+            //    GameObject skillTarget = unitSelected.gameObject;
+            //    //TowerComponent towerSelected = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
+
+            //    if (!unitSelected.GetComponent<TowerComponent>() && !unitSelected.GetComponent<BaseComponent>())
+            //    {
+            //        if (targetFaction.unitFaction != this.GetComponent<FactionComponent>().unitFaction)
+            //        {
+            //            Debug.Log("WaveofTerror");
+            //            Debug.Log(hitInfo.transform.gameObject + " is the target");
+            //            if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[2].getManaCost())
+            //            {
+
+            //                controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
+            //                controlledUnit.unitSkills[2].skillIndex = 1;
+            //                controlledUnit.unitSkills[2].ActivateSkill(skillTarget, this.gameObject); //Change in state machine
+
+            //            }
+            //            else
+            //            {
+            //                Debug.Log("Insufficient Mana");
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Debug.Log("Invalid Target skill");
+            //        }
+
+            //    }
+            //    else
+            //    {
+            //        Debug.Log("Invalid Target skill");
+            //    }
+            //}
         }
     }
 
    void SpawnArrowIndicator(Vector3 location)
-    {
+   {
         GameObject spawnedArrow = Instantiate(arrowIndicator, location, Quaternion.identity);
         if (spawnedArrow)
         {
             Destroy(spawnedArrow, 0.5f);
         }
-    }
+   }
 }
 
 
