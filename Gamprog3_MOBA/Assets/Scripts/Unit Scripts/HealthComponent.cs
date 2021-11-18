@@ -53,6 +53,7 @@ public class HealthComponent : MonoBehaviour
     void Start()
     {
         InitializeHealth();
+
         //maxHP = CalculateMaxHealth();
         //currentHP = maxHP;
     }
@@ -70,6 +71,8 @@ public class HealthComponent : MonoBehaviour
         Assert.IsNotNull(unit);
         UnitStats unitStats = this.gameObject.GetComponent<UnitStats>();
         Assert.IsNotNull(unitStats);
+        
+
         maxHP = CalculateMaxHealth();
         currentHP = maxHP;
         if(unit.unitType == UnitType.Hero)
@@ -145,6 +148,7 @@ public class HealthComponent : MonoBehaviour
         
     }
 
+   
     //IEnumerator displayDamage(float damage)
     //{
     //    yield return new WaitForSeconds(0.1f);

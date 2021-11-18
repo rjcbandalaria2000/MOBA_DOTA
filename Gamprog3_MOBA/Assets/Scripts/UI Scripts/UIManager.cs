@@ -28,6 +28,8 @@ public class UIManager : MonoBehaviour
     public GameObject skill4_icon;
 
     [Header("Player Skills Icon transparent")]
+    public List<Image> skill_icon_Transparent;
+
     public Image skill1_icon_Transparent;
     public Image skill2_icon_Transparent;
     public Image skill3_icon_Transparent;
