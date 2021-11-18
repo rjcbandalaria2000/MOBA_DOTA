@@ -21,7 +21,7 @@ public class DamageReceiver : MonoBehaviour
 
     public float CalculateDamageMultiplier()
     {
-        float unitTotalArmor = source.GetComponent<UnitStats>().GetTotalArmor();
+        float unitTotalArmor = source.GetComponent<UnitStats>().CalculateTotalArmor();
         float multiplier = 1 - ((0.052f * unitTotalArmor) /
             (0.9f + 0.048f * Mathf.Abs(unitTotalArmor)));
         return multiplier;
