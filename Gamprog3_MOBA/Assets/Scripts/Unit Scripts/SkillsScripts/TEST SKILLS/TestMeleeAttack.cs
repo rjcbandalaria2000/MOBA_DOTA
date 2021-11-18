@@ -39,6 +39,8 @@ public class TestMeleeAttack : Skill
                         if (attackerStats)
                         {
                             targetDamageReceiver.ReceiveDamage(attackerStats.GetTotalDamage(), attackType);
+                            targetDamageReceiver.setAttacker(attacker);
+
                         }
 
                     }

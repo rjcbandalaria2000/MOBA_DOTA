@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class DamageReceiver : MonoBehaviour
 {
+   
     GameObject source;
+    public GameObject lastAttacker;
     
     // Start is called before the first frame update
     void Start()
     {
         source = this.gameObject;
+       
     }
 
     // Update is called once per frame
@@ -106,5 +110,12 @@ public class DamageReceiver : MonoBehaviour
     {
         return 1f; 
     }
+
+    public void setAttacker(GameObject attacker)
+    {
+        lastAttacker = attacker;
+    }
+
+   
 
 }
