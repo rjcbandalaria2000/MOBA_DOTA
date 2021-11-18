@@ -9,19 +9,15 @@ public class WaveOfTerrorBuff : Buff
     GameObject source;
     public GameObject Source { get { return source; } }
     [SerializeField]
-    GameObject targetInflicted;
-    public GameObject TargetInflicted { get { return targetInflicted; } }
-    [SerializeField]
     List<float> armorReductionValues;
     public int buffLevel = 0;
-    public int buffDuration;
+    public float buffDuration;
     [SerializeField]
-    int buffTimer = 0;
+    float buffTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
         buffName = "Wave Of Terror";
-        targetInflicted = this.gameObject.transform.parent.gameObject;
 
     }
     public override void ActivateBuff(GameObject target, GameObject source = null)
@@ -46,17 +42,18 @@ public class WaveOfTerrorBuff : Buff
         UnitStats targetStats = target.GetComponent<UnitStats>();
         Assert.IsNotNull(targetStats);
         targetStats.AddBonusArmor(armorReductionValues[buffLevel]);
+        Destroy(this.gameObject);
     }
 
     private void Update()
     {
         if(buffTimer < buffDuration)
         {
-            buffTimer++;
+            buffTimer+=Time.deltaTime;
         }
         if(buffTimer >= buffDuration)
         {
-            DeactivateBuff(targetInflicted);
+            DeactivateBuff(targetUnit);
         }
     }
 
