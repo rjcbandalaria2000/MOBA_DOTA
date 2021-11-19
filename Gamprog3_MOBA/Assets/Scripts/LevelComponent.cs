@@ -45,4 +45,10 @@ public class LevelComponent : MonoBehaviour
         stats.SetBaseArmor(stats.GetBaseArmor() + 5);
         stats.SetAttackSpeed(stats.GetAttackSpeed() + 5);
     }
+
+    public void GainExp(float experienceGain)
+    { 
+
+
+    }
 }

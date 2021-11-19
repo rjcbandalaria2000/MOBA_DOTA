@@ -23,7 +23,7 @@ public class TestRangedAttack : Skill
 
     public override void OnActivate(GameObject target, GameObject attacker = null)
     {
-        base.OnActivate(target, attacker);
+        //base.OnActivate(target, attacker);
         SpawnProjectile(target, attacker);
 
     }

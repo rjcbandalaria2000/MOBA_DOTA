@@ -31,6 +31,10 @@ public class Stun : Buff
     public override void OnActiveBuff(GameObject target, GameObject source = null)
     {
         //base.OnActiveBuff(target, source);
+        if (target.GetComponent<Stun>())
+        {
+            stunTimer = 0;
+        }
         targetAnimator = target.GetComponent<Animator>();
         InterruptActions();
         targetAnimator.SetBool("IsStun", true);

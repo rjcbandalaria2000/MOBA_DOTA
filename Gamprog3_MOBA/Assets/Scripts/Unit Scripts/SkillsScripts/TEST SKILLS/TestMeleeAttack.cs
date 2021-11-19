@@ -18,11 +18,12 @@ public class TestMeleeAttack : Skill
 
     public override void ActivateSkill(GameObject target, GameObject attacker = null)
     {
-        base.ActivateSkill(target, attacker);
+        //base.ActivateSkill(target, attacker);
+        OnActivate(target, attacker);
     }
     public override void OnActivate(GameObject target, GameObject attacker = null)
     {
-        base.OnActivate(target, attacker);
+        //base.OnActivate(target, attacker);
         Unit unitTarget = target.GetComponent<Unit>();
         UnitStats attackerStats = attacker.GetComponent<UnitStats>();
         if (unitTarget)

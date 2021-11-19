@@ -7,10 +7,13 @@ public class BaseComponent : MonoBehaviour
     public List<GameObject> referenceTower;
     public HealthComponent towerHealth;
     int towerTracker;
+    HealthComponent baseHealthComponent;
     // Start is called before the first frame update
     void Start()
     {
         towerTracker = referenceTower.Count;
+        baseHealthComponent = this.gameObject.GetComponent<HealthComponent>();
+        baseHealthComponent.death.AddListener(OnBaseDeath);
     }
 
     // Update is called once per frame
@@ -42,5 +45,17 @@ public class BaseComponent : MonoBehaviour
             }
         }
       
+    }
+
+    void OnBaseDeath(HealthComponent healthComponent)
+    {
+        Collider baseCollider = this.gameObject.GetComponent<Collider>();
+        if (baseCollider)
+        {
+            baseCollider.enabled = false;
+        }
+        MeshRenderer baseMeshRenderer = this.gameObject.GetComponent<MeshRenderer>();
+
+
     }
 }
