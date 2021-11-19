@@ -15,11 +15,11 @@ D:/Gamprog3_Repo/Gamprog3_MOBA
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52915
+52978
 Successfully changed project path to: D:/Gamprog3_Repo/Gamprog3_MOBA
 D:/Gamprog3_Repo/Gamprog3_MOBA
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 90.93 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 152.71 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.6f1 (c0fade0cc7e9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/Resources/UnitySubsystems
@@ -35,53 +35,1333 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56448
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Editor/2021.1.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002158 seconds.
+Registered in 0.002578 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 78.81 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 116.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.537 seconds
+- Completed reload, in  1.980 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003244 seconds.
+Registered in 0.003946 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.013 seconds
+- Completed reload, in  1.319 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2753 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 107.2 MB.
 System memory in use after: 107.4 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3219.
-Total: 2.024700 ms (FindLiveObjects: 0.211000 ms CreateObjectMapping: 0.098200 ms MarkObjects: 1.622600 ms  DeleteObjects: 0.092200 ms)
+Total: 2.280000 ms (FindLiveObjects: 0.233700 ms CreateObjectMapping: 0.147100 ms MarkObjects: 1.786800 ms  DeleteObjects: 0.111300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Prototype.unity
-  artifactKey: Guid(f2d0e796c9e9f5f498c2d62277f3059b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Prototype.unity using Guid(f2d0e796c9e9f5f498c2d62277f3059b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adcf383d18534e7693d4de33be831e07') in 0.011341 seconds 
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackHero.prefab
+  artifactKey: Guid(7180cb5d0c4511f4bb62d623e238eed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackHero.prefab using Guid(7180cb5d0c4511f4bb62d623e238eed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '473650f0420aacac4272f9ab83fc9a4b') in 0.081152 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.421398 seconds.
-  path: Assets/Scenes/Prototype 1.unity
-  artifactKey: Guid(cae05faf499b5ca43a10241a83f9404b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Prototype 1.unity using Guid(cae05faf499b5ca43a10241a83f9404b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86613fde6b150797757890fcea2cc592') in 0.001522 seconds 
+  Time since last request: 0.000409 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackRanged.prefab
+  artifactKey: Guid(a4108c65762f8684380425bde0009fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackRanged.prefab using Guid(a4108c65762f8684380425bde0009fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f6f57990d845605ac3fa7943a62f2dc') in 0.008667 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.669935 seconds.
-  path: Assets/Scenes/Jace_Prototype.unity
-  artifactKey: Guid(cae05faf499b5ca43a10241a83f9404b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Jace_Prototype.unity using Guid(cae05faf499b5ca43a10241a83f9404b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7bd2dcf852dab8738d78fd70464751c') in 0.001806 seconds 
+  Time since last request: 0.000386 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackSiege.prefab
+  artifactKey: Guid(ab6ee22e89a0ca84fa9de6c13f2499c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackSiege.prefab using Guid(ab6ee22e89a0ca84fa9de6c13f2499c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c60631748c6d26310400ebf1ba1f2be') in 0.004459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestMeleeAttackSkill.prefab
+  artifactKey: Guid(19c11ef1b379d4d46ac1e7ee08c981ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestMeleeAttackSkill.prefab using Guid(19c11ef1b379d4d46ac1e7ee08c981ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9dced205e614f92f3c6e333f9700e7') in 0.004594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.249959 seconds.
+  path: Assets/Prefab/KnightUnit .prefab
+  artifactKey: Guid(ecc47b3d6c0768d478c8905b79dd0674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/KnightUnit .prefab using Guid(ecc47b3d6c0768d478c8905b79dd0674) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'States': Transition 'AnyState -> Stun' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '405c1d2cf8ade515a1d5226d4162d650') in 0.208432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.174172 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49b17d54ff67fe6a71b03c2a9c77a5b5') in 0.200327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.809680 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e83ab803b2551cbc2fb16219bf1e285') in 0.207105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.419093 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2763c4e1b3b115c08c57363f24f60a57') in 0.117464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.240126 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d2fb079fd397754b54caac86800396f') in 0.136183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.501695 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61b4aad74e3024e6128498cd805aac72') in 0.127040 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.188307 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aabc2fcfc2a2d01ff0a1d7949ba76ced') in 0.101539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.179364 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '867565886d196f54c874fca9a586291f') in 0.151923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.192033 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bafa23d475b6b663cfcc841e60e1bee') in 0.123749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.671134 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a78e830fc4304c324d8ce0541d16c7b1') in 0.140806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.574189 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ac907af12c56d576eb75b4c4772eb0d') in 0.125149 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.422448 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b2b4da51d0eb729bd3b45cc16bffd6') in 0.139427 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005131 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.732 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.4 MB.
+System memory in use after: 110.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3233.
+Total: 2.477200 ms (FindLiveObjects: 0.251700 ms CreateObjectMapping: 0.145300 ms MarkObjects: 2.053200 ms  DeleteObjects: 0.025800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005555 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.789 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.4 MB.
+System memory in use after: 110.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3236.
+Total: 5.357200 ms (FindLiveObjects: 0.684700 ms CreateObjectMapping: 0.354800 ms MarkObjects: 4.276100 ms  DeleteObjects: 0.039900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004639 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.566 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.4 MB.
+System memory in use after: 110.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3239.
+Total: 2.718700 ms (FindLiveObjects: 0.258900 ms CreateObjectMapping: 0.149900 ms MarkObjects: 2.280600 ms  DeleteObjects: 0.027900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003510 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.424 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.5 MB.
+System memory in use after: 110.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3242.
+Total: 4.812300 ms (FindLiveObjects: 0.328300 ms CreateObjectMapping: 0.215700 ms MarkObjects: 4.236900 ms  DeleteObjects: 0.029200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004007 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.186 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.5 MB.
+System memory in use after: 110.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3245.
+Total: 2.221400 ms (FindLiveObjects: 0.222400 ms CreateObjectMapping: 0.128100 ms MarkObjects: 1.855300 ms  DeleteObjects: 0.014500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004355 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.356 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.5 MB.
+System memory in use after: 110.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3248.
+Total: 3.352000 ms (FindLiveObjects: 0.513300 ms CreateObjectMapping: 0.520400 ms MarkObjects: 2.291700 ms  DeleteObjects: 0.025100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002929 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.086 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.5 MB.
+System memory in use after: 110.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3251.
+Total: 2.514300 ms (FindLiveObjects: 0.263200 ms CreateObjectMapping: 0.141600 ms MarkObjects: 2.090900 ms  DeleteObjects: 0.017600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003064 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.134 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.5 MB.
+System memory in use after: 110.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3254.
+Total: 2.998900 ms (FindLiveObjects: 0.246200 ms CreateObjectMapping: 0.169300 ms MarkObjects: 2.560100 ms  DeleteObjects: 0.022300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006700 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.635 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.6 MB.
+System memory in use after: 110.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3257.
+Total: 2.888700 ms (FindLiveObjects: 0.255100 ms CreateObjectMapping: 0.157700 ms MarkObjects: 2.448600 ms  DeleteObjects: 0.025700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 717.945477 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aecc7a2494f8f6831fb8c08f72601fd3') in 0.306907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.180853 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/MagicMissle.prefab
+  artifactKey: Guid(53ace645c4db6704d9d594058be00da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/MagicMissle.prefab using Guid(53ace645c4db6704d9d594058be00da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '344f59e240999db0bd470d898fc4ad45') in 0.034831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/NetherSwap.prefab
+  artifactKey: Guid(3d8fb0edadd836744b8499482bf62517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/NetherSwap.prefab using Guid(3d8fb0edadd836744b8499482bf62517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65795a031e9e61a39346d9ae49b93a45') in 0.004691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.680165 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/WaveOfTerror.prefab
+  artifactKey: Guid(65fd0b68042b8b24b89cc969be468495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/WaveOfTerror.prefab using Guid(65fd0b68042b8b24b89cc969be468495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9ee6fb093032bc5409b485e70bd9874') in 0.011600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 51.569661 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d8c1be6190b30b30ab81ca5ef3f7b31') in 0.150098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.058683 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd33f1c698da827a3cbba94aea16af678') in 0.158011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.443860 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48debb5347eb04b56146f866b12c13da') in 0.133218 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.062271 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4045964aa507f9af86644baae66b35d8') in 0.173280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.759853 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ffb868168544d58b6a2527267615e1e') in 0.145821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.436609 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c575035c16f1085a5a10d391ccaf983a') in 0.213225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.660153 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8de620984f3edcd3d950ef2a0c135c5d') in 0.142704 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.889933 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14bb882373a790bb9d98ccd82144b6bf') in 0.160499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.818122 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41d89d5aa16c9e63496d365127d32635') in 0.160932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.570268 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '239cfde6b9c6a5b58d36dd448bd27dae') in 0.401867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.921038 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ff00b087c766be5f65137276f9c89d8') in 0.152222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.565838 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d1fbfa1addb92093af4d481c128612') in 0.135729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.868359 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '291784d4a20a25f5e18e04cbc1156111') in 0.148707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.230114 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4994a74e1c873355b5791aa7da843f1d') in 0.212947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.846608 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88a81e32634cda14f7ada17c5963597c') in 0.185884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.455647 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be23a436a7a6f98039ac4f684b71d606') in 0.159225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.313259 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e18b9af197fb818933d69a27de09576') in 0.199344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.554124 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc18e78f8717bb67e8a0ae88db9bf66') in 0.190862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 119.045401 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '752416ce5859e5f972bb804cce9b3275') in 0.187611 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.249891 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f9a7814ace2da030d68982575d3caf0') in 0.158733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.116377 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6f9cee531530b654d75caeaa0064af9') in 0.199989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.017491 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ab49ebc1ab219f1b0e77bf4239e758') in 0.246306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.908087 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98fdbbc69e2e7fe3799bfbc584786177') in 0.246398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.614299 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b9e9687636f694b5f17082d8cde2805') in 0.192551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.738206 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ce8d02868367bc66ce1714e7f7131fc') in 0.192527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.980173 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bd2c9973db0deae0559e52c9edd0f77') in 0.172753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.573607 seconds.
+  path: Assets/Prefab/Spawner
+  artifactKey: Guid(28d8abb82b2697e488ff9ff79ee3c56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner using Guid(28d8abb82b2697e488ff9ff79ee3c56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db835ab7093fdcd1199bb1eee7a09164') in 0.002152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.640106 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab
+  artifactKey: Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab using Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285307a7e56ae6c14dbaaa53ea3165b3') in 0.044619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.629068 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fdce316589a6a7f4740ed245f71f953') in 0.169495 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.829576 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab
+  artifactKey: Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab using Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ff8f9fadf44d5ffe50358da2d417487') in 0.174727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.811094 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab
+  artifactKey: Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab using Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe4167d9cebb9821be6893801aee125d') in 0.052318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.756628 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20453b0edaf612018d42590d6a408273') in 0.054157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.167589 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5179d240ed71c5475860b608a011ea2') in 0.055715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.911161 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0f119f26eb34733d9c595e7b5da1f35') in 0.077073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.219799 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2efb7d3250c75ac7ada7c4eea3606ca4') in 0.060692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.043204 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbc983d1e4b4fd6587a3ff7da3b4aea9') in 0.059832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.925057 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e63ee3f4650e654cb3bcb73b93d24bec') in 0.066687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.292463 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0328dfb0381430f3ef03e567f0deeae6') in 0.078978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.772149 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ccfbac46fc903903eebbf6cebb2ee7b') in 0.210290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.008344 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f864b78538c12c8bc6fbd440320d27c') in 0.054418 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.964709 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6a86ea18906ee7196ebf620214d8a0e') in 0.072788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.505716 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd14479bcc767808136b8cd0b30f6e27') in 0.054098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.750618 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac5e1eec7715433bb862baabc501af26') in 0.489834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.038258 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab
+  artifactKey: Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee.prefab using Guid(24f6a5674e5b94b4f8d5428a5010f61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7314e10d7e600460ba9e79b925a17932') in 0.063696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.478554 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab
+  artifactKey: Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab using Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4284d2690bb337fe9bf7684420633e88') in 0.064175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.265768 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab
+  artifactKey: Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab using Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02ad75129bea90c54df0c8a9c3e3ea17') in 0.058469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.869552 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab
+  artifactKey: Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab using Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b617e4d4f3862dab8a03e06fda507a25') in 0.795809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.968803 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab
+  artifactKey: Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab using Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6471d7996662c13eb4883c6715b502c3') in 0.063022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.725422 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab
+  artifactKey: Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab using Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73cbfb8b1e567632bd1ae78321938d98') in 0.053147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.534671 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab
+  artifactKey: Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab using Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e76097f14597b78d09ebfa3bbd3091') in 0.118524 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.203758 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab
+  artifactKey: Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Melee 1.prefab using Guid(60ad0e0f7d4c5034f96ae7401e9b83e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9193a2ac7b65bef9301d3d0f9213a7c2') in 0.058367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.068994 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab
+  artifactKey: Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab using Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cf4025eff388ee792ef75c58c877f2f') in 0.036184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.746284 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab
+  artifactKey: Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab using Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6553ca64c5051bef11cdcd2bec116446') in 0.039076 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.413507 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab
+  artifactKey: Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab using Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b76ab3b7aa1ae58450e1b434c2ea56') in 1.018557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.013684 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab
+  artifactKey: Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab using Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4cf3011e4e6c87046269291884bee62') in 0.048612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.836302 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab
+  artifactKey: Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab using Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d1cb884951934ed0f4a64a15e1c3465') in 0.042428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.041454 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab
+  artifactKey: Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab using Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd760d4627aa49231ebb8107fa2996062') in 0.051738 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.077915 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab
+  artifactKey: Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged 1.prefab using Guid(1a32c995ae4bf1442901a9ba2598cf1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10cec839bbe2eeae129116636a140324') in 0.502911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.144783 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab
+  artifactKey: Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab using Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12711b4bb40ab4b549482cbab6aa7d6d') in 0.336660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.627201 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab
+  artifactKey: Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab using Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11c1fe4a924e801d8717fbbf8711b86') in 0.038033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.719074 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab
+  artifactKey: Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab using Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '717022a33766ee679d547799e298b4d2') in 0.043081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.803099 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab
+  artifactKey: Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab using Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906642069ef4ad277baa4640950c0eb2') in 0.033993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.061902 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab
+  artifactKey: Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab using Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45fa316b2ee2c65863310162f9e0d890') in 0.038230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.624589 seconds.
+  path: Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab
+  artifactKey: Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner/Inhibitor_Mid_Ranged.prefab using Guid(d18ede85266641a42958708588dd69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc5dc50126ff438bdf54c42eaea0be70') in 0.043570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.847251 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750ddba992d52ea428a2ccfa994b8c45') in 0.198199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.589690 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50d460bac7a13759f0316baeed94c041') in 0.213615 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.519646 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d034cfd88e79b0e8e21d71ce752ba51') in 0.174565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.710984 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3fb443fcab19ac9436950b50e8fa15') in 0.182349 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.639982 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eacbad7421d9725af1840edb6e1973e') in 0.171181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.546738 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec50e99118ece275b473fff108e66fbd') in 0.213060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 74.065079 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a50a810e1883cd114386c97941899cf8') in 0.193806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.365847 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 2.prefab
+  artifactKey: Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 2.prefab using Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eccdf34f757fc76a5cdcd7da276957ef') in 0.200294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.453037 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 2.prefab
+  artifactKey: Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 2.prefab using Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89e2bf4093f8fa7f1def6288c3dd5d4d') in 0.244354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.984263 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 2.prefab
+  artifactKey: Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 2.prefab using Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7d8b4997e4c7079fb4cb052dc264381') in 0.720251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.344189 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 2.prefab
+  artifactKey: Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 2.prefab using Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fb298b315b10444e3580c9157501457') in 0.231133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.653359 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 2.prefab
+  artifactKey: Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 2.prefab using Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '343ec154d5983099f8114b78dd62ad75') in 0.227133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.635445 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 2.prefab
+  artifactKey: Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 2.prefab using Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd563e7fd0e33a6823d395c79f50eb3b0') in 0.415587 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.755500 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6f7727368ad06c9911c56a4854caee') in 0.162879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.241566 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankBlue.prefab
+  artifactKey: Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankBlue.prefab using Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91b9cafe728280574f96ebc5e9a56a87') in 0.221591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.026141 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankBlue.prefab
+  artifactKey: Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankBlue.prefab using Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dd43e9724ae4525060f97b7da21f001') in 0.173600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.138571 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankBlue.prefab
+  artifactKey: Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankBlue.prefab using Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2598ccb81fbc6e04de5b2e0b071d6e') in 0.217839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.703831 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankBlue.prefab
+  artifactKey: Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankBlue.prefab using Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9ef6329d69b3fa1d5bbc4a7c5fb6902') in 0.227928 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.237601 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankBlue.prefab
+  artifactKey: Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankBlue.prefab using Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d06a655a4bc61742e249faa91df6b29') in 0.582233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.521384 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33b90f433eddc5c9b8ad3182cbb6ff99') in 0.177748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.831989 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad075ed57500f8426aaf6312aee52f9d') in 0.177369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.237481 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '961496c07680c6f3cffdd86c09265845') in 0.164443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.320994 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4626f5d07ecbc55fb4b59a39839e2bb1') in 0.169931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.678255 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e2aa54533b9da14140a1f3baac2115a') in 0.153078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.212839 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '707c22389116897111cdd11f70613983') in 0.176234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.569512 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '215ef4c44ae5b3b2deb4b9a175cb8897') in 0.184830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.418865 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e918679817356766c3099c836dfe9f3e') in 0.182020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.277172 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a091399a8ef87695082e2a24b068369') in 0.182288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.013421 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c53b7f20b1d91424bb718b6dcc8b0e2') in 0.175435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.758952 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39eebaf98ac4bcf26174627ccc6f220b') in 0.190324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.909567 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '056c04c431eb2990468a6d52532224ba') in 0.205538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.925389 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebe1ea78936209516e163a21a8f450e3') in 0.199918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.931239 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26566d2c1ceb5723b078c6d0261b0cfb') in 0.191023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.450153 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aca09eec5c0ec5e6b9341c8f069ffb66') in 0.181719 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003849 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.399 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.4 MB.
+System memory in use after: 111.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3262.
+Total: 2.466700 ms (FindLiveObjects: 0.224900 ms CreateObjectMapping: 0.147200 ms MarkObjects: 2.072500 ms  DeleteObjects: 0.020600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003597 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.228 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.4 MB.
+System memory in use after: 111.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3265.
+Total: 4.053600 ms (FindLiveObjects: 0.517200 ms CreateObjectMapping: 0.182900 ms MarkObjects: 3.327900 ms  DeleteObjects: 0.024100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 206.495655 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b796232734fc05eeee19eddf45635d') in 0.348380 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003813 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.229 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.4 MB.
+System memory in use after: 111.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 2.859800 ms (FindLiveObjects: 0.258700 ms CreateObjectMapping: 0.161600 ms MarkObjects: 2.419900 ms  DeleteObjects: 0.018600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.215839 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4280cad7ba2a64bdda71da24aa125f65') in 0.266582 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004822 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.190 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.4 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3273.
+Total: 2.326000 ms (FindLiveObjects: 0.312300 ms CreateObjectMapping: 0.168700 ms MarkObjects: 1.827900 ms  DeleteObjects: 0.015400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.903440 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da73d2c972e7f1a792134e6ce2be30bc') in 0.302018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.853637 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b1003cbded7ca0a8008004ae3ed0883') in 0.136528 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.549289 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ef1aa29e803a0758905e4234257db0') in 0.225226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.634809 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34cd2f20461eb9c5bb7bb376fa814138') in 0.178844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.139915 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreep 1.prefab
+  artifactKey: Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreep 1.prefab using Guid(e870ced6b6f92b548bea73136145dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '546f39f2dd08bf45f763742b4bc86ea3') in 0.168579 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003443 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.242 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.4 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3277.
+Total: 3.233100 ms (FindLiveObjects: 0.252000 ms CreateObjectMapping: 0.146700 ms MarkObjects: 2.808300 ms  DeleteObjects: 0.025100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.118821 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb2b6346f2d1d14a83c02ad41e2eea9d') in 0.274292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.862910 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f035dd17db1d0f98c9437e0737d22d0e') in 0.154474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.544784 seconds.
+  path: Assets/Prefab/Creeps/MeleeCreepRadiant.prefab
+  artifactKey: Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/MeleeCreepRadiant.prefab using Guid(31b4f9ced51ee3945baecff539fad42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b53866e9d0065201429d293765577bd') in 0.140979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.654345 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fef814b86662530bbb3d2f92c534aee') in 0.138274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.533935 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01ca8e26714c1110ffe4618a667ae394') in 0.138719 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.137147 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feaebc37f6519e744b73347862715966') in 0.351284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.668078 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae56507f9817ced400ffb343cf2207d') in 0.139806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.486698 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c8f53793e5c448cc80021ee6bde00cf') in 0.145497 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.693130 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 1.prefab
+  artifactKey: Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 1.prefab using Guid(5ed83963e2ea86b42b4e0368df848cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a512f203a5bcf5a6275962829aa61d58') in 0.145785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.251312 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep 2.prefab
+  artifactKey: Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep 2.prefab using Guid(035562124a528cb449d3fa3821ae208e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41ba8e1397f65e4cd8e0c4eea6e36325') in 0.137470 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 39.337595 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep.prefab
+  artifactKey: Guid(6b99c91e7f9f73b40bf7f8c3929cd02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep.prefab using Guid(6b99c91e7f9f73b40bf7f8c3929cd02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451678a637f9a1fe429a05fcc4b23776') in 0.135386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.668263 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep.prefab
+  artifactKey: Guid(6b99c91e7f9f73b40bf7f8c3929cd02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep.prefab using Guid(6b99c91e7f9f73b40bf7f8c3929cd02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8f825e0ce57f24df54029bc6bac1ff3') in 0.127557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.375640 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep.prefab
+  artifactKey: Guid(6b99c91e7f9f73b40bf7f8c3929cd02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep.prefab using Guid(6b99c91e7f9f73b40bf7f8c3929cd02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eabfc66a06d8ca04dba5fff56c8186c') in 0.147847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.613800 seconds.
+  path: Assets/Prefab/Creeps/RangedCreep.prefab
+  artifactKey: Guid(6b99c91e7f9f73b40bf7f8c3929cd02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/RangedCreep.prefab using Guid(6b99c91e7f9f73b40bf7f8c3929cd02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '297946c080a396ffbaf62f1bac25bfee') in 0.148243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.665282 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankBlue.prefab
+  artifactKey: Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankBlue.prefab using Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5bbd849e32f62c53fa841775f511be6') in 0.128608 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.708184 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankBlue.prefab
+  artifactKey: Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankBlue.prefab using Guid(b421f26e5591a2444bf7c0d939f443b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ec1e25da1d9ccbf049bddc326faa82') in 0.132201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.931789 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1686aae9dcb7f604643c202714791dba') in 0.164562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.829797 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f050bdac5e6372c3ee44fb6aa7221c22') in 0.640381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.781964 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f31116bee8ad05d984a36668b507303') in 0.142870 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.708554 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd6faac2a30ba0c4f33051e3878f9104') in 0.145152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.451625 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee694e1dde62f97c1a2f760c990e643b') in 0.131746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.622104 seconds.
+  path: Assets/Prefab/Creeps/SiegeTankRed.prefab
+  artifactKey: Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SiegeTankRed.prefab using Guid(0b772aa84770f5143b4c1a78886af23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b69c537f49ff969bf469d7affe65da45') in 0.140105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.767140 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e1907224ba8102482bab35acea7f04c') in 0.396792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.881750 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd3084d35f697c1aaa1ccb773a852b9d') in 0.140047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.252598 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep 1.prefab
+  artifactKey: Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep 1.prefab using Guid(ff283c9f328ce274cb88c1ca48784727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0237ea7e74b7fcc1f852d129dcdfa4d') in 0.148456 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.563855 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72048937dbc0f1b5e600aae5b94de0c1') in 0.339989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.550357 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee4f906c719b84b967f274dd9d1a1f94') in 0.140293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.094142 seconds.
+  path: Assets/Prefab/Creeps/Super Melee Creep.prefab
+  artifactKey: Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/Super Melee Creep.prefab using Guid(ef5425feb1a14004eaec2568134c09b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecc42c290d1925e1a9eccfff677a67e8') in 0.133000 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.287294 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e9b752025622e961041abc6b85de509') in 0.142804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.309545 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '111ac90fb630339e614e623b1d1ed3c5') in 0.220778 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.707623 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c656d447eedb42245a1b218d147999c') in 0.144498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.119393 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f54e711f8e91093c7a4c2352a753bd') in 0.146194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.077423 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a92f9d8256faa7ed5f913b77d2b6dd') in 0.131877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.548000 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab
+  artifactKey: Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Blue.prefab using Guid(75db5f905943f5d42be6e142656481cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '598b13b2655c1f34dfa2b461daeec45c') in 0.266873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.803214 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dea205f8c8ee67f32f69135ba7ffe07') in 0.147290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.285651 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '023395c9224233ec8340bc93d5f4a477') in 0.163520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.506163 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939d465e22288459ace3db2d37bf06d8') in 0.142292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.425237 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb7e1c1bf4472fb34afa07fa4bb3cc39') in 0.132860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.112396 seconds.
+  path: Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab
+  artifactKey: Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Creeps/SuperRangeCreep_Red.prefab using Guid(69ba91baf79469549a386daefaa5a839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6f647f74dc2c65202f32b7b62d35172') in 0.136643 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003535 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.469 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2734 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.9 MB.
+System memory in use after: 112.1 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3281.
+Total: 3.201700 ms (FindLiveObjects: 0.273300 ms CreateObjectMapping: 0.147000 ms MarkObjects: 2.737700 ms  DeleteObjects: 0.042300 ms)
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

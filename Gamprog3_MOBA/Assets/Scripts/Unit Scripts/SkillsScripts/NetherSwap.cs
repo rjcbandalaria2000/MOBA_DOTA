@@ -25,5 +25,7 @@ public class NetherSwap : Skill
     public override void ActivateSkill(GameObject target, GameObject attacker = null)
     {
         base.ActivateSkill(target, attacker);
+        isCoolDown = true;
+        coolDownRoutine = StartCoroutine(SkillCoolDown(skillCooldown, skillIndex));
     }
 }
