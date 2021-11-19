@@ -16,9 +16,10 @@ public class UnitSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+           
             if(Physics.Raycast(ray, out RaycastHit hitInfo))
             {
                 Debug.Log(hitInfo.collider.gameObject);
@@ -42,18 +43,22 @@ public class UnitSelect : MonoBehaviour
                         if (unitSelected.unitType == UnitType.Hero)
                         {
                             UI.heroImage.gameObject.SetActive(true);
-                            UI.skill1_icon.gameObject.SetActive(true);
-                            UI.skill2_icon.gameObject.SetActive(true);
-                            UI.skill3_icon.gameObject.SetActive(true);
-                            UI.skill4_icon.gameObject.SetActive(true);
+                            UI.skillsCanvas.gameObject.SetActive(true);
+                            //UI.skill1_icon.gameObject.SetActive(true);
+                            //UI.skill2_icon.gameObject.SetActive(true);
+                            //UI.skill3_icon.gameObject.SetActive(true);
+                            //UI.skill4_icon.gameObject.SetActive(true);
+                           
+                        
                         }
                         else if (unitSelected.unitType != UnitType.Hero)
                         {
                             UI.heroImage.gameObject.SetActive(false);
-                            UI.skill1_icon.gameObject.SetActive(false);
-                            UI.skill2_icon.gameObject.SetActive(false);
-                            UI.skill3_icon.gameObject.SetActive(false);
-                            UI.skill4_icon.gameObject.SetActive(false);
+                            UI.skillsCanvas.gameObject.SetActive(false);
+                            //UI.skill1_icon.gameObject.SetActive(false);
+                            //UI.skill2_icon.gameObject.SetActive(false);
+                            //UI.skill3_icon.gameObject.SetActive(false);
+                            //UI.skill4_icon.gameObject.SetActive(false);
                         }
                         
                     }

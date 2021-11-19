@@ -8,10 +8,12 @@ public class LevelComponent : MonoBehaviour
     public Unit unit;
     public UnitStats stats;
     public HealthComponent HP_Source;
+    public UIManager UI;
 
     public int Level = 1;
     public float currentEXP;
     public float maxEXP;
+    public int skillPoints;
 
    // public float pointsToGain; //EXP points gain when killed something
 
@@ -44,5 +46,30 @@ public class LevelComponent : MonoBehaviour
         stats.SetStrength(stats.GetStrength() + 5);
         stats.SetBaseArmor(stats.GetBaseArmor() + 5);
         stats.SetAttackSpeed(stats.GetAttackSpeed() + 5);
+    }
+
+    public void displayUI_Upgrade()
+    {
+        if (UI.skillsCanvas && skillPoints > 0)
+        {
+            for(int i = 0; i < UI.upgradeButtons.Count; i++)
+            {
+                UI.upgradeButtons[i].gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void skillUpgrade(int index)
+    {
+        unit.GetSkill(index).skillLevel += 1;
+
+        if (UI.skillsCanvas && skillPoints < 0)
+        {
+            for (int i = 0; i < UI.upgradeButtons.Count; i++)
+            {
+                UI.upgradeButtons[i].gameObject.SetActive(false);
+            }
+        }
+
     }
 }
