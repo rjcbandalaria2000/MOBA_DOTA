@@ -6,6 +6,7 @@ public class UnitSelect : MonoBehaviour
 {
     // Start is called before the first frame update
     public UIManager UI;
+    //public DisplayUnitStats unitStats;
     //public TowerDestroy towerDestroyer;
 
     void Start()
@@ -26,19 +27,21 @@ public class UnitSelect : MonoBehaviour
 
                 Unit unitSelected = hitInfo.transform.gameObject.GetComponent<Unit>();
                 //TowerComponent towerSelected = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
+             
 
-           
-                if(unitSelected)
+                if (unitSelected)
                 {
                     UI.name.text = unitSelected.name;
                     UI.HP_Bar_Slider.value = unitSelected.gameObject.GetComponent<HealthComponent>().GetCurrentHealth() / unitSelected.gameObject.GetComponent<HealthComponent>().GetMaxHP();
 
-                    if(unitSelected.gameObject.GetComponent<UnitStats>() != null)
+                    if (unitSelected.gameObject.GetComponent<UnitStats>() != null)
                     {
                         UnitStats selectedStats = unitSelected.gameObject.GetComponent<UnitStats>();
                         UI.AtkVal.text = selectedStats.GetBaseDamage().ToString();
                         UI.DefVal.text = selectedStats.GetBaseArmor().ToString();
                         UI.SpeedVal.text = selectedStats.GetMovementSpeed().ToString();
+
+                       
 
                         if (unitSelected.unitType == UnitType.Hero)
                         {
@@ -60,7 +63,8 @@ public class UnitSelect : MonoBehaviour
                             //UI.skill3_icon.gameObject.SetActive(false);
                             //UI.skill4_icon.gameObject.SetActive(false);
                         }
-                        
+
+                        SingletonManager.Get<DisplayUnitStats>().objectUnitStat = selectedStats;
                     }
                     else
                     {
@@ -73,6 +77,7 @@ public class UnitSelect : MonoBehaviour
                 }
                 else
                 {
+                    SingletonManager.Get<DisplayUnitStats>().objectUnitStat = null;
                     Debug.Log("Not Unit");
                 }
 

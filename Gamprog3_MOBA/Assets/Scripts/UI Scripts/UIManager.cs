@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject debugPanel;
@@ -55,6 +56,11 @@ public class UIManager : MonoBehaviour
         //skill4_icon.SetActive(false);
 
 
+    }
+
+    private void Awake()
+    {
+        SingletonManager.Register(this);
     }
 
     // Update is called once per frame

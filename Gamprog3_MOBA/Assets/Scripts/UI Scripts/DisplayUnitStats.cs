@@ -24,16 +24,25 @@ public class DisplayUnitStats : MonoBehaviour
         
     }
 
+    public void Awake()
+    {
+        SingletonManager.Register(this);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        attackSpeed.text = objectUnitStat.GetAttackSpeed().ToString();
-        baseDamage.text = objectUnitStat.GetBaseDamage().ToString();
-        attackRange.text = objectUnitStat.GetAttackRange().ToString();
-        MoveSpeed.text = objectUnitStat.GetMovementSpeed().ToString();
+        if(objectUnitStat != null)
+        {
+            attackSpeed.text = objectUnitStat.GetAttackSpeed().ToString();
+            baseDamage.text = objectUnitStat.GetBaseDamage().ToString();
+            attackRange.text = objectUnitStat.GetAttackRange().ToString();
+            MoveSpeed.text = objectUnitStat.GetMovementSpeed().ToString();
 
-        Armor.text = objectUnitStat.GetTotalArmor().ToString();
+            Armor.text = objectUnitStat.GetTotalArmor().ToString();
 
-        HealthRegen.text = objectUnitStat.GetBaseHealthRegen().ToString();
+            HealthRegen.text = objectUnitStat.GetBaseHealthRegen().ToString();
+        }
+       
     }
 }
