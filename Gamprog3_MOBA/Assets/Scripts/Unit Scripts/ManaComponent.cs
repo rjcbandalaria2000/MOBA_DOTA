@@ -68,6 +68,11 @@ public class ManaComponent : MonoBehaviour
         
     }
 
+    public void UseMana(float manaCost)
+    {
+        currentMana -= manaCost;
+    }
+
     IEnumerator ManaRegeneration()
     {
         while (true)

@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
-public class Projectile : MonoBehaviour
+public class MagicMissileProjectile : MonoBehaviour
 {
     [SerializeField]
     GameObject source;
@@ -13,6 +12,8 @@ public class Projectile : MonoBehaviour
     float projectileSpeed;
     [SerializeField]
     float rotationSpeed;
+    [SerializeField]
+    GameObject stunPrefab;
 
     public UnityEvent<GameObject, GameObject> onTargetHit;
 
@@ -27,7 +28,7 @@ public class Projectile : MonoBehaviour
     }
     public void SetProjectileSpeed(float speed)
     {
-        projectileSpeed = speed; 
+        projectileSpeed = speed;
     }
     #endregion
 
@@ -64,7 +65,8 @@ public class Projectile : MonoBehaviour
     {
         Unit collidedUnit = other.GetComponent<Unit>();
         Unit targetUnit = target.GetComponent<Unit>();
-        if (collidedUnit) {
+        if (collidedUnit)
+        {
             if (collidedUnit == targetUnit)
             {
                 //HealthComponent targetHealth = target.GetComponent<HealthComponent>();
@@ -80,7 +82,13 @@ public class Projectile : MonoBehaviour
     public void OnProjectileHit()
     {
         onTargetHit.Invoke(target, source);
+        Buff stunDebuff = Instantiate(stunPrefab.GetComponent<Buff>());
+        stunDebuff.targetUnit = target;
+        stunDebuff.transform.parent = target.transform;
+        stunDebuff.ActivateBuff(target);
+
     }
+
     
 
 }

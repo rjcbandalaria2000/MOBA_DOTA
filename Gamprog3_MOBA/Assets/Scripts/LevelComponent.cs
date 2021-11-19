@@ -7,7 +7,7 @@ public class LevelComponent : MonoBehaviour
 {
     public Unit unit;
     public UnitStats stats;
-    public HealthComponent HP_Source;
+    
 
     public int Level = 1;
     public float currentEXP;

@@ -1,57 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
-public class WaveOfTerrorBuff : Buff
+public class Stun : Buff
 {
     [SerializeField]
-    List<float> armorReductionValues;
-    public int buffLevel = 0;
-    public float buffDuration;
+    Animator targetAnimator;
     [SerializeField]
-    float buffTimer = 0;
+    List<float> stunDuration;
+    [SerializeField]
+    int buffLevel = 0;
+    [SerializeField]
+    float stunTimer = 0; 
     // Start is called before the first frame update
     void Start()
     {
-        buffName = "Wave Of Terror";
-
+        targetAnimator = targetUnit.GetComponent<Animator>();
     }
+
     public override void ActivateBuff(GameObject target, GameObject source = null)
     {
         base.ActivateBuff(target, source);
     }
+
     public override void DeactivateBuff(GameObject target, GameObject source = null)
     {
         base.DeactivateBuff(target, source);
     }
+
     public override void OnActiveBuff(GameObject target, GameObject source = null)
     {
         //base.OnActiveBuff(target, source);
-        UnitStats targetStats = target.GetComponent<UnitStats>();
-        Assert.IsNotNull(targetStats);
-        targetStats.RemoveBonusArmor(armorReductionValues[buffLevel]);
-
+        targetAnimator = target.GetComponent<Animator>();
+        InterruptActions();
+        targetAnimator.SetBool("IsStun", true);
+        
     }
     public override void OnDeactiveBuff(GameObject target, GameObject source = null)
     {
         base.OnDeactiveBuff(target, source);
-        UnitStats targetStats = target.GetComponent<UnitStats>();
-        Assert.IsNotNull(targetStats);
-        targetStats.AddBonusArmor(armorReductionValues[buffLevel]);
+        targetAnimator.SetBool("IsStun", false);
         Destroy(this.gameObject);
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if(buffTimer < buffDuration)
+        if (stunTimer < stunDuration[buffLevel])
         {
-            buffTimer+=Time.deltaTime;
+            stunTimer += Time.deltaTime;
         }
-        if(buffTimer >= buffDuration)
+        else
         {
             DeactivateBuff(targetUnit);
         }
     }
 
+    void InterruptActions()
+    {
+        targetAnimator.SetBool("IsMoving", false);
+        targetAnimator.SetBool("IsAttacking", false);
+        targetUnit.GetComponent<Unit>().target = null;
+        targetAnimator.SetBool("hasTarget", false);
+    }
 }
