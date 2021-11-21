@@ -30,13 +30,13 @@ public class LevelComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentEXP >= maxEXP) // if level up
-        {
-            Level += 1;
-            currentEXP = 0;
-            maxEXP += 10; // Hard Values
-            updateStats(); 
-        }
+        //if(currentEXP >= maxEXP) // if level up
+        //{
+        //    Level += 1;
+        //    currentEXP = 0;
+        //    maxEXP += 10; // Hard Values
+        //    updateStats(); 
+        //}
     }
 
     public void updateStats()
@@ -47,8 +47,15 @@ public class LevelComponent : MonoBehaviour
     }
 
     public void GainExp(float experienceGain)
-    { 
+    {
 
+        currentEXP += experienceGain;
+        if(currentEXP >= maxEXP)
+        {
+            Level += 1;
+            maxEXP += 100;
+            updateStats();
+        }
 
     }
 }
