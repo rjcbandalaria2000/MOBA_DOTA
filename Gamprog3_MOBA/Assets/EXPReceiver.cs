@@ -73,7 +73,11 @@ public class EXPReceiver : MonoBehaviour
         if (unitDied)
         {
             LevelComponent unitDiedLevelComponent = unitDied.GetComponent<LevelComponent>();
-            unitLevelComponent.GainExp(50f);
+            if (unitDiedLevelComponent)
+            {
+                unitLevelComponent.GainExp(unitDiedLevelComponent.GiveExp());
+            }
+            
 
         }
     }

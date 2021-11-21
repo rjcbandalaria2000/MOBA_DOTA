@@ -10,8 +10,11 @@ public class LevelComponent : MonoBehaviour
     
 
     public int Level = 1;
+    public int maxLevel = 25;
     public float currentEXP;
     public float maxEXP;
+    public List<int> requiredExp;
+    public List<int> deathExp;
 
    // public float pointsToGain; //EXP points gain when killed something
 
@@ -30,13 +33,7 @@ public class LevelComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(currentEXP >= maxEXP) // if level up
-        //{
-        //    Level += 1;
-        //    currentEXP = 0;
-        //    maxEXP += 10; // Hard Values
-        //    updateStats(); 
-        //}
+
     }
 
     public void updateStats()
@@ -48,14 +45,24 @@ public class LevelComponent : MonoBehaviour
 
     public void GainExp(float experienceGain)
     {
-
-        currentEXP += experienceGain;
-        if(currentEXP >= maxEXP)
+        if (Level < 25)
         {
-            Level += 1;
-            maxEXP += 100;
-            updateStats();
+            currentEXP += experienceGain;
+            if (currentEXP >= maxEXP)
+            {
+                Level += 1;
+                if(Level - 1 < requiredExp.Count)
+                {
+                    maxEXP = requiredExp[Level - 1];
+                }
+                
+                updateStats();
+            }
         }
+    }
 
+    public int GiveExp()
+    {
+        return deathExp[Level - 1];
     }
 }
