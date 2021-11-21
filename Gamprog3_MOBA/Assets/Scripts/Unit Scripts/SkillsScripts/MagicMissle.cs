@@ -41,7 +41,7 @@ public class MagicMissle : Skill
     void SpawnProjectile(GameObject target, GameObject source)
     {
         GameObject spawnedProjectile = Instantiate(projectile, source.transform.GetChild(0).transform.position, Quaternion.identity);
-        Projectile projectileSpawned = spawnedProjectile.GetComponent<Projectile>();
+        MagicMissileProjectile projectileSpawned = spawnedProjectile.GetComponent<MagicMissileProjectile>();
         if (projectileSpawned)
         {
             UnitStats sourceStats = source.GetComponent<UnitStats>();
@@ -51,6 +51,7 @@ public class MagicMissle : Skill
                 projectileSpawned.SetTarget(target);
                 // projectileSpawned.SetProjectileSpeed(900f/GameManager.distanceUnit);
                 projectileSpawned.SetProjectileSpeed(750f);
+
                 projectileSpawned.onTargetHit.AddListener(HitTarget);
             }
 
@@ -77,23 +78,5 @@ public class MagicMissle : Skill
 
     }
 
-    //void spawnMagicMissle(GameObject target, GameObject source)
-    //{
-    //    GameObject skillSpawnPoint = Instantiate(projectile, source.transform.GetChild(0).transform.position, Quaternion.identity);
-    //    Projectile projectileSpawned = skillSpawnPoint.GetComponent<Projectile>();
-    //    if (projectileSpawned)
-    //    {
-    //        UnitStats sourceStats = source.GetComponent<UnitStats>();
-    //        if (sourceStats)
-    //        {
-    //            projectileSpawned.SetSource(source);
-    //            projectileSpawned.SetTarget(target);
-    //            projectileSpawned.SetProjectileSpeed(900f/GameManager.distanceUnit);
-    //            projectileSpawned.onTargetHit.AddListener(HitTarget);
-    //        }
-
-
-    //    }
-    //}
-   
+    
 }

@@ -16,7 +16,9 @@ public class PenetratingProjectile : MonoBehaviour
     [SerializeField]
     Vector3 mousePos;
     public float timer;
-    public float range; 
+    public float range;
+    [SerializeField]
+    Buff buffPrefab;
 
     public UnityEvent<GameObject, GameObject> onTargetHit;
 
@@ -95,6 +97,10 @@ public class PenetratingProjectile : MonoBehaviour
     }
     public void OnProjectileHit()
     {
+        Buff waveOfTerrorBuff = Instantiate(buffPrefab);
+        waveOfTerrorBuff.targetUnit = target;
+        waveOfTerrorBuff.gameObject.transform.parent = target.transform;
+        waveOfTerrorBuff.ActivateBuff(target);
         onTargetHit.Invoke(target, source);
         
     }

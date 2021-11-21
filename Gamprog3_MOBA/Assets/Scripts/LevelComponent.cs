@@ -7,13 +7,14 @@ public class LevelComponent : MonoBehaviour
 {
     public Unit unit;
     public UnitStats stats;
-    public HealthComponent HP_Source;
-    public UIManager UI;
+    
 
     public int Level = 1;
+    public int maxLevel = 25;
     public float currentEXP;
     public float maxEXP;
-    public int skillPoints;
+    public List<int> requiredExp;
+    public List<int> deathExp;
 
    // public float pointsToGain; //EXP points gain when killed something
 
@@ -32,13 +33,7 @@ public class LevelComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentEXP >= maxEXP) // if level up
-        {
-            Level += 1;
-            currentEXP = 0;
-            maxEXP += 10; // Hard Values
-            updateStats(); 
-        }
+
     }
 
     public void updateStats()
@@ -48,28 +43,26 @@ public class LevelComponent : MonoBehaviour
         stats.SetAttackSpeed(stats.GetAttackSpeed() + 5);
     }
 
-    public void displayUI_Upgrade()
+    public void GainExp(float experienceGain)
     {
-        if (UI.skillsCanvas && skillPoints > 0)
+        if (Level < 25)
         {
-            for(int i = 0; i < UI.upgradeButtons.Count; i++)
+            currentEXP += experienceGain;
+            if (currentEXP >= maxEXP)
             {
-                UI.upgradeButtons[i].gameObject.SetActive(true);
+                Level += 1;
+                if(Level - 1 < requiredExp.Count)
+                {
+                    maxEXP = requiredExp[Level - 1];
+                }
+                
+                updateStats();
             }
         }
     }
 
-    public void skillUpgrade(int index)
+    public int GiveExp()
     {
-        unit.GetSkill(index).skillLevel += 1;
-
-        if (UI.skillsCanvas && skillPoints < 0)
-        {
-            for (int i = 0; i < UI.upgradeButtons.Count; i++)
-            {
-                UI.upgradeButtons[i].gameObject.SetActive(false);
-            }
-        }
-
+        return deathExp[Level - 1];
     }
 }

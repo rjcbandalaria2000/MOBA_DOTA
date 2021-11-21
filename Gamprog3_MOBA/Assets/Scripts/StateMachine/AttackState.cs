@@ -18,9 +18,10 @@ public class AttackState : UnitStateMachine
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
-        unit.transform.LookAt(target.transform.position);
+        
         if (target)
         {
+            unit.transform.LookAt(target.transform.position);
             if (animator.GetFloat("Distance") - attackAccuracy <= unitStats.GetAttackRange())
             {
 

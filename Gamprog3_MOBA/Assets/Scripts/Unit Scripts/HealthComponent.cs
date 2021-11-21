@@ -53,9 +53,6 @@ public class HealthComponent : MonoBehaviour
     void Start()
     {
         InitializeHealth();
-
-        //maxHP = CalculateMaxHealth();
-        //currentHP = maxHP;
     }
 
     // Update is called once per frame

@@ -5,40 +5,39 @@ using UnityEngine.Events;
 
 public class SpawnerUpgrade : MonoBehaviour
 {
+    public GameObject redBarracks;
+    public GameObject blueBarracks;
+
     public GameObject redSpawner;
     public GameObject blueSpawner;
-
-    //public UnityEvent onDestroySpawner;
-
-    //public List<GameObject> midSpawners;
    
     // Start is called before the first frame update
     void Start()
     {
-        if (redSpawner)
+        if (redBarracks)
         {
-            HealthComponent redSpawnerHealth = redSpawner.GetComponent<HealthComponent>();
+            HealthComponent redSpawnerHealth = redBarracks.GetComponent<HealthComponent>();
             redSpawnerHealth.death.AddListener(UpgradeBlueSpawner);
         }
-        if (blueSpawner)
+        if (blueBarracks)
         {
-            HealthComponent blueSpawnerHealth = blueSpawner.GetComponent<HealthComponent>();
+            HealthComponent blueSpawnerHealth = blueBarracks.GetComponent<HealthComponent>();
             blueSpawnerHealth.death.AddListener(UpgradeRedSpawner);
         }
     }
 
     void UpgradeBlueSpawner(HealthComponent spawner)
     {
-        if (redSpawner != null)
+        if (redBarracks != null)
         {
             //Debug.Log(redSpawner.name);
-            HealthComponent redSpawnerHealth = redSpawner.GetComponent<HealthComponent>();
+            HealthComponent redSpawnerHealth = redBarracks.GetComponent<HealthComponent>();
             if (redSpawnerHealth)
             {
                 //redSpawnerHealth.death.AddListener()
                 if (redSpawnerHealth.GetIsDead() == true)
                 {
-                    if (!blueSpawner.GetComponent<Creep_Spawner>().isSpawningSuperCreeps)
+                    if (!blueBarracks.GetComponent<Creep_Spawner>().isSpawningSuperCreeps)
                     {
                         blueSpawner.GetComponent<Creep_Spawner>().isSpawningSuperCreeps = true;
                         //Debug.Log("Red Spawner is Dead");
@@ -53,15 +52,15 @@ public class SpawnerUpgrade : MonoBehaviour
     }
     void UpgradeRedSpawner(HealthComponent spawner)
     {
-        if (blueSpawner != null)
+        if (blueBarracks != null)
         {
             //Debug.Log(blueSpawner.name);
-            HealthComponent blueSpawnerHealth = blueSpawner.GetComponent<HealthComponent>();
+            HealthComponent blueSpawnerHealth = blueBarracks.GetComponent<HealthComponent>();
             if (blueSpawnerHealth)
             {
                 if (blueSpawnerHealth.GetIsDead() == true)
                 {
-                    if (!redSpawner.GetComponent<Creep_Spawner>().isSpawningSuperCreeps)
+                    if (!redBarracks.GetComponent<Creep_Spawner>().isSpawningSuperCreeps)
                     {
                         redSpawner.GetComponent<Creep_Spawner>().isSpawningSuperCreeps = true;
                         //Debug.Log("Red Spawner is Dead");

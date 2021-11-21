@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct GrowthStats
+{
+    public float healthGrowth;
+    public float attackGrowth;
+    public int goldGrowth;
+    public int experienceGrowth;
+}
+
 public class Creep_Spawner : MonoBehaviour
 {
    // public GameObject[] creeps;
@@ -23,13 +31,13 @@ public class Creep_Spawner : MonoBehaviour
     public bool isSpawningSuperCreeps;
 
     private Coroutine spawnRoutine;
-
+    private Coroutine creepGrowth;
     // Start is called before the first frame update
     void Start()
     {
 
         spawnRoutine = StartCoroutine(SpawnCreepsRoutine());
-
+        creepGrowth = StartCoroutine(CreepGrowthRoutine());
         
     }
 
@@ -38,7 +46,22 @@ public class Creep_Spawner : MonoBehaviour
     {
       
     }
+    IEnumerator CreepGrowthRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(180f);
+            Debug.Log("CreepGrowth");
+            UnitStats creepStats = regularCreeps.GetComponent<UnitStats>();
+            if (creepStats)
+            {
+                //For testing
+                creepStats.SetBaseHP(creepStats.GetBaseHP() + 9);
 
+            }
+        }
+        
+    }
     IEnumerator SpawnCreepsRoutine()
     {
         while (true)
