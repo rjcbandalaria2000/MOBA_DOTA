@@ -9,8 +9,12 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject debugPanel;
     [SerializeField] GameObject debugButton;
+
+    [Header("Basic Info UI")]
     public TextMeshProUGUI name;
     public Slider HP_Bar_Slider;
+    public Slider Mana_Bar_Slider;
+    public TextMeshProUGUI levelValue;
     public Button DestroyTowerButton;
 
     [Header("Stats UI")]

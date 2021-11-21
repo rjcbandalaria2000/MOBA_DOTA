@@ -33,6 +33,15 @@ public class UnitSelect : MonoBehaviour
                 {
                     UI.name.text = unitSelected.name;
                     UI.HP_Bar_Slider.value = unitSelected.gameObject.GetComponent<HealthComponent>().GetCurrentHealth() / unitSelected.gameObject.GetComponent<HealthComponent>().GetMaxHP();
+                    if (unitSelected.gameObject.GetComponent<ManaComponent>() != null)
+                    {
+                        UI.HP_Bar_Slider.value = unitSelected.gameObject.GetComponent<ManaComponent>().GetCurrentMana() / unitSelected.gameObject.GetComponent<ManaComponent>().GetMaxMana();
+                    }
+                    else
+                    {
+                        UI.HP_Bar_Slider.value = 0;
+                    }
+                        
 
                     if (unitSelected.gameObject.GetComponent<UnitStats>() != null)
                     {
@@ -41,7 +50,11 @@ public class UnitSelect : MonoBehaviour
                         UI.DefVal.text = selectedStats.GetBaseArmor().ToString();
                         UI.SpeedVal.text = selectedStats.GetMovementSpeed().ToString();
 
-                       
+                        if (unitSelected.gameObject.GetComponent<LevelComponent>() != null)
+                        {
+                            LevelComponent selectedLevel = unitSelected.gameObject.GetComponent<LevelComponent>();
+                            UI.levelValue.text = selectedLevel.Level.ToString();
+                        }
 
                         if (unitSelected.unitType == UnitType.Hero)
                         {
