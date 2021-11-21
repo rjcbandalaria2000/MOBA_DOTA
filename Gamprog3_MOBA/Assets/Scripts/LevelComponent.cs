@@ -13,6 +13,7 @@ public class LevelComponent : MonoBehaviour
     public int maxLevel = 25;
     public float currentEXP;
     public float maxEXP;
+    public int skillPoints;
     public List<int> requiredExp;
     public List<int> deathExp;
 
@@ -33,7 +34,7 @@ public class LevelComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 
     public void updateStats()
@@ -51,11 +52,17 @@ public class LevelComponent : MonoBehaviour
             if (currentEXP >= maxEXP)
             {
                 Level += 1;
+                skillPoints += 1;
                 if(Level - 1 < requiredExp.Count)
                 {
                     maxEXP = requiredExp[Level - 1];
                 }
-                
+
+                if (skillPoints > 0)
+                {
+                    skillUpgradeActivate();
+                }
+
                 updateStats();
             }
         }
@@ -64,5 +71,29 @@ public class LevelComponent : MonoBehaviour
     public int GiveExp()
     {
         return deathExp[Level - 1];
+    }
+
+    public void skillUpgradeActivate()
+    {
+        if(this.gameObject.GetComponent<Unit>().unitType == UnitType.Hero)
+        {
+            for(int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
+            {
+                SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void selectSkillUpgrade(int index)
+    {
+        skillPoints -= 1;
+        //skill Upgrade
+        if (skillPoints <= 0)
+        {
+            for (int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
+            {
+                SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
+            }
+        }
     }
 }
