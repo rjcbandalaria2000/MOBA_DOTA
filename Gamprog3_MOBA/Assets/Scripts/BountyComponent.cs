@@ -7,7 +7,7 @@ public class BountyComponent : MonoBehaviour
     [SerializeField]
      public int Gold;
     [SerializeField]
-    int goldBounty;
+    public List<int> goldBounty;
 
     public GameObject killer; //for last hit
 
@@ -15,6 +15,9 @@ public class BountyComponent : MonoBehaviour
 
     public Collider bountyRange;
     public GameObject bountyIncludeObject;
+
+    public LevelComponent unitLevel;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,7 @@ public class BountyComponent : MonoBehaviour
                 Gold = 0;
             }
         }
+        unitLevel = this.gameObject.GetComponent<LevelComponent>();
     }
 
     // Update is called once per frame
@@ -44,5 +48,9 @@ public class BountyComponent : MonoBehaviour
     {
         bountyInRange.Remove(bountyIncludeObject);
     }
-    
+
+    public int GetGoldBounty()
+    {
+        return goldBounty[unitLevel.Level - 1];
+    }
 }

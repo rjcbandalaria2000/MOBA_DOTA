@@ -140,7 +140,8 @@ public class DamageReceiver : MonoBehaviour
             if(lastAttackerUnit.unitType == UnitType.Hero)
             {
                 BountyComponent lastAttackerBounty = lastAttackerUnit.gameObject.GetComponent<BountyComponent>();
-                lastAttackerBounty.Gold += 10;
+                BountyComponent sourceBounty = source.GetComponent<BountyComponent>();
+                lastAttackerBounty.Gold += sourceBounty.GetGoldBounty();
             }
         }
     }
