@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public Slider HP_Bar_Slider;
     public Slider Mana_Bar_Slider;
     public TextMeshProUGUI levelValue;
+    public TextMeshProUGUI expValue;
     public Button DestroyTowerButton;
 
     [Header("Stats UI")]

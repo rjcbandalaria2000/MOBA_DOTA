@@ -58,6 +58,7 @@ public class TestRangedAttack : Skill
             UnitStats sourceStats = source.GetComponent<UnitStats>();
             if (sourceStats)
             {
+                Debug.Log("Damage By Projectile");
                 targetDamageReceiver.ReceiveDamage(sourceStats.GetTotalDamage(), attackType, damageType);
             }
         }
