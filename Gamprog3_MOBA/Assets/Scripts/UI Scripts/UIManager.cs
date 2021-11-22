@@ -4,12 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject debugPanel;
     [SerializeField] GameObject debugButton;
+
+    [Header("Basic Info UI")]
     public TextMeshProUGUI name;
     public Slider HP_Bar_Slider;
+    public Slider Mana_Bar_Slider;
+    public TextMeshProUGUI levelValue;
+    public TextMeshProUGUI expValue;
     public Button DestroyTowerButton;
 
     [Header("Stats UI")]
@@ -30,10 +36,14 @@ public class UIManager : MonoBehaviour
     [Header("Player Skills Icon transparent")]
     public List<Image> skill_icon_Transparent;
 
-    public Image skill1_icon_Transparent;
-    public Image skill2_icon_Transparent;
-    public Image skill3_icon_Transparent;
-    public Image skill4_icon_Transparent;
+    [Header("Player Skills Icon upgradeButton")]
+    public List<Button> upgradeButtons;
+
+    public DisplayUnitStats unitStatDisplay;
+
+    public Canvas skillsCanvas;
+    public Canvas basicStatsDisplayCanvas;
+    public Canvas inDepthStatsCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +51,21 @@ public class UIManager : MonoBehaviour
         debugPanel.SetActive(false);
         debugButton.SetActive(true);
         DestroyTowerButton.gameObject.SetActive(false);
+        inDepthStatsCanvas.gameObject.SetActive(false);
 
+        heroImage.SetActive(false);
+        skillsCanvas.gameObject.SetActive(false);
+        //skill1_icon.SetActive(false);
+        //skill2_icon.SetActive(false);
+        //skill3_icon.SetActive(false);
+        //skill4_icon.SetActive(false);
+
+
+    }
+
+    private void Awake()
+    {
+        SingletonManager.Register(this);
     }
 
     // Update is called once per frame
@@ -60,4 +84,6 @@ public class UIManager : MonoBehaviour
         debugPanel.SetActive(false);
         debugButton.SetActive(true);
     }
+
+    
 }

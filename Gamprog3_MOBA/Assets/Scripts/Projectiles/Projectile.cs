@@ -64,21 +64,26 @@ public class Projectile : MonoBehaviour
     {
         Unit collidedUnit = other.GetComponent<Unit>();
         Unit targetUnit = target.GetComponent<Unit>();
-        if (collidedUnit) {
-            if (collidedUnit == targetUnit)
+        if (collidedUnit)
+        {
+            if(targetUnit)
             {
-                //HealthComponent targetHealth = target.GetComponent<HealthComponent>();
-                //if (targetHealth)
-                //{
-                OnProjectileHit();
-                Destroy(this.gameObject);
-                //}
+                if (collidedUnit == targetUnit)
+                {
+                    //HealthComponent targetHealth = target.GetComponent<HealthComponent>();
+                    //if (targetHealth)
+                    //{
+                    OnProjectileHit();
+                    Destroy(this.gameObject);
+                    //}
+                }
             }
         }
 
     }
     public void OnProjectileHit()
     {
+        Debug.Log("Projectile Hit");
         onTargetHit.Invoke(target, source);
     }
     

@@ -17,7 +17,11 @@ public class Skill : MonoBehaviour
     public bool isCoolDown;
     protected Coroutine coolDownRoutine;
     public int skillIndex;
-    public int currentSkillLevel;
+    public int skillLevel;
+    [SerializeField]
+    bool isMaxSkillLevel;
+
+    //public int currentSkillLevel;
     public int maxSkillLevel;
     public UIManager skillsUI;
 
@@ -48,12 +52,16 @@ public class Skill : MonoBehaviour
         Debug.Log(isCoolDown);
         if (isCoolDown)
         {
-            skillsUI.skill_icon_Transparent[skillIndex].fillAmount -= 1 / skillCooldown * Time.deltaTime;
-            if (skillsUI.skill_icon_Transparent[skillIndex].fillAmount <= 0)
+            if(skillsUI != null)
             {
-                Debug.Log("Finish CD");
-                skillsUI.skill_icon_Transparent[skillIndex].fillAmount = 0;
+                skillsUI.skill_icon_Transparent[skillIndex].fillAmount -= 1 / skillCooldown * Time.deltaTime;
+                if (skillsUI.skill_icon_Transparent[skillIndex].fillAmount <= 0)
+                {
+                    Debug.Log("Finish CD");
+                    skillsUI.skill_icon_Transparent[skillIndex].fillAmount = 0;
+                }
             }
+            
         }
     }
 
@@ -63,9 +71,12 @@ public class Skill : MonoBehaviour
         {
             OnActivate(target, attacker);
 
-            isCoolDown = true;
-            skillsUI.skill_icon_Transparent[skillIndex].fillAmount = 1;
-            coolDownRoutine = StartCoroutine(SkillCoolDown(skillCooldown,skillIndex));
+           if(skillsUI != null)
+            {
+                skillsUI.skill_icon_Transparent[skillIndex].fillAmount = 1;
+            }
+        
+          
             
             //SkillCoolDown1(skillCooldown, skillIndex);
         }

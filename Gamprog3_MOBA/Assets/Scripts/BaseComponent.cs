@@ -39,10 +39,7 @@ public class BaseComponent : MonoBehaviour
                 referenceTower.RemoveAt(i);
                 towerTracker--;
             }
-            else
-            {
-                
-            }
+           
         }
       
     }
