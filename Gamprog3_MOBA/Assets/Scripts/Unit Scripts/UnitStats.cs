@@ -36,20 +36,20 @@ public class UnitStats : MonoBehaviour
     [SerializeField]
     float totalDamage;
     [SerializeField]
-    int strength;
+    float strength;
     [SerializeField]
-    int intelligence;
+    float intelligence;
     [SerializeField]
     float baseMana;
     [SerializeField]
-    int agility;
+    float agility;
     [SerializeField]
     int movementSpeed;
     [SerializeField]
     int baseAttackSpeed;
     public int attackSpeedModifier;
     [SerializeField]
-    int totalAttackSpeed;
+    float totalAttackSpeed;
     [SerializeField]
     float attackRange;
     [SerializeField]
@@ -74,22 +74,22 @@ public class UnitStats : MonoBehaviour
 
     #region StatGetters
     public float GetBaseDamage()
-    {
-        return baseDamage;
+    { 
+        return CalculateBaseDamageForPrimaryAttribute() ;
     }
     public float GetTotalDamage()
     {
         return totalDamage;
     }
-    public int GetStrength()
+    public float GetStrength()
     {
         return strength;
     }
-    public int GetIntelligence()
+    public float GetIntelligence()
     {
         return intelligence;
     }
-    public int GetAgility()
+    public float GetAgility()
     {
         return agility;
     }
@@ -123,7 +123,7 @@ public class UnitStats : MonoBehaviour
     }
     public float GetTotalArmor()
     {
-        return totalArmor;
+        return CalculateTotalArmor();
     }
     public ArmorType GetArmorType()
     {
@@ -152,15 +152,15 @@ public class UnitStats : MonoBehaviour
     {
         totalDamage = totalDamageValue;
     }
-    public void SetStrength(int strengthValue)
+    public void SetStrength(float strengthValue)
     {
         strength = strengthValue;
     }
-    public void SetIntelligence(int intelligenceValue)
+    public void SetIntelligence(float intelligenceValue)
     {
         intelligence = intelligenceValue;
     }
-    public void SetAgility(int agilityValue)
+    public void SetAgility(float agilityValue)
     {
         agility = agilityValue;
     }
@@ -202,7 +202,7 @@ public class UnitStats : MonoBehaviour
         attackRange /= GameManager.distanceUnit;
         totalArmor = CalculateTotalArmor();
         totalAttackSpeed = CalculateAttackSpeedWithAgility();
-        CalculateBaseDamageForPrimaryAttribute();
+        baseDamage = CalculateBaseDamageForPrimaryAttribute();
         totalDamage = baseDamage;
         CalculateAttackTime();
 
@@ -218,23 +218,23 @@ public class UnitStats : MonoBehaviour
         totalArmor -= bonusArmorValue;
     }
 
-    public void CalculateBaseDamageForPrimaryAttribute()
+    public float CalculateBaseDamageForPrimaryAttribute()
     {
         if (unitPrimaryAttribute == PrimaryAttribute.Strength)
         {
-            baseDamage = initialDamage + strength;
+            return baseDamage = initialDamage + strength;
         }
         else if (unitPrimaryAttribute == PrimaryAttribute.Agility)
         {
-            baseDamage = initialDamage + agility;
+            return baseDamage = initialDamage + agility;
         }
         else if (unitPrimaryAttribute == PrimaryAttribute.Intelligence)
         {
-            baseDamage = initialDamage + intelligence;
+            return baseDamage = initialDamage + intelligence;
         }
         else
         {
-            baseDamage = initialDamage;
+            return baseDamage = initialDamage;
         }
     }
 
@@ -243,7 +243,7 @@ public class UnitStats : MonoBehaviour
         return baseArmor + (agility * 0.16f);
     }
 
-    public int CalculateAttackSpeedWithAgility()
+    public float CalculateAttackSpeedWithAgility()
     {
         return baseAttackSpeed + agility;
     }
