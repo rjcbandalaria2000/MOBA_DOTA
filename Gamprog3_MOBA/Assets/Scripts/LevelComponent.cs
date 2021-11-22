@@ -28,7 +28,14 @@ public class LevelComponent : MonoBehaviour
         
         stats = this.gameObject.GetComponent<UnitStats>();
         Assert.IsNotNull(stats);
-        maxEXP = requiredExp[Level - 1];
+
+        skillPoints = 1;
+        skillUpgradeActivate();
+
+        if (requiredExp.Count > 0)
+        {
+            maxEXP = requiredExp[Level - 1];
+        }
         
     }
 
@@ -40,9 +47,20 @@ public class LevelComponent : MonoBehaviour
 
     public void updateStats()
     {
+        skillPoints -= 1;
         stats.SetStrength(stats.GetStrength() + growthStats.GetStrength());
         stats.SetAgility(stats.GetAgility() + growthStats.GetAgility());
         stats.SetIntelligence(stats.GetIntelligence() + growthStats.GetIntelligence());
+        if (skillPoints <= 0)
+        {
+            for (int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
+            {
+                SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
+            }
+            SingletonManager.Get<UIManager>().attributeUpgradeButtons.gameObject.SetActive(false);
+            
+        }
+        
     }
 
     public void GainExp(float experienceGain)
@@ -83,9 +101,10 @@ public class LevelComponent : MonoBehaviour
 
     public void selectSkillUpgrade(int index)
     {
-        if(unit.GetSkill(index + 1).skillLevel < unit.GetSkill(index + 1).maxSkillLevel)
+        if(unit.GetSkill(index).skillLevel < unit.GetSkill(index).maxSkillLevel)
         {
-            unit.GetSkill(index + 1).skillLevel += 1;
+            Debug.Log("Skill Upgrade");
+            unit.GetSkill(index).skillLevel += 1;
             skillPoints -= 1;
             //skill Upgrade
             if (skillPoints <= 0)
@@ -95,7 +114,7 @@ public class LevelComponent : MonoBehaviour
                 SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
                 }
             }
-            SingletonManager.Get<UIManager>().attributeUpgradeButtons.gameObject.SetActive(false);
+            
         }
         
     }
@@ -109,7 +128,7 @@ public class LevelComponent : MonoBehaviour
         }
         if (growthStats)
         {
-            updateStats();
+            //updateStats();
         }
        
     }

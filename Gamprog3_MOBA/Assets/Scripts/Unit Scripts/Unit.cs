@@ -69,24 +69,7 @@ public class Unit : MonoBehaviour
 
     public void UseSkill()
     {
-        // Attack skill for testing 
-        //Unit unitTarget = target.GetComponent<Unit>();
-        //if (unitTarget)
-        //{
-        //    FactionComponent targetFaction = target.GetComponent<FactionComponent>();
-        //    if (targetFaction)
-        //    {
-        //        if(targetFaction.unitFaction != this.gameObject.GetComponent<FactionComponent>().unitFaction)
-        //        {
-        //            HealthComponent targetHealth = target.GetComponent<HealthComponent>();
-        //            if (targetHealth)
-        //            {
-        //                Debug.Log("Damage: " + target.name);
-        //                targetHealth.TakeDamage(unitStats.GetBaseDamage());
-        //            }
-        //        }
-        //    }
-        //}
+        
         unitSkills[0].ActivateSkill(target, this.gameObject);
     }
 

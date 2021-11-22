@@ -31,14 +31,23 @@ public class Creep_Spawner : MonoBehaviour
     public bool isSpawningSuperCreeps;
 
     private Coroutine spawnRoutine;
-    private Coroutine creepGrowth;
+    private Coroutine regularCreepGrowth;
+    private Coroutine superCreepGrowth;
+
+    public float creepScaleTimer;
+
+    public GameObject regularStatsScaler;
+    public GameObject superStatsScaler;
+  
     // Start is called before the first frame update
     void Start()
     {
 
         spawnRoutine = StartCoroutine(SpawnCreepsRoutine());
-        creepGrowth = StartCoroutine(CreepGrowthRoutine());
-        
+        regularCreepGrowth = StartCoroutine(RegularCreepGrowth());
+       
+
+
     }
 
     // Update is called once per frame
@@ -46,22 +55,62 @@ public class Creep_Spawner : MonoBehaviour
     {
       
     }
-    IEnumerator CreepGrowthRoutine()
+    IEnumerator RegularCreepGrowth()
     {
         while (true)
         {
-            yield return new WaitForSeconds(180f);
+            yield return new WaitForSeconds(creepScaleTimer);
             Debug.Log("CreepGrowth");
             UnitStats creepStats = regularCreeps.GetComponent<UnitStats>();
+            LevelComponent creepLevels = regularCreeps.GetComponent<LevelComponent>();
+
+            UnitStats regualarStatsScale = regularStatsScaler.GetComponent<UnitStats>();
+            LevelComponent regularLevelScale = regularStatsScaler.GetComponent<LevelComponent>();
+
             if (creepStats)
             {
                 //For testing
-                creepStats.SetBaseHP(creepStats.GetBaseHP() + 9);
-
+                creepStats.SetBaseHP(creepStats.GetBaseHP() + regualarStatsScale.GetBaseHP());
+                creepStats.SetTotalDamage(creepStats.GetTotalDamage() + regualarStatsScale.GetBaseDamage());
+                if(creepLevels)
+                {
+                    for(int i = 0; i < creepLevels.deathExp.Count; i++)
+                    {
+                        creepLevels.deathExp[i] += regularLevelScale.deathExp[i];
+                    }
+                }
             }
         }
-        
     }
+
+    IEnumerator SuperCreepGrowth()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(creepScaleTimer);
+            Debug.Log("CreepGrowth");
+            UnitStats creepStats = SuperCreep.GetComponent<UnitStats>();
+            LevelComponent creepLevels = SuperCreep.GetComponent<LevelComponent>();
+
+            UnitStats superStatsScale = superStatsScaler.GetComponent<UnitStats>();
+            LevelComponent superLevelScale = superStatsScaler.GetComponent<LevelComponent>();
+
+            if (creepStats)
+            {
+                //For testing
+                creepStats.SetBaseHP(creepStats.GetBaseHP() + superStatsScale.GetBaseHP());
+                creepStats.SetTotalDamage(creepStats.GetTotalDamage() + superStatsScale.GetBaseDamage());
+                if (creepLevels)
+                {
+                    for (int i = 0; i < creepLevels.deathExp.Count; i++)
+                    {
+                        creepLevels.deathExp[i] += superLevelScale.deathExp[i];
+                    }
+                }
+            }
+        }
+    }
+
     IEnumerator SpawnCreepsRoutine()
     {
         while (true)
@@ -82,10 +131,6 @@ public class Creep_Spawner : MonoBehaviour
             }
            
             Debug.Log("FinishSpawning"); 
-            
-          
-            
-
             
         }
 
@@ -148,6 +193,7 @@ public class Creep_Spawner : MonoBehaviour
 
     IEnumerator SpawnSuperCreeps()
     {
+        superCreepGrowth = StartCoroutine(SuperCreepGrowth());
         while (true)
         {
             this.waves += 1;

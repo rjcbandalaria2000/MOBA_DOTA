@@ -30,9 +30,6 @@ public class BountyComponent : MonoBehaviour
                 Gold = 0;
             }
         }
-
-
-        
     }
 
     // Update is called once per frame
