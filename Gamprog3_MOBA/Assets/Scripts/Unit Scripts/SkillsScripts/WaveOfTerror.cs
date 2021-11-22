@@ -64,19 +64,11 @@ public class WaveOfTerror : Skill
     public void HitTarget(GameObject target, GameObject source)
     {
 
-        HealthComponent targetHealth = target.GetComponent<HealthComponent>();
-        if (targetHealth)
+        DamageReceiver targetDamageReceiver = target.GetComponent<DamageReceiver>();
+        if (targetDamageReceiver)
         {
-            UnitStats sourceStats = source.GetComponent<UnitStats>();
-            if (sourceStats)
-            {
-                //Make a new stun state mechanim 
-                //Go to stun and wait for timer then return to idle 
-                //Same with nether swap 
-                targetHealth.TakeDamage(damage[skillLevel - 1]);
-            }
-
+            targetDamageReceiver.ReceiveDamage(damage[skillLevel - 1], attackType, damageType);
+            targetDamageReceiver.setAttacker(source);
         }
-
     }
 }

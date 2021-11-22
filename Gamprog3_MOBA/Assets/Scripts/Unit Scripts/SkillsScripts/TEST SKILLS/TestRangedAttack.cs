@@ -60,6 +60,7 @@ public class TestRangedAttack : Skill
             {
                 Debug.Log("Damage By Projectile");
                 targetDamageReceiver.ReceiveDamage(sourceStats.GetTotalDamage(), attackType, damageType);
+                targetDamageReceiver.setAttacker(source);
             }
         }
     }

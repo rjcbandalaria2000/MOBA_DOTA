@@ -15,11 +15,11 @@ E:/Chris Bandalaria/Documents/DLS-CSB/4th Year/1ST TERM/GAMPROG3/MOBA REPOSITORY
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57155
+58109
 Successfully changed project path to: E:/Chris Bandalaria/Documents/DLS-CSB/4th Year/1ST TERM/GAMPROG3/MOBA REPOSITORY/Gamprog3_MOBA
 E:/Chris Bandalaria/Documents/DLS-CSB/4th Year/1ST TERM/GAMPROG3/MOBA REPOSITORY/Gamprog3_MOBA
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 269.90 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 82.17 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.6f1 (c0fade0cc7e9)
 [Subsystems] Discovering subsystems at path E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/Resources/UnitySubsystems
@@ -35,5 +35,641 @@ Initialize mono
 Mono path[0] = 'E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56900
 Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Program Files/Unity/Hub/Editor/2021.1.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003062 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 76.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.596 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004150 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.034 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2761 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 108.8 MB.
+System memory in use after: 109.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3232.
+Total: 1.708700 ms (FindLiveObjects: 0.170600 ms CreateObjectMapping: 0.090900 ms MarkObjects: 1.369900 ms  DeleteObjects: 0.076600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Red.prefab
+  artifactKey: Guid(0afd12bda36369749871bd0c448a3425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Red.prefab using Guid(0afd12bda36369749871bd0c448a3425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f820f3d23b5e80152be375856d4eaa5b') in 0.136416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001302 seconds.
+  path: Assets/Prefab/Blue_Base2.prefab
+  artifactKey: Guid(b255fbb36a1b14f43a350b77b4a884ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Blue_Base2.prefab using Guid(b255fbb36a1b14f43a350b77b4a884ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '443357b27685a17064244c5f5a184f03') in 0.042578 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001428 seconds.
+  path: Assets/Prefab/Spawner
+  artifactKey: Guid(28d8abb82b2697e488ff9ff79ee3c56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Spawner using Guid(28d8abb82b2697e488ff9ff79ee3c56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bd8900a9777367d4d302de46f1c5b1f') in 0.011299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004059 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab
+  artifactKey: Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab using Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2482c70b4a8ef9159291c58931d53038') in 0.115137 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001644 seconds.
+  path: Assets/Prefab/Base_Red.prefab
+  artifactKey: Guid(5ebe337a98ad28f408c57babca6b600c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Base_Red.prefab using Guid(5ebe337a98ad28f408c57babca6b600c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb349400fd8f45587f8510e0f3f9f64') in 0.061336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.528175 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab
+  artifactKey: Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab using Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8a57a7a99d2167e5feb7b19ad70327d') in 0.133554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.782171 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab
+  artifactKey: Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab using Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcaffbf35c5b0bd9ac982ad71b28df2c') in 0.078273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.282921 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab
+  artifactKey: Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab using Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc35dc531cf4d3e88aee07611c57caa9') in 0.099094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.672756 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab
+  artifactKey: Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab using Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c52cc88aa0ceb73665a5130925faf423') in 0.109852 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.091308 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab
+  artifactKey: Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab using Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f6e36ccd85e5c60eeb389f7249414ca') in 0.094617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.064307 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab
+  artifactKey: Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Blue.prefab using Guid(05eaed44db6cc234aa320897c2a5c115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbea03ced7940f4204dd44a0b0a13776') in 0.537473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.022717 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Red.prefab
+  artifactKey: Guid(0afd12bda36369749871bd0c448a3425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Red.prefab using Guid(0afd12bda36369749871bd0c448a3425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dc23f71e98b4f1fef1e692d6ce86230') in 0.138155 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.569965 seconds.
+  path: Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Red.prefab
+  artifactKey: Guid(0afd12bda36369749871bd0c448a3425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier1 Towers/Tower Mage_Red.prefab using Guid(0afd12bda36369749871bd0c448a3425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e20523e67ffdb74c063bf8e3769d289e') in 0.211013 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 128.191463 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b00977a2c800fcd3bbd9dedf9c3a63') in 0.019427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000489 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Red Tier2 1.prefab
+  artifactKey: Guid(a1e08f3965252a8489796b0c3e1c7d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Red Tier2 1.prefab using Guid(a1e08f3965252a8489796b0c3e1c7d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c341ec3ffacd0bbf831c91809f1ade2a') in 0.025724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.577152 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0ad3a370c7f1896ecda261baee49b4e') in 0.104950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.934271 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '985d0c2fe8b7f6f6303bbf40bc5c564f') in 0.145389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.349502 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60b2588e88c21721b14a084abf070ff7') in 0.064478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.288504 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a9116c2c7d9c6e4f51ed633c4c5c4a') in 0.106883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.322927 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5505672ba5ae9364ad201958d965fa30') in 0.171432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.031710 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa645304f7623283631001862c4f3178') in 0.231673 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.797421 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bd204bc53c941d89e056b78a6f55ec3') in 0.034031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.036691 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f7cfc7ebff244624ba80f2f282564e4') in 0.096025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.686670 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Red Tier2 1.prefab
+  artifactKey: Guid(a1e08f3965252a8489796b0c3e1c7d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Red Tier2 1.prefab using Guid(a1e08f3965252a8489796b0c3e1c7d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e7cc7c51b06387312f69f39cd542ed') in 0.052347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.140968 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Red Tier2 1.prefab
+  artifactKey: Guid(a1e08f3965252a8489796b0c3e1c7d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Red Tier2 1.prefab using Guid(a1e08f3965252a8489796b0c3e1c7d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c4bf3d691690f33ac2cba0f64c84fea') in 0.099951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.036210 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9f8679cf15eb8191637e628ae407970') in 0.038162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab
+  artifactKey: Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab using Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f9fc6354fb279ec8c3c8688f2c8b86d') in 0.037127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.223659 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc802462cad467329c0929769e9cb403') in 0.122322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.136007 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b5b199b16092b6b8d0df94bf3c433a8') in 0.094387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.136337 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d639346b56d9d0d59221cba419dd350') in 0.057452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.872092 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e67ec1738a537b9781fcd73254f3cdf') in 0.114730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.344746 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccefa88adb0a80b34c4fac88a6cfd612') in 0.122047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.450483 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5cda64abef4a2bee938ea983ddb75ff') in 0.126202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.401486 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c18dd7a9165e41f013f09b42f3ec75') in 0.094221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.695216 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d4595017b965989d635df9cd6270aa7') in 0.474162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.903625 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08b13f78581d522caa9e1a46039d3fa9') in 0.148386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.886240 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6df950f5a5c3e3f4f22d70cecf7a1d3e') in 0.230466 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.934411 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab
+  artifactKey: Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab using Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6840eff1f575e6e39ea7fb58fef75b0e') in 0.116526 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.242804 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab
+  artifactKey: Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab using Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87e902369ac753c8f0291b778a2b2f01') in 0.134083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.430934 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab61304331821dc54b0edfed302686df') in 0.021427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab
+  artifactKey: Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab using Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '229292e100a36ee075300119232447a1') in 0.079401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.404575 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4c7649edb0f7c6360b9d0f97d679f4a') in 0.136617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.887056 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e7bc852af1c58ba50890fcbae426677') in 0.024377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.939455 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be9f8adcd09c9b3821958c6982bed939') in 0.099002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.028447 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36b384a7e7824ef2f9996840ecf8e27d') in 0.110615 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.036422 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42f9c72f69730c10a000bf611b40146f') in 0.093220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.812734 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bafd2d2867d463e72f4fe5a95492b713') in 0.076391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.455734 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae0fa1d60bccc4cf0845afaeabc206bc') in 0.023773 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.520084 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4c7b0ba27ede9cc8df6ada5fbd254c1') in 0.110312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.731420 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9a45aef69b437c47b11066717dca50f') in 0.061724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.341370 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1df2e9fc6a798605a81bf5de03025965') in 0.073282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.692337 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22b167bfa27e07fd5589fcd9ee18fc1d') in 0.250240 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.230637 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9d28d80129e9a7cb63f44480260d549') in 0.157673 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.206773 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab
+  artifactKey: Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab using Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91a00f1d3c8aeafdbc56b71fff7ab654') in 0.104887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.223541 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab
+  artifactKey: Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab using Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e88a47574dab8c0a61c2c002a5391dec') in 0.087363 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.878476 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab
+  artifactKey: Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Blue Tier2 1.prefab using Guid(713626e2eb7765f4ca54efe1c543cfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e29b19d4d2559ff4af30b7e7825a1251') in 0.127956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.579578 seconds.
+  path: Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Red Tier2 1.prefab
+  artifactKey: Guid(a1e08f3965252a8489796b0c3e1c7d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier2 Towers/Tower Mage_Red Tier2 1.prefab using Guid(a1e08f3965252a8489796b0c3e1c7d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dbbf799850fed521b6e63c31b425bdf') in 0.061762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.392786 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faa9660dde5000ddc8d5f726065d12a6') in 0.054101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.726058 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '917397b9f6327c1b509a04ec7a54089d') in 0.067426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.605462 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab
+  artifactKey: Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Blue Tier3.prefab using Guid(a77d000c711ce0948be0a3ba4eff2e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0afbb566508fd6fa04f40bf36d2a098c') in 0.040200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.055853 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab
+  artifactKey: Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab using Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c80fddf2fddb00510d66e4cfe4e09141') in 0.183567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.623064 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab
+  artifactKey: Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab using Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d6b25ecbfd4fa847c8ec2923d1910f9') in 0.126887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.675627 seconds.
+  path: Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab
+  artifactKey: Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier3 Towers/Tower Mage_Red Tier3.prefab using Guid(8e5f310e397ed3b4890f377aeb53de6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c1c5f360a24b54f8827cd55a453b6c') in 0.127445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.600538 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71ebf67d06f5dbb539389570f2a79653') in 0.061920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.479641 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0917a5b88dd16e184b9146558bcf0595') in 0.130138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.662695 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab
+  artifactKey: Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Blue Tier4.prefab using Guid(1b64a6a462c6f734cb6525fd7ce541fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76458de646c72c9cd34d233c53bd7cbd') in 0.058014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.520134 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab
+  artifactKey: Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab using Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9f0a4afe9f47582d535ae45e3e8cf03') in 0.239401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.622707 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab
+  artifactKey: Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab using Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0880c19475792b34cdd4f8f6935de23') in 0.093185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.500306 seconds.
+  path: Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab
+  artifactKey: Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tower/Tier4 Towers/Tower Mage_Red Tier4.prefab using Guid(6179487d73578704585b8f9598e591ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92316af6c5d9b871e12bff5bde7f4ba4') in 0.132089 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004061 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.941 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2742 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.6 MB.
+System memory in use after: 111.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3244.
+Total: 2.206700 ms (FindLiveObjects: 0.190100 ms CreateObjectMapping: 0.112000 ms MarkObjects: 1.890800 ms  DeleteObjects: 0.013000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 365.442602 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackHero.prefab
+  artifactKey: Guid(7180cb5d0c4511f4bb62d623e238eed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackHero.prefab using Guid(7180cb5d0c4511f4bb62d623e238eed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4668af3a5736c71cfb02d7de539ba1d') in 0.100696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Prefab/TEST PREFABS/TestMeleeCreepDire.prefab
+  artifactKey: Guid(5cc40b640473f314d9219eb029e54f25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/TEST PREFABS/TestMeleeCreepDire.prefab using Guid(5cc40b640473f314d9219eb029e54f25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3bab22fb2d3f970255001258c40ef5e') in 0.278435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011844 seconds.
+  path: Assets/Prefab/TEST PREFABS/TestCreepRangedBlue.prefab
+  artifactKey: Guid(d9ec9673b943c7e49a274b2f31f37531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/TEST PREFABS/TestCreepRangedBlue.prefab using Guid(d9ec9673b943c7e49a274b2f31f37531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f5ea4f83786867d17ac9750c3b5cee4') in 0.143646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackRanged.prefab
+  artifactKey: Guid(a4108c65762f8684380425bde0009fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackRanged.prefab using Guid(a4108c65762f8684380425bde0009fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59bd92d631c06e1f5ffb56401933bdb7') in 0.036449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackSiege.prefab
+  artifactKey: Guid(ab6ee22e89a0ca84fa9de6c13f2499c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestAttackSiege.prefab using Guid(ab6ee22e89a0ca84fa9de6c13f2499c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '184e40ab9f6a80b6909564c2b92821ec') in 0.026717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestMeleeAttackSkill.prefab
+  artifactKey: Guid(19c11ef1b379d4d46ac1e7ee08c981ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/TEST SKILLS/TestMeleeAttackSkill.prefab using Guid(19c11ef1b379d4d46ac1e7ee08c981ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04368a2ffcc44169801666a35fdd0c34') in 0.050467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000458 seconds.
+  path: Assets/Prefab/TEST PREFABS/TestCreepRangedRed.prefab
+  artifactKey: Guid(ed917e6b0b51ea846889f279e66be048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/TEST PREFABS/TestCreepRangedRed.prefab using Guid(ed917e6b0b51ea846889f279e66be048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef9a3741ac2c3483bb2d53a08bbbcd02') in 0.161181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000552 seconds.
+  path: Assets/Prefab/TEST PREFABS/TestMeleeCreepRadiant.prefab
+  artifactKey: Guid(b8248164daa16e749bae66fbb7e93cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/TEST PREFABS/TestMeleeCreepRadiant.prefab using Guid(b8248164daa16e749bae66fbb7e93cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47dfb5df563112a337f38b1d5fd86116') in 0.176157 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004424 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.214 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2742 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.2 MB.
+System memory in use after: 112.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3248.
+Total: 1.735000 ms (FindLiveObjects: 0.183500 ms CreateObjectMapping: 0.132500 ms MarkObjects: 1.406200 ms  DeleteObjects: 0.012000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 150.733444 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/MagicMissle.cs
+  artifactKey: Guid(d3a93164794ed7f43802a74523a77e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/MagicMissle.cs using Guid(d3a93164794ed7f43802a74523a77e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31d355c2a09c910483b286540faf8ae8') in 0.018001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.274898 seconds.
+  path: Assets/MagicMissileProjectile.cs
+  artifactKey: Guid(837d70de8c6e5b3478d99789fd8f2ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicMissileProjectile.cs using Guid(837d70de8c6e5b3478d99789fd8f2ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30d30614ce51372f2a0dfd3ed1c24ca0') in 0.010639 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009817 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.877 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2742 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.3 MB.
+System memory in use after: 112.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3251.
+Total: 1.839200 ms (FindLiveObjects: 0.180600 ms CreateObjectMapping: 0.101000 ms MarkObjects: 1.544400 ms  DeleteObjects: 0.012300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 127.062227 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/MagicMissle.cs
+  artifactKey: Guid(d3a93164794ed7f43802a74523a77e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/MagicMissle.cs using Guid(d3a93164794ed7f43802a74523a77e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a6ef49225c26a7bd5b8591a6adec869') in 0.012475 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009764 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.492 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2742 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.3 MB.
+System memory in use after: 112.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3254.
+Total: 1.530500 ms (FindLiveObjects: 0.177500 ms CreateObjectMapping: 0.099900 ms MarkObjects: 1.240600 ms  DeleteObjects: 0.011500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.755747 seconds.
+  path: Assets/Scripts/Unit Scripts/SkillsScripts/MagicMissle.cs
+  artifactKey: Guid(d3a93164794ed7f43802a74523a77e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Unit Scripts/SkillsScripts/MagicMissle.cs using Guid(d3a93164794ed7f43802a74523a77e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30638f6c8443fdc310ec42f4476abfe') in 0.008167 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.094206 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.140 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2742 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.3 MB.
+System memory in use after: 112.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3257.
+Total: 1.601700 ms (FindLiveObjects: 0.213400 ms CreateObjectMapping: 0.123100 ms MarkObjects: 1.251500 ms  DeleteObjects: 0.012500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004653 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.875 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2742 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.3 MB.
+System memory in use after: 112.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3260.
+Total: 1.874600 ms (FindLiveObjects: 0.216000 ms CreateObjectMapping: 0.149000 ms MarkObjects: 1.494500 ms  DeleteObjects: 0.014100 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
