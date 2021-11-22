@@ -10,12 +10,16 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject debugPanel;
     [SerializeField] GameObject debugButton;
 
+    public TextMeshProUGUI radiantWin;
+    public TextMeshProUGUI direWin;
+
     [Header("Basic Info UI")]
     public TextMeshProUGUI name;
     public Slider HP_Bar_Slider;
     public Slider Mana_Bar_Slider;
     public TextMeshProUGUI levelValue;
     public TextMeshProUGUI expValue;
+    public TextMeshProUGUI goldValue;
     public Button DestroyTowerButton;
 
     [Header("Stats UI")]
@@ -55,6 +59,9 @@ public class UIManager : MonoBehaviour
 
         heroImage.SetActive(false);
         skillsCanvas.gameObject.SetActive(false);
+        radiantWin.gameObject.SetActive(false);
+        direWin.gameObject.SetActive(false);
+
         //skill1_icon.SetActive(false);
         //skill2_icon.SetActive(false);
         //skill3_icon.SetActive(false);

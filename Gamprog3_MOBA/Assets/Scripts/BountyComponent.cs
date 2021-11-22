@@ -5,7 +5,7 @@ using UnityEngine;
 public class BountyComponent : MonoBehaviour
 {
     [SerializeField]
-    int Gold;
+     public int Gold;
     [SerializeField]
     int goldBounty;
 

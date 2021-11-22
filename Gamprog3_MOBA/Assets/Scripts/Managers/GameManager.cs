@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SingletonManager.Get<AudioManager>().playMusic();
+
         if (redBase)
         {
             HealthComponent redBaseHealth = redBase.GetComponent<HealthComponent>();
@@ -64,13 +66,16 @@ public class GameManager : MonoBehaviour
 
     public void redDebugWin(HealthComponent health)
     {
+       
         Debug.Log("Red WIN");
+        SingletonManager.Get<UIManager>().direWin.gameObject.SetActive(true);
         gameEnd = true;
     }
 
     public void blueDebugWin(HealthComponent health)
     {
         Debug.Log("Blue WIN");
+        SingletonManager.Get<UIManager>().radiantWin.gameObject.SetActive(true);
         gameEnd = true;
     }
 }

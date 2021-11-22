@@ -59,6 +59,12 @@ public class UnitSelect : MonoBehaviour
                         UI.expValue.text = selectedLevel.currentEXP.ToString() + " / " + selectedLevel.maxEXP.ToString();
                     }
 
+                    if (unitSelected.gameObject.GetComponent<BountyComponent>() != null)
+                    {
+                        BountyComponent selectedBounty = unitSelected.gameObject.GetComponent<BountyComponent>();
+                        UI.goldValue.text = selectedBounty.Gold.ToString();
+                    }
+
                     if (unitSelected.unitType == UnitType.Hero)
                     {
                         UI.heroImage.gameObject.SetActive(true);
