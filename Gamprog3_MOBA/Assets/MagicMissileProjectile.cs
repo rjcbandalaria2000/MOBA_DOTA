@@ -14,7 +14,8 @@ public class MagicMissileProjectile : MonoBehaviour
     float rotationSpeed;
     [SerializeField]
     GameObject stunPrefab;
-
+    public int skillLevel;
+    
     public UnityEvent<GameObject, GameObject> onTargetHit;
 
     #region Getter Setter
@@ -82,9 +83,10 @@ public class MagicMissileProjectile : MonoBehaviour
     public void OnProjectileHit()
     {
         onTargetHit.Invoke(target, source);
-        Buff stunDebuff = Instantiate(stunPrefab.GetComponent<Buff>());
+        Stun stunDebuff = Instantiate(stunPrefab.GetComponent<Stun>());
         stunDebuff.targetUnit = target;
         stunDebuff.transform.parent = target.transform;
+        stunDebuff.buffLevel = skillLevel;
         stunDebuff.ActivateBuff(target);
 
     }

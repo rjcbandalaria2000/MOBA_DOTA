@@ -28,7 +28,7 @@ public class LevelComponent : MonoBehaviour
         
         stats = this.gameObject.GetComponent<UnitStats>();
         Assert.IsNotNull(stats);
-
+        maxEXP = requiredExp[Level - 1];
         
     }
 
@@ -53,19 +53,12 @@ public class LevelComponent : MonoBehaviour
             if (currentEXP >= maxEXP)
             {
                 LevelUpUnit();
-                /*Level += 1;
-                skillPoints += 1;
-                if(Level - 1 < requiredExp.Count)
-                {
-                    maxEXP = requiredExp[Level - 1];
-                }*/
-
+                
                 if (skillPoints > 0)
                 {
                     skillUpgradeActivate();
                 }
 
-                //updateStats();
             }
         }
     }
@@ -88,18 +81,25 @@ public class LevelComponent : MonoBehaviour
 
     public void selectSkillUpgrade(int index)
     {
-        skillPoints -= 1;
-        //skill Upgrade
-        if (skillPoints <= 0)
+        if(unit.GetSkill(index + 1).skillLevel < unit.GetSkill(index + 1).maxSkillLevel)
         {
-            for (int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
+            unit.GetSkill(index + 1).skillLevel += 1;
+            skillPoints -= 1;
+            //skill Upgrade
+            if (skillPoints <= 0)
             {
+                for (int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
+                {
                 SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
+                }
             }
         }
+        
+    }
     void LevelUpUnit()
     {
         Level += 1;
+        skillPoints++;
         if (Level - 1 < requiredExp.Count)
         {
             maxEXP = requiredExp[Level - 1];

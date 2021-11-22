@@ -26,6 +26,6 @@ public class NetherSwap : Skill
     {
         base.ActivateSkill(target, attacker);
         isCoolDown = true;
-        coolDownRoutine = StartCoroutine(SkillCoolDown(skillCooldown, skillIndex));
+        coolDownRoutine = StartCoroutine(SkillCoolDown(skillCooldown[skillLevel - 1], skillIndex));
     }
 }

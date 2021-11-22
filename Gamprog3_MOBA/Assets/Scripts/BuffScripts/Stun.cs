@@ -9,7 +9,7 @@ public class Stun : Buff
     [SerializeField]
     List<float> stunDuration;
     [SerializeField]
-    int buffLevel = 0;
+    public int buffLevel = 0;
     [SerializeField]
     float stunTimer = 0; 
     // Start is called before the first frame update
@@ -35,6 +35,7 @@ public class Stun : Buff
         {
             stunTimer = 0;
         }
+
         targetAnimator = target.GetComponent<Animator>();
         InterruptActions();
         targetAnimator.SetBool("IsStun", true);
