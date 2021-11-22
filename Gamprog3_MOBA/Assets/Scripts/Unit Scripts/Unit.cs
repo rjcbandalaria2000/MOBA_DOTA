@@ -93,7 +93,7 @@ public class Unit : MonoBehaviour
     public void useFirstSkill()
     {
         if(unitSkills[1] != null)
-        {
+        { 
             unitSkills[1].ActivateSkill(target, this.gameObject);
         }
         else

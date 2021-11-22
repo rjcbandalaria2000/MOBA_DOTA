@@ -18,8 +18,8 @@ public class PenetratingProjectile : MonoBehaviour
     public float timer;
     public float range;
     [SerializeField]
-    Buff buffPrefab;
-
+    WaveOfTerrorBuff buffPrefab;
+    public int skillLevel;
     public UnityEvent<GameObject, GameObject> onTargetHit;
 
     #region Getter Setter
@@ -97,11 +97,16 @@ public class PenetratingProjectile : MonoBehaviour
     }
     public void OnProjectileHit()
     {
-        Buff waveOfTerrorBuff = Instantiate(buffPrefab);
-        waveOfTerrorBuff.targetUnit = target;
-        waveOfTerrorBuff.gameObject.transform.parent = target.transform;
-        waveOfTerrorBuff.ActivateBuff(target);
-        onTargetHit.Invoke(target, source);
+        if (buffPrefab)
+        {
+            WaveOfTerrorBuff waveOfTerrorBuff = Instantiate(buffPrefab);
+            waveOfTerrorBuff.targetUnit = target;
+            waveOfTerrorBuff.gameObject.transform.parent = target.transform;
+            waveOfTerrorBuff.buffLevel = skillLevel;
+            waveOfTerrorBuff.ActivateBuff(target);
+            onTargetHit.Invoke(target, source);
+        }
+        
         
     }
 

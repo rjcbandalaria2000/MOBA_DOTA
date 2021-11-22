@@ -7,7 +7,7 @@ public class MagicMissle : Skill
     public GameObject projectile;
     public GameObject targets;
    
-    public float damage;
+    public List<float> damage;
   
     [SerializeField]
     Transform skillSpawnPoint;
@@ -35,7 +35,7 @@ public class MagicMissle : Skill
     {
         base.ActivateSkill(target, attacker);
         isCoolDown = true;
-        coolDownRoutine = StartCoroutine(SkillCoolDown(skillCooldown, skillIndex));
+        coolDownRoutine = StartCoroutine(SkillCoolDown(skillCooldown[skillLevel - 1], skillIndex));
     }
 
     void SpawnProjectile(GameObject target, GameObject source)
@@ -51,7 +51,7 @@ public class MagicMissle : Skill
                 projectileSpawned.SetTarget(target);
                 // projectileSpawned.SetProjectileSpeed(900f/GameManager.distanceUnit);
                 projectileSpawned.SetProjectileSpeed(750f);
-
+                projectileSpawned.skillLevel = skillLevel;
                 projectileSpawned.onTargetHit.AddListener(HitTarget);
             }
 
@@ -71,7 +71,7 @@ public class MagicMissle : Skill
                 //Make a new stun state mechanim 
                 //Go to stun and wait for timer then return to idle 
                 //Same with nether swap 
-                targetHealth.TakeDamage(sourceStats.GetBaseDamage());
+                targetHealth.TakeDamage(damage[skillLevel -1]);
             }
 
         }

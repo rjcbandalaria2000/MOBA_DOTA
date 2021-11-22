@@ -115,11 +115,17 @@ public class PlayerControls : MonoBehaviour
                     Debug.Log(unitSelected.gameObject + " is the target");
                     if(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[1].getManaCost() && controlledUnit.unitSkills[1].isCoolDown == false)
                     {
-                     
-                       controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
-                       controlledUnit.unitSkills[1].skillIndex = 0;
-                       controlledUnit.unitSkills[1].ActivateSkill(skillTarget, this.gameObject); //Change in state machine
-
+                        if(controlledUnit.unitSkills[1].skillLevel > 0)
+                        {
+                            controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
+                            controlledUnit.unitSkills[1].skillIndex = 0;
+                            controlledUnit.unitSkills[1].ActivateSkill(skillTarget, this.gameObject); //Change in state machine
+                        }
+                        else
+                        {
+                            Debug.Log("Skill Not Yet Learned");
+                        }
+                        
                     }
                     else
                     {
@@ -151,10 +157,16 @@ public class PlayerControls : MonoBehaviour
                 Debug.Log(hitInfo.transform.gameObject + " is the target");
                 if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[2].getManaCost() && controlledUnit.unitSkills[2].isCoolDown == false)
                 {
-
-                    controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
-                    controlledUnit.unitSkills[2].skillIndex = 1;
-                    controlledUnit.unitSkills[2].ActivateSkill(null, this.gameObject); //Change in state machine
+                    if(controlledUnit.unitSkills[2].skillLevel > 0)
+                    {
+                        controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[1].getManaCost());
+                        controlledUnit.unitSkills[2].skillIndex = 1;
+                        controlledUnit.unitSkills[2].ActivateSkill(null, this.gameObject); //Change in state machine
+                    }
+                    else
+                    {
+                        Debug.Log("Skill Not Yet Learned");
+                    }
 
                 }
                 else
@@ -171,9 +183,17 @@ public class PlayerControls : MonoBehaviour
                 GameObject unitTarget = hitInfo.transform.gameObject;
                 if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[3].getManaCost() && controlledUnit.unitSkills[3].isCoolDown == false)
                 {
-                    controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[3].getManaCost());
-                    controlledUnit.unitSkills[3].skillIndex = 3;
-                    controlledUnit.unitSkills[3].ActivateSkill(unitTarget, this.gameObject); //Change in state machine
+                    if(controlledUnit.unitSkills[3].skillLevel > 0)
+                    {
+                        controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[3].getManaCost());
+                        controlledUnit.unitSkills[3].skillIndex = 3;
+                        controlledUnit.unitSkills[3].ActivateSkill(unitTarget, this.gameObject); //Change in state machine
+                    }
+                    else
+                    {
+                        Debug.Log("Skill Not Yet Learned");
+                    }
+                    
                 }
             }
         }

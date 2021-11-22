@@ -11,7 +11,7 @@ public enum DamageType
 
 public class Skill : MonoBehaviour
 {
-    public float skillCooldown;
+    public List<float> skillCooldown;
     //public float currentSkillCooldown;
     //public float maxSkillCoolDown;
     public bool isCoolDown;
@@ -21,6 +21,8 @@ public class Skill : MonoBehaviour
     [SerializeField]
     bool isMaxSkillLevel;
 
+    //public int currentSkillLevel;
+    public int maxSkillLevel;
     public UIManager skillsUI;
 
     [SerializeField]
@@ -52,7 +54,7 @@ public class Skill : MonoBehaviour
         {
             if(skillsUI != null)
             {
-                skillsUI.skill_icon_Transparent[skillIndex].fillAmount -= 1 / skillCooldown * Time.deltaTime;
+                skillsUI.skill_icon_Transparent[skillIndex].fillAmount -= 1 / skillCooldown[skillLevel - 1] * Time.deltaTime;
                 if (skillsUI.skill_icon_Transparent[skillIndex].fillAmount <= 0)
                 {
                     Debug.Log("Finish CD");
@@ -143,25 +145,7 @@ public class Skill : MonoBehaviour
                    
                 }
            }
-          
-        
 
     }
 
-    //public IEnumerator MagicMissleCooldown(float coolDownValue)
-    //{
-
-    //    while (coolDownTimer < coolDownValue)
-    //    {
-    //        isCoolDown = true;
-    //        coolDownTimer++;
-    //        skillsUI.skill1_icon_Transparent.fillAmount = coolDownTimer / coolDownValue;
-    //    }
-    //    coolDownTimer = 0;
-
-    //    //skillsUI.skill1_icon_Transparent.fillAmount = 0;
-    //    isCoolDown = false;
-    //    coolDownValue = skillCooldown;
-    //    yield return null;
-    //}
 }
