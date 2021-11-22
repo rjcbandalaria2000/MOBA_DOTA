@@ -81,6 +81,8 @@ public class LevelComponent : MonoBehaviour
             {
                 SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(true);
             }
+
+            SingletonManager.Get<UIManager>().attributeUpgradeButtons.gameObject.SetActive(true);
         }
     }
 
@@ -94,6 +96,7 @@ public class LevelComponent : MonoBehaviour
             {
                 SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
             }
+            SingletonManager.Get<UIManager>().attributeUpgradeButtons.gameObject.SetActive(false);
         }
     }
 }

@@ -11,8 +11,10 @@ public class BountyComponent : MonoBehaviour
 
     public GameObject killer; //for last hit
 
-    public Collider bountyRange;
+    public List<GameObject> bountyInRange;
 
+    public Collider bountyRange;
+    public GameObject bountyIncludeObject;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +30,22 @@ public class BountyComponent : MonoBehaviour
                 Gold = 0;
             }
         }
+
+
         
     }
 
     // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider bountyRange)
     {
-        
+        bountyIncludeObject = bountyRange.gameObject;
+        bountyInRange.Add(bountyIncludeObject);
+
     }
+
+    private void OnTriggerExit(Collider bountyRange)
+    {
+        bountyInRange.Remove(bountyIncludeObject);
+    }
+    
 }

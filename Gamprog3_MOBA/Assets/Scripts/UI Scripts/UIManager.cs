@@ -43,6 +43,9 @@ public class UIManager : MonoBehaviour
     [Header("Player Skills Icon upgradeButton")]
     public List<Button> upgradeButtons;
 
+    [Header("Player Attributes Icon upgradeButton")]
+    public Button attributeUpgradeButtons;
+
     public DisplayUnitStats unitStatDisplay;
 
     public Canvas skillsCanvas;
@@ -54,6 +57,7 @@ public class UIManager : MonoBehaviour
     {
         debugPanel.SetActive(false);
         debugButton.SetActive(true);
+        attributeUpgradeButtons.gameObject.SetActive(false);
         DestroyTowerButton.gameObject.SetActive(false);
         inDepthStatsCanvas.gameObject.SetActive(false);
 
