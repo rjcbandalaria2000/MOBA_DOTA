@@ -13,7 +13,11 @@ public class DamageReceiver : MonoBehaviour
     void Start()
     {
         source = this.gameObject;
-       
+        HealthComponent sourceHP = source.GetComponent<HealthComponent>();
+        if (sourceHP)
+        {
+            sourceHP.death.AddListener(OnLastHit);
+        }
     }
 
     // Update is called once per frame
@@ -127,6 +131,19 @@ public class DamageReceiver : MonoBehaviour
         lastAttacker = attacker;
     }
 
+
+    public void OnLastHit(HealthComponent lastAttackerHP)
+    {
+        Unit lastAttackerUnit = lastAttacker.GetComponent<Unit>();
+        if (lastAttackerUnit)
+        {
+            if(lastAttackerUnit.unitType == UnitType.Hero)
+            {
+                BountyComponent lastAttackerBounty = lastAttackerUnit.gameObject.GetComponent<BountyComponent>();
+                lastAttackerBounty.Gold += 10;
+            }
+        }
+    }
    
 
 }
