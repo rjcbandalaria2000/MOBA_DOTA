@@ -17,7 +17,8 @@ public class Skill : MonoBehaviour
     public bool isCoolDown;
     protected Coroutine coolDownRoutine;
     public int skillIndex;
-
+    public int currentSkillLevel;
+    public int maxSkillLevel;
     public UIManager skillsUI;
 
     [SerializeField]
