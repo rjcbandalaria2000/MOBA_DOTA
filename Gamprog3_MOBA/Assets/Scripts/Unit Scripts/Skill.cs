@@ -26,7 +26,7 @@ public class Skill : MonoBehaviour
     public UIManager skillsUI;
 
     [SerializeField]
-    int manaCost;
+    public List<int> manaCost;
     [SerializeField]
     public float castRange;
     [SerializeField]
@@ -103,7 +103,7 @@ public class Skill : MonoBehaviour
 
     public int getManaCost()
     {
-        return manaCost;
+        return manaCost[skillLevel -1];
     }
 
     //public IEnumerator coolDown(float coolDownValue)

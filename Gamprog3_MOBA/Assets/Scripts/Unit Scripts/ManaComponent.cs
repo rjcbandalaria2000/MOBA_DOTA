@@ -37,12 +37,7 @@ public class ManaComponent : MonoBehaviour
     void Start()
     {
         InitializeMana();
-        if (canManaRegen)
-        {
-            manaRegenerationRoutine = StartCoroutine(ManaRegeneration());
-        }
-        
-
+        manaRegenerationRoutine = StartCoroutine(ManaRegeneration());
     }
 
     void InitializeMana()
@@ -51,8 +46,9 @@ public class ManaComponent : MonoBehaviour
         Assert.IsNotNull(unitStats);
         maxMana = unitStats.GetBaseMana() + (unitStats.GetIntelligence() * 12f);
         currentMana = maxMana;
-    }
+        manaRegen = unitStats.GetIntelligence() * 0.05f;
 
+    }
     public void IncreaseMaxMana(float maxManaIncreaseValue)
     {
         float tempMana = maxMana;

@@ -16,7 +16,10 @@ public class LevelComponent : MonoBehaviour
     public int skillPoints;
     public List<int> requiredExp;
     public List<int> deathExp;
-    public UnitStats growthStats; 
+    public UnitStats growthStats;
+
+    //For Sharing 
+    public int numOfHeroesInRadius;
 
    // public float pointsToGain; //EXP points gain when killed something
 
