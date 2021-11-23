@@ -35,8 +35,14 @@ public class EXPReceiver : MonoBehaviour
                 {
                     unitsInRange.Add(unitDetected.gameObject);
                     HealthComponent unitDetectedHP = unitDetected.gameObject.GetComponent<HealthComponent>();
+                    LevelComponent unitLevelComponent = unitDetected.gameObject.GetComponent<LevelComponent>();
                     if (unitDetectedHP)
                     {
+                        if (unitLevelComponent) 
+                        {
+                            unitLevelComponent.numOfHeroesInRadius += 1;
+                        
+                        }
                         unitDetectedHP.death.AddListener(ReceiveExperiencePoints);
                     }
                 }
@@ -58,8 +64,15 @@ public class EXPReceiver : MonoBehaviour
                 {
                     unitsInRange.Remove(unitDetected.gameObject);
                     HealthComponent unitDetectedHP = unitDetected.gameObject.GetComponent<HealthComponent>();
+                    LevelComponent unitLevelComponent = unitDetected.gameObject.GetComponent<LevelComponent>();
                     if (unitDetectedHP)
                     {
+                        if (unitLevelComponent)
+                        {
+                            unitLevelComponent.numOfHeroesInRadius -= 1;
+
+                        }
+                       
                         unitDetectedHP.death.RemoveListener(ReceiveExperiencePoints);
                     }
                 }

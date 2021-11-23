@@ -86,7 +86,7 @@ public class LevelComponent : MonoBehaviour
 
     public int GiveExp()
     {
-        return deathExp[Level - 1];
+        return deathExp[Level - 1] / numOfHeroesInRadius;
     }
 
     public void skillUpgradeActivate()
