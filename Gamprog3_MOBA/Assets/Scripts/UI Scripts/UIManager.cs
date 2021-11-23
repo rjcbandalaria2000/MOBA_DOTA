@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI expValue;
     public TextMeshProUGUI goldValue;
     public Button DestroyTowerButton;
+    public Button DestroyBaseButton;
+
 
     [Header("Stats UI")]
     public Text AtkVal;
@@ -59,6 +61,7 @@ public class UIManager : MonoBehaviour
         debugButton.SetActive(true);
         attributeUpgradeButtons.gameObject.SetActive(false);
         DestroyTowerButton.gameObject.SetActive(false);
+        DestroyBaseButton.gameObject.SetActive(false);
         inDepthStatsCanvas.gameObject.SetActive(false);
 
         heroImage.SetActive(false);

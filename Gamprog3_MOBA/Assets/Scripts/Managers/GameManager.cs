@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool gameEnd = false;
 
     public Faction unitFaction;
+    public LightingManager lighting;
 
     private void Awake()
     {
@@ -27,20 +28,37 @@ public class GameManager : MonoBehaviour
     {
         SingletonManager.Get<AudioManager>().playMusic();
 
-        if (redBase)
-        {
-            HealthComponent redBaseHealth = redBase.GetComponent<HealthComponent>();
-            redBaseHealth.death.AddListener(blueDebugWin);
-        }
-        if (blueBase)
-        {
-            HealthComponent blueBasehealth = blueBase.GetComponent<HealthComponent>();
-            blueBasehealth.death.AddListener(redDebugWin);
-        }
+        //if (redBase)
+        //{
+        //    HealthComponent redBaseHealth = redBase.GetComponent<HealthComponent>();
+        //    redBaseHealth.death.AddListener(blueDebugWin);
+        //}
+        //if (blueBase)
+        //{
+        //    HealthComponent blueBasehealth = blueBase.GetComponent<HealthComponent>();
+        //    blueBasehealth.death.AddListener(redDebugWin);
+        //}
     }
     // Update is called once per frame
     void Update()
     {
+        if (redBase == null)
+        {
+            Debug.Log("Blue WIN");
+            SingletonManager.Get<UIManager>().radiantWin.gameObject.SetActive(true);
+            gameEnd = true;
+            gameTime += 0;
+            lighting.dayTimer += 0;
+        }
+        if (blueBase == null)
+        {
+            Debug.Log("Red WIN");
+            SingletonManager.Get<UIManager>().direWin.gameObject.SetActive(true);
+            gameEnd = true;
+            gameTime += 0;
+            lighting.dayTimer += 0;
+        }
+
         gameTime += Time.deltaTime;
     }
 

@@ -121,7 +121,7 @@ public class LevelComponent : MonoBehaviour
         }
         
     }
-    void LevelUpUnit()
+    public void LevelUpUnit()
     {
         Level += 1;
         skillPoints++;
