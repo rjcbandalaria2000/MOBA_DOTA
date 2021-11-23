@@ -21,17 +21,26 @@ public class ChaseState : UnitStateMachine
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
-        if (animator.GetFloat("Distance")  > unitStats.GetAttackRange())
+        if (target)
         {
-            unitNavmesh.SetDestination(target.transform.position);
-            animator.SetBool("IsMoving", true);
+            if (animator.GetFloat("Distance")  > unitStats.GetAttackRange())
+            {
+                unitNavmesh.SetDestination(target.transform.position);
+                animator.SetBool("IsMoving", true);
+            }
+            else
+            {
+                unit.transform.position = unit.transform.position;
+                Debug.Log("Target In Range");
+                animator.SetBool("inRange", true);
+            }
         }
         else
         {
-            unit.transform.position = unit.transform.position;
-            Debug.Log("Target In Range");
-            animator.SetBool("inRange", true);
+            animator.SetBool("hasTarget", false);
         }
+        
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
