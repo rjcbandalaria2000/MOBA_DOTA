@@ -17,6 +17,7 @@ public class LevelComponent : MonoBehaviour
     public List<int> requiredExp;
     public List<int> deathExp;
     public UnitStats growthStats;
+    public float attributeUpgradeValue = 2;
 
     //For Sharing 
     public int numOfHeroesInRadius;
@@ -48,12 +49,12 @@ public class LevelComponent : MonoBehaviour
        
     }
 
-    public void updateStats()
+    public void UpgradeStats()
     {
         skillPoints -= 1;
-        stats.SetStrength(stats.GetStrength() + growthStats.GetStrength());
-        stats.SetAgility(stats.GetAgility() + growthStats.GetAgility());
-        stats.SetIntelligence(stats.GetIntelligence() + growthStats.GetIntelligence());
+        stats.SetStrength(stats.GetStrength() + attributeUpgradeValue);
+        stats.SetAgility(stats.GetAgility() + attributeUpgradeValue);
+        stats.SetIntelligence(stats.GetIntelligence() + attributeUpgradeValue);
         if (skillPoints <= 0)
         {
             for (int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
@@ -132,7 +133,15 @@ public class LevelComponent : MonoBehaviour
         if (growthStats)
         {
             //updateStats();
+            LevelUpAttributes();
         }
        
+    }
+
+    public void LevelUpAttributes()
+    {
+        stats.SetStrength(stats.GetStrength() + growthStats.GetStrength());
+        stats.SetAgility(stats.GetAgility() + growthStats.GetAgility());
+        stats.SetIntelligence(stats.GetIntelligence() + growthStats.GetIntelligence());
     }
 }
