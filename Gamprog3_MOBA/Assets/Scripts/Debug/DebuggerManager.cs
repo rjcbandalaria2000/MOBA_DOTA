@@ -12,7 +12,8 @@ public class DebuggerManager : MonoBehaviour
     //public List<GameObject> towerButton;
     public UIManager UI;
     public GameObject selectedTower;
-    
+    public GameObject selectedBase;
+
 
 
     // Start is called before the first frame update
@@ -36,11 +37,17 @@ public class DebuggerManager : MonoBehaviour
 
                
                 TowerComponent towerSelected = hitInfo.transform.gameObject.GetComponent<TowerComponent>();
+                BaseComponent baseSelected = hitInfo.transform.gameObject.GetComponent<BaseComponent>();
 
                 if (towerSelected)
                 {
                     selectedTower = towerSelected.gameObject;
                     UI.DestroyTowerButton.gameObject.SetActive(true);
+                }
+                else if(baseSelected)
+                {
+                    selectedBase = baseSelected.gameObject;
+                    UI.DestroyBaseButton.gameObject.SetActive(true);
                 }
                 else
                 {
@@ -77,6 +84,11 @@ public class DebuggerManager : MonoBehaviour
     public void restoreMana()
     {
         player.gameObject.GetComponent<ManaComponent>().SetCurrentMana(player.gameObject.GetComponent<ManaComponent>().GetMaxMana());
+    }
+
+    public void levelUp()
+    {
+        player.gameObject.GetComponent<LevelComponent>().LevelUpUnit();
     }
 
     /*public void destroyTower()
@@ -116,6 +128,16 @@ public class DebuggerManager : MonoBehaviour
         UI.DestroyTowerButton.gameObject.SetActive(false);
         // DestroyTowerButton.gameObject.SetActive(false);
         Destroy(selectedTower);
+    }
+
+    public void destroyBase()
+    {
+        Debug.Log("Destroy");
+        UI.DestroyBaseButton.gameObject.SetActive(false);
+        
+        Destroy(selectedBase);
+
+
     }
 
     //public void selectToDestroyTower()
