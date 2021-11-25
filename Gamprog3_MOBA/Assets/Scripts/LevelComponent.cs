@@ -62,9 +62,23 @@ public class LevelComponent : MonoBehaviour
                 SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
             }
             SingletonManager.Get<UIManager>().attributeUpgradeButtons.gameObject.SetActive(false);
-            
+
+            for (int i = 0; i < unit.unitSkills.Count; i++)
+            {
+                if (unit.unitSkills[i].skillLevel == 1 && this.Level == 2)
+                {
+                    SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
+                }
+                else
+                {
+                    return;
+                }
+            }
+
         }
         
+       
+
     }
 
     public void GainExp(float experienceGain)
