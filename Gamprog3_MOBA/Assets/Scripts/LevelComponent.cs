@@ -19,6 +19,8 @@ public class LevelComponent : MonoBehaviour
     public UnitStats growthStats;
     public float attributeUpgradeValue = 2;
 
+    public List<int> levelRequired;
+
     //For Sharing 
     public int numOfHeroesInRadius;
 
@@ -111,6 +113,14 @@ public class LevelComponent : MonoBehaviour
             for(int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
             {
                 SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(true);
+                if(this.Level >= 6 && unit.unitSkills[i].skillLevel != 1) //Skill cap for ultimate
+                {
+                    SingletonManager.Get<UIManager>().upgradeButtons[3].gameObject.SetActive(true);
+                }
+                else
+                {
+                    SingletonManager.Get<UIManager>().upgradeButtons[3].gameObject.SetActive(false);
+                }
             }
 
             SingletonManager.Get<UIManager>().attributeUpgradeButtons.gameObject.SetActive(true);
