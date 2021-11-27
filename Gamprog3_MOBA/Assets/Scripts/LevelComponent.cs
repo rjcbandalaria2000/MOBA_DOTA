@@ -93,11 +93,6 @@ public class LevelComponent : MonoBehaviour
             if (currentEXP >= maxEXP)
             {
                 LevelUpUnit();
-                
-                if (skillPoints > 0)
-                {
-                    skillUpgradeActivate();
-                }
 
             }
         }
@@ -115,10 +110,10 @@ public class LevelComponent : MonoBehaviour
             for(int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
             {
                 SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(true);
-                if(this.Level >= levelRequired[levelRequiredIndex] && unit.unitSkills[i].skillLevel != 1) //Skill cap for ultimate
+                if(this.Level >= levelRequired[levelRequiredIndex]) //Skill cap for ultimate
                 {
                     SingletonManager.Get<UIManager>().upgradeButtons[3].gameObject.SetActive(true);
-                    levelRequiredIndex += 1;
+                    //levelRequiredIndex += 1;
                 }
                 else
                 {
@@ -132,7 +127,7 @@ public class LevelComponent : MonoBehaviour
 
     public void selectSkillUpgrade(int index)
     {
-        if(unit.GetSkill(index).skillLevel < unit.GetSkill(index).maxSkillLevel)
+        if (unit.GetSkill(index).skillLevel < unit.GetSkill(index).maxSkillLevel)
         {
             Debug.Log("Skill Upgrade");
             unit.GetSkill(index).skillLevel += 1;
@@ -142,8 +137,11 @@ public class LevelComponent : MonoBehaviour
             {
                 for (int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
                 {
-                SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
+                    SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
                 }
+            }
+            if (unit.GetSkill(index) == unit.GetSkill(3)) {
+                levelRequiredIndex += 1;
             }
             
         }
@@ -162,7 +160,11 @@ public class LevelComponent : MonoBehaviour
             //updateStats();
             LevelUpAttributes();
         }
-       
+        if (skillPoints > 0)
+        {
+            skillUpgradeActivate();
+        }
+
     }
 
     public void LevelUpAttributes()
