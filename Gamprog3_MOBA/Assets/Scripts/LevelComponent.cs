@@ -19,9 +19,9 @@ public class LevelComponent : MonoBehaviour
     public UnitStats growthStats;
     public float attributeUpgradeValue = 2;
 
-    public List<int> levelRequired;
-    [SerializeField]
-    int levelRequiredIndex = 0;
+    //public List<int> levelRequired;
+    //[SerializeField]
+    //int levelRequiredIndex = 0;
 
     //For Sharing 
     public int numOfHeroesInRadius;
