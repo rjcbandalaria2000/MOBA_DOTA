@@ -178,16 +178,19 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            Debug.Log("Pressed R");
             if (Physics.Raycast(ray, out RaycastHit hitInfo))
             {
                 GameObject unitTarget = hitInfo.transform.gameObject;
-                if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[3].getManaCost() && controlledUnit.unitSkills[3].isCoolDown == false)
+                if (controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() > controlledUnit.unitSkills[4].getManaCost() && controlledUnit.unitSkills[4].isCoolDown == false)
                 {
-                    if(controlledUnit.unitSkills[3].skillLevel > 0)
+                    Debug.Log("Not Cooldown and Has Mana");
+                    if (controlledUnit.unitSkills[4].skillLevel > 0)
                     {
-                        controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[3].getManaCost());
-                        controlledUnit.unitSkills[3].skillIndex = 3;
-                        controlledUnit.unitSkills[3].ActivateSkill(unitTarget, this.gameObject); //Change in state machine
+                        controlledUnit.gameObject.GetComponent<ManaComponent>().SetCurrentMana(controlledUnit.gameObject.GetComponent<ManaComponent>().GetCurrentMana() - controlledUnit.unitSkills[4].getManaCost());
+                        controlledUnit.unitSkills[4].skillIndex = 3;
+                        controlledUnit.unitSkills[4].ActivateSkill(unitTarget, this.gameObject); //Change in state machine
+                        Debug.Log("Activate Skill");
                     }
                     else
                     {

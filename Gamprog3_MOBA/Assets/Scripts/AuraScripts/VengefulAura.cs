@@ -15,7 +15,8 @@ public class VengefulAura : Aura
     // Start is called before the first frame update
     void Start()
     {
-        source = this.gameObject.transform.parent.gameObject;
+        source = this.gameObject.transform.parent.gameObject.
+            transform.parent.gameObject;
         auraDetector = this.GetComponent<SphereCollider>();
         Assert.IsNotNull(auraDetector);
         auraDetector.radius = auraRange / GameManager.distanceUnit;

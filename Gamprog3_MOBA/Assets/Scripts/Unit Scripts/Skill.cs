@@ -21,6 +21,11 @@ public class Skill : MonoBehaviour
     [SerializeField]
     bool isMaxSkillLevel;
 
+    //Prototype Level Requirements 
+    [SerializeField]
+    public List<int> heroLevelRequirement;
+
+
     //public int currentSkillLevel;
     public int maxSkillLevel;
     public UIManager skillsUI;
@@ -33,6 +38,17 @@ public class Skill : MonoBehaviour
     protected AttackType attackType;
     [SerializeField]
     protected DamageType damageType;
+
+    public int GetHeroLevelRequirement()
+    {
+        if (skillLevel > 1)
+        {
+            return heroLevelRequirement[skillLevel - 1];
+        }
+        else{
+            return heroLevelRequirement[skillLevel];
+        } 
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +65,7 @@ public class Skill : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(isCoolDown);
+        //Debug.Log(isCoolDown);
         if (isCoolDown)
         {
             if(skillsUI != null)

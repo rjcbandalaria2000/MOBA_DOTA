@@ -107,19 +107,32 @@ public class LevelComponent : MonoBehaviour
     {
         if(this.gameObject.GetComponent<Unit>().unitType == UnitType.Hero)
         {
-            for(int i = 0; i < SingletonManager.Get<UIManager>().upgradeButtons.Count; i++)
+            for(int i = 1; i < unit.unitSkills.Count; i++)
             {
-                SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(true);
-                if(this.Level >= levelRequired[levelRequiredIndex]) //Skill cap for ultimate
+                Debug.Log("Unit Skills: " + unit.GetSkill(i).name);
+                
+                //SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(true);
+                if(unit.GetSkill(i).skillLevel < unit.GetSkill(i).maxSkillLevel)//levelRequired[levelRequiredIndex]) //Skill cap for ultimate
                 {
-                    SingletonManager.Get<UIManager>().upgradeButtons[3].gameObject.SetActive(true);
-                    //levelRequiredIndex += 1;
+                    Debug.Log(unit.GetSkill(i).name + " Hero Level Requirement: " + unit.GetSkill(i).GetHeroLevelRequirement());
+                    if(this.Level >= unit.GetSkill(i).GetHeroLevelRequirement())
+                    {
+                        Debug.Log(unit.GetSkill(i).name + " Level for Upgrading");
+                        //SingletonManager.Get<UIManager>().upgradeButtons[3].gameObject.SetActive(true);
+                        //levelRequiredIndex += 1;
+                        SingletonManager.Get<UIManager>().upgradeButtons[i -1].gameObject.SetActive(true);
+                    }
+                    
                 }
                 else
                 {
-                    SingletonManager.Get<UIManager>().upgradeButtons[3].gameObject.SetActive(false);
+                   Debug.Log(unit.GetSkill(i).name + " upgrade level not met");
+                   //SingletonManager.Get<UIManager>().upgradeButtons[3].gameObject.SetActive(false);
+                   SingletonManager.Get<UIManager>().upgradeButtons[i -1].gameObject.SetActive(false);
                 }
+               
             }
+            
 
             SingletonManager.Get<UIManager>().attributeUpgradeButtons.gameObject.SetActive(true);
         }
@@ -140,9 +153,14 @@ public class LevelComponent : MonoBehaviour
                     SingletonManager.Get<UIManager>().upgradeButtons[i].gameObject.SetActive(false);
                 }
             }
-            if (unit.GetSkill(index) == unit.GetSkill(3)) {
-                levelRequiredIndex += 1;
+            else
+            {
+                Debug.Log("Has skill points left");
+                skillUpgradeActivate();
             }
+            //if (unit.GetSkill(index) == unit.GetSkill(3)) {
+            //    levelRequiredIndex += 1;
+            //}
             
         }
         

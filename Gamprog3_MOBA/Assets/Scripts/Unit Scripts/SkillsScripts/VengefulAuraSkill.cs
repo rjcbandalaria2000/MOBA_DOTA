@@ -8,7 +8,7 @@ public class VengefulAuraSkill : Skill
     // Start is called before the first frame update
     void Start()
     {
-        
+        skillAura = this.gameObject.GetComponentInChildren<VengefulAura>();
     }
 
     // Update is called once per frame
